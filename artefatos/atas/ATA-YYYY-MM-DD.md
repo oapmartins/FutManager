@@ -1,16 +1,19 @@
 # Ata de Reunião Semanal - Nome do Projeto
 
 ## Informações
-**Data/hora:** data, hora  
-**Local:** local da reunião  
-**Motivo da reunião:** motivo da reunião
-**Secretário:** responsável pela ata  
+**Data/hora:** 17/02/21, 21:00 - 22:00
+**Local:** Plataforma - Discord  
+**Motivo da reunião:** Definição inicial do escopo;
+Nome do projeto;
+Funcionalidade geral do sistema;
+Compreensão do documento inicial.
+**Secretário:** Pedro Henrique Damasceno Dias  
 
 ## Participantes
 Estiveram presentes na reunião:
-- Nome completo da pessoa A
-- Nome completo da pessoa B
-- Nome completo da pessoa C
+- Octavio Augusto
+-  Thiago Costa
+- Mateus Gomes
 
 ## Pauta
 
