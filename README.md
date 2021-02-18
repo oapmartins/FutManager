@@ -1,17 +1,20 @@
-# Nome do projeto
+#  Gestão de Quadras
 
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+O sistema Gestão de Quadras será um software que irá reunir "peladeiros" e donos de quadras em uma gestão automatizada dos processos, para a facilidade do gerenciamento de quadras e centros esportivos, assim automatizando processos para uma forma mais prática, agil e simples.
+
+O sistema irá auxiliar na administração  para a organização de produtos, serviços e clientes.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+*  Octavio Augusto
+* Thiago Costa
+*  Mateus Gomes
+* Pedro Henrique
+*  Samuel 
 
 ## Professor
 
-* Nome completo do professor
+* Hugo
 
 ## Instruções de utilização
 
