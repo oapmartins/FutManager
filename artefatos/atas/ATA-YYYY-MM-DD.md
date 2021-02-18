@@ -11,8 +11,9 @@ Compreensão do documento inicial.
 
 ## Participantes
 Estiveram presentes na reunião:
+- Pedro Damasceno
 - Octavio Augusto
--  Thiago Costa
+- Thiago Costa
 - Mateus Gomes
 
 ## Pauta
