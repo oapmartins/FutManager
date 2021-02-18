@@ -6,15 +6,16 @@ O sistema irá auxiliar na administração  para a organização de produtos, se
 
 ## Integrantes
 
-*  Octavio Augusto
-* Thiago Costa
-*  Mateus Gomes
-* Pedro Henrique
-*  Samuel 
+* Octavio Augusto Pereira Martins
+* Thiago Costa de Souza Pereira
+* Mateus Gomes Pereira Silva
+* Pedro Henrique Faria Andrade
+* Samuel Ribeiro de Freitas
 
-## Professor
+## Professores
 
-* Hugo
+* Hugo Bastos de Paula
+* Joyce Christina de Paiva Carvalho 
 
 ## Instruções de utilização
 
