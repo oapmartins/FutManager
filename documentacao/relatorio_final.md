@@ -1,19 +1,19 @@
-# Gestão de Quadras
+# Fut Manager
 
 
 **Mateus Gomes Pereira Silva, mateus.silva.1004445@sga.pucminas.br**
 
 **Octavio Augusto Pereira Martins, email do aluno 2**
 
-**Pedro Henrique Faria Andrade, email do aluno 3**
+**Pedro Henrique Damasceno Dias, pedro.hdias@outlook.com**
 
-**Samuel Ribeiro de Freitas, email do aluno 3**
+**Samuel Ribeiro de Freitas, srfreitas97@gmail.com**
 
 **Thiago Costa de Souza Pereira, email do aluno 3**
 
 ---
 
-_Curso de Engenharia de Software, Unidade Praça da Liberdade_
+_Curso de Engenharia de Software, Unidade Praça da Liberdade / Curso de Sistemas de Informação, Unidade São Gabriel_
 
 _Instituto de Informática e Ciências Exatas – Pontifícia Universidade de Minas Gerais (PUC MINAS), Belo Horizonte – MG – Brasil_
 
@@ -27,35 +27,35 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 ## 1. Introdução
 
-A introdução deve apresentar de dois ou quatro parágrafos de contextualização do trabalho. 
+O projeto do sistema Gestão de Quadras será um software que irá reunir "peladeiros" e donos de quadras em uma gestão automatizada dos processos, para a facilidade do gerenciamento de quadras e centros esportivos. Pode-se citar entre esses processos: cadastro e atendimento ao cliente; cadastro de quadra; agenda de horários disponíveis e reservas destes; cobrança e pagamentos.
+
+A finalidade do sistema será auxiliar na administração, para a organização de produtos, serviços e clientes. A fim de automatizar processos para uma forma mais prática, ágil e simples.
+
 
     1.1 Contextualização
 
-Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere. 
-A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
-A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas).
+O projeto tem como finaliade o gerenciamento de quadras, se qualificando no ramo de negócios que se trata a esportes e lazer de clientes como um todo. Atualmente o Brasil consta com mais de 30 mil atletas registrados , 12 milhões de adeptos ao futebol Society e com mais de 4 mil campos disponíveis em todo território nacional segundo a Confederação Brasileira de Futebol 7 Society. Visto tal fato, coloca-se como necessário a entrada de tecnologias que visam auxiliar esse grande mercado de esportes, para assim, gerar automatização de processos gerais, desde ao contato ao clientes até o termino do seu "jogo". Com isso, o software FutManager veio para facilitar pequenas empresas de quadras que visam a entrada no mercado e até mesmo melhora das já existentes.
 
     1.2 Problema
 
-Em seguida o aluno deve caminhar a contextualização para descrever o **problema** que o artigo trata. 
-O **problema** pode ser algo vivido em uma empresa específica. Neste caso, o aluno deve rapidamente apresentar 
-o cenário de problema da empresa. A empresa só deve ser citada explicitamente se o aluno tiver autorização 
-para tal.
+O FootManager é um software que visa realizar a ponte entre jogadores de futebol, amadores ou profissionais, e donos de quadras. Hoje, o fluxo normal de quem deseja encontrar uma quadra disponível em sua região passa por realizar uma pesquisa por centros esportivos em sua região na internet, entrar em contato, realizar o levantamento de preço, conferir os dias e horários diponíveis, para, caso positivo, realizar a alocação da quadra. Da perspectiva do centro esportivo, a divulgação de suas quadras e promoções, gerenciar o quadro de horários, as abstenções de ultima hora e bla, bla, bla passar a se tornar um ofensor.
 
     1.3 Objetivo geral
 
-O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
-O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, ava-liar, comparar etc.).
+Facilitar a gestão de quadras transformando um modelo de negócio informal em um modelo escalável e sustentável.
 
         1.3.1 Objetivos específicos
 
-Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
-concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+- Facilitar o agendamento de horários nas quadras, tanto por parte do cliente quanto do fornecedor.
+- Melhorar a visualização de horários disponíveis.
+- Melhorar o sistema de cobrança e pagamentos.
+- Implementar um tratamento de fluxo de exceção no modelo de negócio. (Quando um cliente desiste de um horário).
 
     1.4 Justificativas
 
-Mostre também as **justificativas** para o 
-desenvolvimento do seu trabalho e, caso deseje, desta-que alguma contribuição do trabalho.
+- A maioria das empresas de locação de quadras não tem um processo bem definido, o que abre margem para vários furos no modelo de negócio.
+- A digitalização do processo de aluguel de quadras aumentará a produtividade e facilitará o processo para os clientes.
+- A digitalização ajudará na divulgação de muitas quadras que não tem um marketing envolvido no negócio.
 
 
 ## 2. Participantes do processo
