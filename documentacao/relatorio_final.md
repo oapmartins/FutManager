@@ -3,7 +3,7 @@
 
 **Mateus Gomes Pereira Silva, mateus.silva.1004445@sga.pucminas.br**
 
-**Octavio Augusto Pereira Martins, email do aluno 2**
+**Octavio Augusto Pereira Martins, oapmartins@sga.pucminas.br**
 
 **Pedro Henrique Damasceno Dias, pedro.hdias@outlook.com**
 
