@@ -60,7 +60,15 @@ Facilitar a gestão de quadras transformando um modelo de negócio informal em u
 
 ## 2. Participantes do processo
 
-Apresente aqui os diferentes perfis dos Stakeholders (participantes do processo) chave do sistema. Diversas são as informações que podem ser relevantes para a definição dos perfis dos usuários, tais como idade, gênero, aspectos culturais, nível de educação, entre outros. A pesquisa de mercado pode ser uma ferramenta poderosa para se identificar e caracterizar os perfis de usuários.
+PERSONA 1
+Nome: Fábio 
+Idade: 41
+Trabalho: Dono / Gestor de quadras de futebol
+Personalidade: Carismático, brincalhão, empreendedor
+Sonho: Viajar o mundo, ser dono de vários negócios.
+
+Fábio tem 41 anos, é casado e atualmente trabalha como dono / gestor de quadras de futebol na região onde vive. Sua personalidade é de uma pessoa brincalhona e bem humorada, é também um ótimo empreendedor. Seu sonho atualmente é conhecer o mundo e poder melhorar e amplicar seus negócios.
+Um problema que Fábio enfrenta atualmente é a falta de organização em sua quadra. Muitas vezes acabou marcando um jogo para duas pessoas no mesmo horário. O sistema de gestão de quadras sanará esses problemas. Com o sistema, o usuário que esta gerenciando poderá ter controle total em sua agenda, sabendo assim se determinadas pessoas que alugaram a quadra vão ir mesmo, ou vão cancelar o horário. O sistema vai auxiliar também as pessoas que estão alugando a quadra, onde os mesmos vão poder enviar convites de confirmação de presença para outras pessoas, para assim também poder ter o controle da quantidade de jogadores que vão comparecer no local.
 
 ## 3. Modelagem do processo de negócio
 
