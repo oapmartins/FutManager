@@ -67,7 +67,7 @@ Um problema que Fábio enfrenta atualmente é a falta de organização em sua qu
 
     2.2 PERSONA 2
 
-Paulo tem 25 anos é solteiro e estudante, ele adora se reunir com os amigos nos finais de semana para jogar futebol, mas tem dificuldade para encontrar um horário de aluguel da quadrada em que todos estejam disponíveis para jogar. O sistema de gestão de quadradas resolverá esse problema. A partir dele o usuário poderá acessar a agenda de quadradas disponíveis de maneira fácil, podendo marcar oh desmarcar um horário além de ser possível confirmar a presença de outras pessoa através de um convite.
+Paulo tem 25 anos é solteiro e estudante, ele adora se reunir com os amigos nos finais de semana para jogar futebol, mas tem dificuldade para encontrar um horário de aluguel da quadrada em que todos estejam disponíveis para jogar. O sistema de gestão de quadradas resolverá esse problema. A partir dele o usuário poderá acessar a agenda de quadradas disponíveis de maneira fácil, podendo marcar ou desmarcar um horário, além de ser possível confirmar a presença de outras pessoa através de um convite.
 
 ## 3. Modelagem do processo de negócio
 
