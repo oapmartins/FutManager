@@ -9,7 +9,7 @@
 
 **Samuel Ribeiro de Freitas, srfreitas97@gmail.com**
 
-**Thiago Costa de Souza Pereira, email do aluno 3**
+**Thiago Costa de Souza Pereira, tcspereira@sga.pucminas.br**
 
 ---
 
