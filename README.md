@@ -16,6 +16,7 @@ A finalidade do sistema será auxiliar na administração, para a organização 
 
 * Hugo Bastos de Paula
 * Joyce Christina de Paiva Carvalho 
+* Claudiney
 
 ## Instruções de utilização
 
