@@ -76,9 +76,15 @@ Paulo tem 25 anos é solteiro e estudante, ele adora se reunir com os amigos nos
 Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, _ **apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente** _, mesmo que não se utilize tecnologia computacional.
 
 ## 3.2. Descrição Geral da proposta
+Nossa proposta é facilitar e automatizar o gerenciamento de quadradas de futebol através de um sistema de controle de reservas de quadradas, proporcionando maior controle e retorno financeiro para a organização que gerencia as quadras. Além disso o usuário que utilizar o serviço para agendar horários terá maior conveniência ao marca ou desmarcar um horário de aluguel de uma quadra através do sistema. O sistema apenas atuará na marcação de horários, não controlará o pagamento dos aluguéis e também não será possível controlar as finanças do negócio.
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Oportunidades de melhorias:
 
+* Possibilidade de divulgação das quadras em canais digitais
+
+* Agilidade no processo agendamento
+
+* Melhor visibilidade de métricas do negócio
 ## 3.3. Processos
 
 ### 3.3.1 Processo 1 – NOME DO PROCESSO
