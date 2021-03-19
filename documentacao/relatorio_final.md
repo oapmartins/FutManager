@@ -104,9 +104,9 @@ Oportunidades de melhorias:
 
 ### 3.3.1 Processo 1 – NOME DO PROCESSO
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN.
+Processo de cadastro de cliente levará em conta o cliente ao entrar no site, tendo interesse por este, para realizar o cadastro o cliente enviará seus dados para o sistema, ao recebe-los o sistema passará por uma etapa de validação (subprocesso), caso seja aprovada o sistema cadastrará o usuário, caso contrário ele é direcionado ao envio novamente dos dados.
 
-![Processo de cadastro do usuário no sistema](imagens/ "Modelo BPMN do Processo 1.")
+![Processo de cadastro do usuário no sistema](imagens/processoCadastroCliente.png "Modelo BPMN do Processo de Cadastro do usuário no sistema.")
 
 
 ### 3.3.2 Processo 2 – NOME DO PROCESSO
