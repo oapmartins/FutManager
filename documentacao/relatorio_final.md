@@ -109,11 +109,11 @@ Processo de cadastro de cliente levará em conta o cliente ao entrar no site, te
 ![Processo de cadastro do usuário no sistema](imagens/processoCadastroCliente.png "Modelo BPMN do Processo de Cadastro do usuário no sistema.")
 
 
-### 3.3.2 Processo 2 – NOME DO PROCESSO
+### 3.3.2 Processo 2 – Cadastro de Gestor e Quadras
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+No processo de cadastro de Gestor e de Quadras, o cliente inicialmente envia os seus dados comerciais, para ser realizado o cadastro. Depois de passar pela validação, os dados são enviados ao banco. Após completar a primeira parte do cadastro (empresa), é exibida uma janela de escolhas, onde a mesma pergunta se deseja continuar e ir para o cadastro de quadras, ou finalizar. Se for escolhido ir para o cadastro, é realizado o procedimento de coleta dos dados das quadras, seguido pela validação e por fim cadastro.
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/call_process.png "Modelo BPMN do Processo 2.")
+![Processo de cadastro do Gestor e Quadras no sistema](imagens/ModeloGestorEQuadras.png "Modelo BPMN do Processo de Cadastro do Gestor e Quadras no sistema.")
 
 ## 4. Projeto da Solução
 
