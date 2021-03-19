@@ -102,7 +102,7 @@ Oportunidades de melhorias:
 * Melhor visibilidade de métricas do negócio
 ## 3.3. Processos
 
-### 3.3.1 Processo 1 – NOME DO PROCESSO
+### 3.3.1 Processo 1 – Cadastro de Cliente
 
 Processo de cadastro de cliente levará em conta o cliente ao entrar no site, tendo interesse por este, para realizar o cadastro o cliente enviará seus dados para o sistema, ao recebe-los o sistema passará por uma etapa de validação (subprocesso), caso seja aprovada o sistema cadastrará o usuário, caso contrário ele é direcionado ao envio novamente dos dados.
 
