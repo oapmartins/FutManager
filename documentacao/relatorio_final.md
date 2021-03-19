@@ -115,6 +115,11 @@ No processo de cadastro de Gestor e de Quadras, o cliente inicialmente envia os 
 
 ![Processo de cadastro do Gestor e Quadras no sistema](imagens/ModeloGestorEQuadras.png "Modelo BPMN do Processo de Cadastro do Gestor e Quadras no sistema.")
 
+### 3.3.2 Processo 3 – Reserva de Horários
+O Processo permitirá ao usuário encontrar quais horários então disponíveis em uma quadra. Nele, o usuário, caso tenha interesse por algum dos horários disponíveis, deverá realizar a pré-reserva. A pré-reserva consisti no pagamento de uma taxa que deverá ser paga em até um dia. Somente após a confirmação do pagamento será efetivada a reserva de horário. Uma vez paga taxa, o valor não poderá ser reavido pelo usuário.
+
+![Processo de reserva](imagens/modelagem-reserva-de-horario.jpg "Modelo BPMN do Processo de Reserva de Horários.")
+
 ## 4. Projeto da Solução
 
 ### 4.1. Detalhamento das atividades
