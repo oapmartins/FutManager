@@ -106,7 +106,7 @@ Oportunidades de melhorias:
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN.
 
-![Exemplo de um Modelo BPMN do PROCESSO 1](imagens/process.png "Modelo BPMN do Processo 1.")
+![Processo de cadastro do usuário no sistema](imagens/ "Modelo BPMN do Processo 1.")
 
 
 ### 3.3.2 Processo 2 – NOME DO PROCESSO
