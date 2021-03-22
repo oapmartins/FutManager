@@ -102,11 +102,11 @@ Oportunidades de melhorias:
 * Melhor visibilidade de métricas do negócio
 ## 3.3. Processos
 
-### 3.3.1 Processo 1 – Cadastro de Cliente
+### 3.3.1 Processo 1 – Cadastro Cliente e Gestor
 
 Processo de cadastro de cliente levará em conta o cliente ao entrar no site, tendo interesse por este, para realizar o cadastro o cliente enviará seus dados para o sistema, ao recebe-los o sistema passará por uma etapa de validação (subprocesso), caso seja aprovada o sistema cadastrará o usuário, caso contrário ele é direcionado ao envio novamente dos dados.
 
-![Processo de cadastro do usuário no sistema](imagens/processoCadastro.jpg"Modelo BPMN do Processo de Cadastro do usuário no sistema.")
+![Processo de cadastro do usuário no sistema](imagens/processoCadastro.jpg "Modelo BPMN do Processo de Cadastro do usuário no sistema.")
 
 
 ### 3.3.2 Processo 2 – Cadastro de Gestor e Quadras
