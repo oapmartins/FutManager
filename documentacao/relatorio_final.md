@@ -106,7 +106,7 @@ Oportunidades de melhorias:
 
 Processo de cadastro de cliente levará em conta o cliente ao entrar no site, tendo interesse por este, para realizar o cadastro o cliente enviará seus dados para o sistema, ao recebe-los o sistema passará por uma etapa de validação (subprocesso), caso seja aprovada o sistema cadastrará o usuário, caso contrário ele é direcionado ao envio novamente dos dados.
 
-![Processo de cadastro do usuário no sistema](imagens/processoCadastroCliente.png "Modelo BPMN do Processo de Cadastro do usuário no sistema.")
+![Processo de cadastro do usuário no sistema](imagens/"Modelo BPMN do Processo de Cadastro do usuário no sistema.")
 
 
 ### 3.3.2 Processo 2 – NOME DO PROCESSO
