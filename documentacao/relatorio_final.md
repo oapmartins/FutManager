@@ -112,7 +112,7 @@ Processo de cadastro de cliente levará em conta o cliente ao entrar no site, te
 
 No processo de cadastro de Quadras, o cliente inicialmente envia os dados da quadra, para ser realizado o cadastro. Depois de passar pela validação, os dados são enviados ao banco. Após completar o cadastro, é exibida uma janela de escolhas, onde é perguntado, se ele deseja continuar e cadastrar mais quadras, ou finalizar.
 
-![Processo de cadastro de Quadras no sistema](imagens/modeloCadastroQuadras.png "Modelo BPMN do Processo de Cadastro de Quadras no sistema.")
+![Processo de cadastro de Quadras no sistema](imagens/modeloCadastroQuadras.jpg "Modelo BPMN do Processo de Cadastro de Quadras no sistema.")
 
 ### 3.3.3 Processo 3 – Reserva de Horários
 O Processo permitirá ao usuário encontrar quais horários então disponíveis em uma quadra. Nele, o usuário, caso tenha interesse por algum dos horários disponíveis, deverá realizar a pré-reserva. A pré-reserva consisti no pagamento de uma taxa que deverá ser paga em até um dia. Somente após a confirmação do pagamento será efetivada a reserva de horário. Uma vez paga taxa, o valor não poderá ser reavido pelo usuário.
