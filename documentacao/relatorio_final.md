@@ -38,7 +38,7 @@ O projeto tem como finaliade o gerenciamento de quadras, se qualificando no ramo
 
     1.2 Problema
 
-O Fut Manager é um software que visa realizar a ponte entre jogadores de futebol, amadores ou profissionais, e donos de quadras. Hoje, o fluxo normal de quem deseja encontrar uma quadra disponível em sua região passa por realizar uma pesquisa por centros esportivos em sua região na internet, entrar em contato, realizar o levantamento de preço, conferir os dias e horários diponíveis, para, caso positivo, realizar a alocação da quadra. Da perspectiva do centro esportivo, a divulgação de suas quadras e promoções, gerenciar o quadro de horários, as abstenções de ultima hora e bla, bla, bla passar a se tornar um ofensor.
+O Fut Manager é um software que visa realizar a ponte entre jogadores de futebol, amadores ou profissionais, e donos de quadras. Hoje, o fluxo normal de quem deseja encontrar uma quadra disponível em sua região passa por realizar uma pesquisa por centros esportivos em sua região na internet, entrar em contato, realizar o levantamento de preço, conferir os dias e horários diponíveis, para, caso positivo, realizar a alocação da quadra. Da perspectiva do centro esportivo, a divulgação de suas quadras e promoções, gerenciar o quadro de horários, as abstenções de ultima hora, passam a se tornar um ofensor.
 
     1.3 Objetivo geral
 
@@ -109,11 +109,21 @@ Processo de cadastro de cliente levará em conta o cliente ao entrar no site, te
 ![Processo de cadastro do usuário no sistema](imagens/"Modelo BPMN do Processo de Cadastro do usuário no sistema.")
 
 
-### 3.3.2 Processo 2 – NOME DO PROCESSO
+### 3.3.2 Processo 2 – Cadastro de Gestor e Quadras
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+No processo de cadastro de Gestor e de Quadras, o cliente inicialmente envia os seus dados comerciais, para ser realizado o cadastro. Depois de passar pela validação, os dados são enviados ao banco. Após completar a primeira parte do cadastro (empresa), é exibida uma janela de escolhas, onde a mesma pergunta se deseja continuar e ir para o cadastro de quadras, ou finalizar. Se for escolhido ir para o cadastro, é realizado o procedimento de coleta dos dados das quadras, seguido pela validação e por fim cadastro.
 
-![Exemplo de um Modelo BPMN do PROCESSO 2](imagens/call_process.png "Modelo BPMN do Processo 2.")
+![Processo de cadastro do Gestor e Quadras no sistema](imagens/ModeloGestorEQuadras.png "Modelo BPMN do Processo de Cadastro do Gestor e Quadras no sistema.")
+
+### 3.3.3 Processo 3 – Reserva de Horários
+O Processo permitirá ao usuário encontrar quais horários então disponíveis em uma quadra. Nele, o usuário, caso tenha interesse por algum dos horários disponíveis, deverá realizar a pré-reserva. A pré-reserva consisti no pagamento de uma taxa que deverá ser paga em até um dia. Somente após a confirmação do pagamento será efetivada a reserva de horário. Uma vez paga taxa, o valor não poderá ser reavido pelo usuário.
+
+![Processo de reserva](imagens/modelagem-reserva-de-horario.jpg "Modelo BPMN do Processo de Reserva de Horários.")
+
+### 3.3.4 Processo 3 – Pagamento
+O Processo permitirá ao usuário escolher o tipo de pagamento, entre pré e pós. Para ambos os tipos de pagamento haverão duas formas, sendo elas através de cartão ou boleto. Após a confirmação do pagamento no método pré, será necessário levar o comprovante no dia da realização do evento. No pagamento pós, o usuário pagará no local após a realização do evento.
+
+![Processo de Pagamento](imagens/fut-manager-payment-process.png "Modelo BPMN do Processo de Pagamento.")
 
 ## 4. Projeto da Solução
 
