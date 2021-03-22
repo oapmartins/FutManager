@@ -135,35 +135,35 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 **Nome da atividade 1**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-| ***Exemplo:***  |    |     |
-| login | Caixa de Texto | formato de e-mail |  |
-| senha | Caixa de Texto | mínimo de 8 caracteres |   |
+| **Campo**       | **Tipo**                                                                                                      | **Restrições**         | **Valor default** |
+| --------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------- |
+| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                        |                   |
+| ***Exemplo:***  |                                                                                                               |                        |
+| login           | Caixa de Texto                                                                                                | formato de e-mail      |                   |
+| senha           | Caixa de Texto                                                                                                | mínimo de 8 caracteres |                   |
 
 **Nome da atividade 2**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| **Campo**       | **Tipo**                                                                                                      | **Restrições** | **Valor default** |
+| --------------- | ------------------------------------------------------------------------------------------------------------- | -------------- | ----------------- |
+| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                |                   |
+|                 |                                                                                                               |                |
 
 #### Processo 2 – NOME DO PROCESSO
 
 **Nome da atividade 1**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| **Campo**       | **Tipo**                                                                                                      | **Restrições** | **Valor default** |
+| --------------- | ------------------------------------------------------------------------------------------------------------- | -------------- | ----------------- |
+| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                |                   |
+|                 |                                                                                                               |                |
 
 **Nome da atividade 2**
 
-| **Campo** | **Tipo** | **Restrições** | **Valor default** |
-| --- | --- | --- | --- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |  |  |
-|    |    |     |
+| **Campo**       | **Tipo**                                                                                                      | **Restrições** | **Valor default** |
+| --------------- | ------------------------------------------------------------------------------------------------------------- | -------------- | ----------------- |
+| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                |                   |
+|                 |                                                                                                               |                |
 
 ### 4.2. Tecnologias
 
@@ -186,11 +186,11 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 
 Usar o seguinte modelo:
 
-| **Indicador** | **Objetivos** | **Descrição** | **Cálculo** | **Fonte dados** | **Perspectiva** |
-| --- | --- | --- | --- | --- | --- |
-| Percentual reclamações | Avaliar quantitativamente as reclamações | Percentual de reclamações em relação ao total atendimento |   | Tabela reclamações | Aprendizado e Crescimento |
-| Taxa de Requisições abertas | Melhorar a prestação de serviços medindo a porcentagem de requisições | Mede % de requisições atendidas na semana | \*100 | Tabela solicitações | Processos internos |
-| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues | Mede % de material entregue dentro do mês |   | Tabela Pedidos | Clientes |
+| **Indicador**               | **Objetivos**                                                         | **Descrição**                                             | **Cálculo** | **Fonte dados**     | **Perspectiva**           |
+| --------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------- | ----------- | ------------------- | ------------------------- |
+| Percentual reclamações      | Avaliar quantitativamente as reclamações                              | Percentual de reclamações em relação ao total atendimento |             | Tabela reclamações  | Aprendizado e Crescimento |
+| Taxa de Requisições abertas | Melhorar a prestação de serviços medindo a porcentagem de requisições | Mede % de requisições atendidas na semana                 | \*100       | Tabela solicitações | Processos internos        |
+| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues          | Mede % de material entregue dentro do mês                 |             | Tabela Pedidos      | Clientes                  |
 
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe **a ser proposto**
 
