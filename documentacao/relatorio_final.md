@@ -119,7 +119,7 @@ O Processo permitirá ao usuário encontrar quais horários então disponíveis 
 
 ![Processo de reserva](imagens/modelagem-reserva-de-horario.jpg "Modelo BPMN do Processo de Reserva de Horários.")
 
-### 3.3.4 Processo 3 – Pagamento
+### 3.3.4 Processo 4 – Pagamento
 O Processo permitirá ao usuário escolher o tipo de pagamento, entre pré e pós. Para ambos os tipos de pagamento haverão duas formas, sendo elas através de cartão ou boleto. Após a confirmação do pagamento no método pré, será necessário levar o comprovante no dia da realização do evento. No pagamento pós, o usuário pagará no local após a realização do evento.
 
 ![Processo de Pagamento](imagens/fut-manager-payment-process.png "Modelo BPMN do Processo de Pagamento.")
