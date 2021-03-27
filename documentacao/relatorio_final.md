@@ -1,6 +1,5 @@
 # Fut Manager
 
-
 **Mateus Gomes Pereira Silva, mateus.silva.1004445@sga.pucminas.br**
 
 **Octavio Augusto Pereira Martins, oapmartins@sga.pucminas.br**
@@ -24,13 +23,11 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 ---
 
-
 ## 1. Introdução
 
 O projeto do sistema Gestão de Quadras será um software que irá reunir "peladeiros" e donos de quadras em uma gestão automatizada dos processos, para a facilidade do gerenciamento de quadras e centros esportivos. Pode-se citar entre esses processos: cadastro e atendimento ao cliente; cadastro de quadra; agenda de horários disponíveis e reservas destes; cobrança e pagamentos.
 
 A finalidade do sistema será auxiliar na administração, para a organização de produtos, serviços e clientes. A fim de automatizar processos para uma forma mais prática, ágil e simples.
-
 
     1.1 Contextualização
 
@@ -47,16 +44,20 @@ Facilitar a gestão de quadras transformando um modelo de negócio informal em u
         1.3.1 Objetivos específicos
 
 - Facilitar o agendamento de horários nas quadras, tanto por parte do cliente quanto do fornecedor.
-- Melhorar a visualização de horários disponíveis.
-- Melhorar o sistema de cobrança e pagamentos.
-- Implementar um tratamento de fluxo de exceção no modelo de negócio. (Quando um cliente desiste de um horário).
 
+- Melhorar a visualização de horários disponíveis.
+
+- Melhorar o sistema de cobrança e pagamentos.
+
+- Implementar um tratamento de fluxo de exceção no modelo de negócio. (Quando um cliente desiste de um horário).
+  
     1.4 Justificativas
 
 - A maioria das empresas de locação de quadras não tem um processo bem definido, o que abre margem para vários furos no modelo de negócio.
-- A digitalização do processo de aluguel de quadras aumentará a produtividade e facilitará o processo para os clientes.
-- A digitalização ajudará na divulgação de muitas quadras que não tem um marketing envolvido no negócio.
 
+- A digitalização do processo de aluguel de quadras aumentará a produtividade e facilitará o processo para os clientes.
+
+- A digitalização ajudará na divulgação de muitas quadras que não tem um marketing envolvido no negócio.
 
 ## 2. Participantes do processo
 
@@ -91,6 +92,7 @@ Pode-se citar para resolução desses problemas a criação do Fut Manager que v
 * Já a questão de pagamentos e cobrancas será responsável pelo gerenciamento das vendas, como se fosse uma loja virtual, um ambiente que troca a dificuldade de pagamento presencial por uma forma online que oferece praticidade e segurança aos clientes.
 
 ## 3.2. Descrição Geral da proposta
+
 Nossa proposta é facilitar e automatizar o gerenciamento de quadradas de futebol através de um sistema de controle de reservas de quadradas, proporcionando maior controle e retorno financeiro para a organização que gerencia as quadras. Além disso o usuário que utilizar o serviço para agendar horários terá maior conveniência ao marca ou desmarcar um horário de aluguel de uma quadra através do sistema.
 
 Oportunidades de melhorias:
@@ -100,7 +102,8 @@ Oportunidades de melhorias:
 * Agilidade no processo agendamento
 
 * Melhor visibilidade de métricas do negócio
-## 3.3. Processos
+  
+  ## 3.3. Processos
 
 ### 3.3.1 Processo 1 – Cadastro Cliente e Gestor
 
@@ -115,11 +118,13 @@ No processo de cadastro de Quadras, o cliente inicialmente envia os dados da qua
 ![Processo de cadastro de Quadras no sistema](imagens/modeloCadastroQuadras.jpg "Modelo BPMN do Processo de Cadastro de Quadras no sistema.")
 
 ### 3.3.3 Processo 3 – Reserva de Horários
+
 O Processo permitirá ao usuário encontrar quais horários então disponíveis em uma quadra. Nele, o usuário, caso tenha interesse por algum dos horários disponíveis, deverá realizar a pré-reserva. A pré-reserva consisti no pagamento de uma taxa que deverá ser paga em até um dia. Somente após a confirmação do pagamento será efetivada a reserva de horário. Uma vez paga taxa, o valor não poderá ser reavido pelo usuário.
 
 ![Processo de reserva](imagens/reserva-de-horario.jpg "Modelo BPMN do Processo de Reserva de Horários.")
 
 ### 3.3.4 Processo 4 – Pagamento
+
 O Processo permitirá ao usuário escolher o tipo de pagamento, entre pré e pós. Para ambos os tipos de pagamento haverão duas formas, sendo elas através de cartão ou boleto. Após a confirmação do pagamento no método pré, será necessário levar o comprovante no dia da realização do evento. No pagamento pós, o usuário pagará no local após a realização do evento.
 
 ![Processo de Pagamento](imagens/paymentProcessv2.png "Modelo BPMN do Processo de Pagamento.")
@@ -137,7 +142,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | **Campo**       | **Tipo**                                                                                                      | **Restrições**         | **Valor default** |
 | --------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------- |
 | [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                        |                   |
-| ***Exemplo:***  |                                                                                                               |                        |
+| ***Exemplo:***  |                                                                                                               |                        |                   |
 | login           | Caixa de Texto                                                                                                | formato de e-mail      |                   |
 | senha           | Caixa de Texto                                                                                                | mínimo de 8 caracteres |                   |
 
@@ -146,23 +151,30 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | **Campo**       | **Tipo**                                                                                                      | **Restrições** | **Valor default** |
 | --------------- | ------------------------------------------------------------------------------------------------------------- | -------------- | ----------------- |
 | [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                |                   |
-|                 |                                                                                                               |                |
+|                 |                                                                                                               |                |                   |
 
-#### Processo 2 – NOME DO PROCESSO
+#### Processo 3 – Reserva de Horários
 
-**Nome da atividade 1**
+**Solicita horários disponíveis**
 
-| **Campo**       | **Tipo**                                                                                                      | **Restrições** | **Valor default** |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | -------------- | ----------------- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                |                   |
-|                 |                                                                                                               |                |
+ A plataforma retornará ao usuário um formulário. O mesmo deverá informar qual o período de datas e cidade deseja consultar por horários. Opcionalmente, o usuário também poderá especificar por quais quadras deseja consultar. 
 
-**Nome da atividade 2**
+| **Campo**    | **Tipo**         | **Restrições**                             | **Valor default**   |
+| ------------ | ---------------- | ------------------------------------------ | ------------------- |
+| Data inicial | Data             | Obrigatório e maior ou igual a data atual  | Data atual          |
+| Data final   | Data             | Obrigatório, maior ou igual a data inicial | Data atual          |
+| Estado       | Seleção única    | Obrigatório                                | Dropdown vazio      |
+| Cidade       | Seleção única    | Obrigatório                                | Dropdown vazio      |
+| Quadra       | Múltipla escolha | Não obrigatório                            | Checkbox desmarcado |
 
-| **Campo**       | **Tipo**                                                                                                      | **Restrições** | **Valor default** |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | -------------- | ----------------- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                |                   |
-|                 |                                                                                                               |                |
+**Informa o horário desejado**
+
+ Para o filtro informado pelo usuário, a plataforma deverá retornar, caso haja, a relação de todos os horários disponíveis. A relação será uma tabela composta pelo nome e endereço da quadra, data e horário. Nesta tabela o usuário deverá marca por qual horário deseja realizar a pre-reserva.
+
+| **Campo** | **Tipo**         | **Restrições**                    | **Valor default**   |
+| --------- | ---------------- | --------------------------------- | ------------------- |
+| Horário   | Múltipla escolha | Obrigatório seleção de um ou mais | Checkbox desmarcado |
+|           |                  |                                   |                     |
 
 ### 4.2. Tecnologias
 
@@ -177,7 +189,6 @@ Apresente o modelo de dados. Defina o dicionário de dados com os respectivos fo
 Apresente aqui o Diagrama de Entidade-Relacionamento (DER) que contemple todos conceitos e atributos apresentados item anterior. Deve contemplar também o controle de acesso de usuários de acordo com os papeis definidos nos modelos do processo de negócio.
 
 ![Diagrama de Entidade Relacionamento de Exemplo](imagens/er_diagram.png "Diagrama de Entidade Relacionamento de Exemplo")
-
 
 ## 6. Indicadores de desempenho
 
@@ -213,7 +224,6 @@ Verifique no link abaixo como devem ser as referências no padrão ABNT:
 
 http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 
-
 **[1.1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
 
 **[1.2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
@@ -223,8 +233,6 @@ http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 **[1.4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
 
 **[1.5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
-
-
 
 # APÊNDICES
 
@@ -237,7 +245,3 @@ Dos artefatos;
 Da apresentação final;
 
 Do vídeo de apresentação.
-
-
-
-
