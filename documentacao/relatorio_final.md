@@ -31,7 +31,7 @@ A finalidade do sistema será auxiliar na administração, para a organização 
 
     1.1 Contextualização
 
-O projeto tem como finaliade o gerenciamento de quadras, se qualificando no ramo de negócios que se trata a esportes e lazer de clientes como um todo. Atualmente o Brasil consta com mais de 30 mil atletas registrados , 12 milhões de adeptos ao futebol Society e com mais de 4 mil campos disponíveis em todo território nacional segundo a Confederação Brasileira de Futebol 7 Society. Visto tal fato, coloca-se como necessário a entrada de tecnologias que visam auxiliar esse grande mercado de esportes, para assim, gerar automatização de processos gerais, desde ao contato ao clientes até o termino do seu "jogo". Com isso, o software FutManager veio para facilitar pequenas empresas de quadras que visam a entrada no mercado e até mesmo melhora das já existentes.
+O projeto tem como finalidade o gerenciamento de quadras, se qualificando no ramo de negócios que se trata a esportes e lazer de clientes como um todo. Atualmente o Brasil consta com mais de 30 mil atletas registrados , 12 milhões de adeptos ao futebol Society e com mais de 4 mil campos disponíveis em todo território nacional segundo a Confederação Brasileira de Futebol 7 Society. Visto tal fato, coloca-se como necessário a entrada de tecnologias que visam auxiliar esse grande mercado de esportes, para assim, gerar automatização de processos gerais, desde ao contato ao clientes até o termino do seu "jogo". Com isso, o software FutManager veio para facilitar pequenas empresas de quadras que visam a entrada no mercado e até mesmo melhora das já existentes.
 
     1.2 Problema
 
@@ -63,12 +63,14 @@ Facilitar a gestão de quadras transformando um modelo de negócio informal em u
 
     2.1 PERSONA 1
 
-Fábio tem 41 anos, é casado e atualmente trabalha como dono / gestor de quadras de futebol na região onde vive. Sua personalidade é de uma pessoa brincalhona e bem humorada, é também um ótimo empreendedor. Seu sonho atualmente é conhecer o mundo e poder melhorar e amplicar seus negócios.
-Um problema que Fábio enfrenta atualmente é a falta de organização em sua quadra. Muitas vezes acabou marcando um jogo para duas pessoas no mesmo horário. O sistema de gestão de quadras sanará esses problemas. Com o sistema, o usuário que esta gerenciando poderá ter controle total em sua agenda, sabendo assim se determinadas pessoas que alugaram a quadra vão ir mesmo, ou vão cancelar o horário. O sistema vai auxiliar também as pessoas que estão alugando a quadra, onde os mesmos vão poder enviar convites de confirmação de presença para outras pessoas, para assim também poder ter o controle da quantidade de jogadores que vão comparecer no local.
+ Fábio tem 41 anos, é casado e atualmente trabalha como dono/gestor de quadras de futebol na região onde vive. Sua personalidade é de uma pessoa brincalhona e bem humorada, é também um ótimo empreendedor. Seu sonho atualmente é conhecer o mundo e poder melhorar e ampliar seus negócios.
+ 
+
+Um problema que Fábio enfrenta atualmente é a falta de organização em sua quadra. Fábio se utiliza de uma agenda para se organizar mas, mesmo assim, não foram raras as vezes que ele acabou reservando um mesmo horário para mais de uma pessoa. O sistema de gestão de quadras sanará este e outros problemas. Com o sistema, Fábio poderá ter controle total em sua agenda, sabendo quais horários estão disponíveis, pré-reservados ou reservados. Ele também não precisará mais se preocupar com confirmação de presença ou com a divulgação de sua quadra.
 
     2.2 PERSONA 2
 
-Paulo tem 25 anos é solteiro e estudante, ele adora se reunir com os amigos nos finais de semana para jogar futebol, mas tem dificuldade para encontrar um horário de aluguel da quadrada em que todos estejam disponíveis para jogar. O sistema de gestão de quadradas resolverá esse problema. A partir dele o usuário poderá acessar a agenda de quadradas disponíveis de maneira fácil, podendo marcar ou desmarcar um horário, além de ser possível confirmar a presença de outras pessoa através de um convite.
+Paulo tem 25 anos é solteiro e estudante, ele adora se reunir com os amigos nos finais de semana para jogar futebol. Entre os amigos, Paulo é o responsável por organizar as partidas e o churrasco ao final de cada partida, mas ele sempre encontra dificuldade em encontrar uma quadra que tenha disponível o horário em que ele, e seus amigos, possam se reunir para jogar. Além disso, durante a manhã em que o jogo ocorrerá, Paulo perde boa parte de seu tempo confirmando se todos os seus amigos poderão comparecer. Com o sistema de gestão de quadras Paulo não terá mas estes problemas. Ao utilizá-lo, ele poderá facilmente encontrar quais quadras possuem o horário que ele e seus amigos desejam, podendo facilmente realizar uma pré-reserva ou até mesmo cancelá-la. O sistema também automatizará o processo de confirmação de presença, assim Paulo poderá ter mas tempo para preparar o churrasco.
 
 ## 3. Modelagem do processo de negócio
 
@@ -169,7 +171,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 **Informa o horário desejado**
 
- Para o filtro informado pelo usuário, a plataforma deverá retornar, caso haja, a relação de todos os horários disponíveis. A relação será uma tabela composta pelo nome e endereço da quadra, data e horário. Nesta tabela o usuário deverá marca por qual horário deseja realizar a pre-reserva.
+ Para o filtro informado pelo usuário, a plataforma deverá retornar, caso haja, a relação de todos os horários disponíveis. A relação será uma tabela composta pelo nome e endereço da quadra, data e horário. Nesta tabela o usuário deverá marca por qual horário deseja realizar a pré-reserva.
 
 | **Campo** | **Tipo**         | **Restrições**                    | **Valor default**   |
 | --------- | ---------------- | --------------------------------- | ------------------- |
