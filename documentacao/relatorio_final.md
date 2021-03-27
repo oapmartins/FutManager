@@ -117,7 +117,7 @@ No processo de cadastro de Quadras, o cliente inicialmente envia os dados da qua
 ### 3.3.3 Processo 3 – Reserva de Horários
 O Processo permitirá ao usuário encontrar quais horários então disponíveis em uma quadra. Nele, o usuário, caso tenha interesse por algum dos horários disponíveis, deverá realizar a pré-reserva. A pré-reserva consisti no pagamento de uma taxa que deverá ser paga em até um dia. Somente após a confirmação do pagamento será efetivada a reserva de horário. Uma vez paga taxa, o valor não poderá ser reavido pelo usuário.
 
-![Processo de reserva](imagens/modelagem-reserva-de-horario.jpg "Modelo BPMN do Processo de Reserva de Horários.")
+![Processo de reserva](imagens/reserva-de-horario.jpg "Modelo BPMN do Processo de Reserva de Horários.")
 
 ### 3.3.4 Processo 4 – Pagamento
 O Processo permitirá ao usuário escolher o tipo de pagamento, entre pré e pós. Para ambos os tipos de pagamento haverão duas formas, sendo elas através de cartão ou boleto. Após a confirmação do pagamento no método pré, será necessário levar o comprovante no dia da realização do evento. No pagamento pós, o usuário pagará no local após a realização do evento.
