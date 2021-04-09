@@ -148,12 +148,23 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | login           | Caixa de Texto                                                                                                | formato de e-mail      |                   |
 | senha           | Caixa de Texto                                                                                                | mínimo de 8 caracteres |                   |
 
-**Nome da atividade 2**
 
-| **Campo**       | **Tipo**                                                                                                      | **Restrições** | **Valor default** |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | -------------- | ----------------- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                |                   |
-|                 |                                                                                                               |                |                   |
+#### Processo 2 – Cadastro de Quadras
+
+**Informação sobre o Cadastro das Quadras**
+
+ Após o cadastro do Gestor, ou dentro do sistema na parte específica de cadastro de quadras, é possivel realizar o cadastro das quadras. Nesse cadastro, é requerido as informações básicas, como localidade da quadra, horário de funcionamento, informações para contato e até mesmo fotos (opcinal).  
+
+| **Campo**                 | **Tipo**       | **Restrições**                                  | **Valor default** |
+| ------------------------- | -------------- | ----------------------------------------------- | ----------------- |
+| Nome                      | Caixa de Texto | Preenchimento Obrigatório                       |                   |
+| Endereço                  | Caixa de Texto | Preenchimento Obrigatório                       |                   |
+| CNPJ                      | Número         | Preenchimento Obrigatório, mínimo 14 carácteres |                   |
+| Telefone                  | Número         | Preenchimento Opcional, formatação de Telefone  |                   |
+| Horário Comercial Inicial | Caixa de Texto | Obrigatório, padrão do horário 00:00            |                   |
+| Horário Comercial Final   | Caixa de Texto | Obrigatório, padrão do horário 00:00            |                   |
+| Descrição                 | Área de texto  | Preenchimento Opcional                          |                   |
+| Fotos                     | Imagens        | Preenchimento Opcional                          |                   |
 
 #### Processo 3 – Reserva de Horários
 
