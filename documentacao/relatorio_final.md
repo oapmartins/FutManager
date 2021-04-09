@@ -199,6 +199,21 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Horário   | Múltipla escolha | Obrigatório seleção de um ou mais | Checkbox desmarcado |
 |           |                  |                                   |                     |
 
+#### Processo 4 – Fluxo de Pagamento
+**Preencher informações de contato**
+
+Será fornecido um formulário para o usuário preencher os dados do cartão que será utilizado caso opte pelo tipo de pagamento pós. Os dados informados pelo usuário serão utilizados para pagamentos futuros. O formulário conterá os campos necessários para serem enviados ao gateway de pagamento.
+
+| **Campo**        | **Tipo**         | **Restrições**                             | **Valor default**   |
+| ------------     | ---------------- | ------------------------------------------ | ------------------- |
+| Numero do Cartão | Caixa de texto   | Somente números                            | Vazio               |
+| Validade         | Caixa de texto   | Somente números                            | Vazio               |
+| CVV              | Caixa de texto   | Somente números                            | Vazio               |
+| Nome do Titlar   | Caixa de texto   | Caracteres de texto somente                | Vazio               |
+| Apelido do cartão| Caixa de texto   | Opcional                                   | Vazio               |
+| CPF/CNPJ titular | Caixa de texto   | Somente números                            | Vazio               |
+
+
 ### 4.2. Tecnologias
 
 Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas. Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
