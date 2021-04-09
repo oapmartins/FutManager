@@ -137,16 +137,26 @@ O Processo permitirá ao usuário escolher o tipo de pagamento, entre pré e pó
 
 Descrever aqui cada uma das propriedades das atividades de cada um dos processos. Devem estar relacionadas com o modelo de processo apresentado anteriormente.
 
-#### Processo 1 – NOME DO PROCESSO
+#### Processo 1 – Cadastro de Cliente e Gestor
 
-**Nome da atividade 1**
+**Informação sobre o Cadastro de Cliente/Gestor**
 
-| **Campo**       | **Tipo**                                                                                                      | **Restrições**         | **Valor default** |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------- |
-| [Nome do campo] | [Área de texto, Caixa de texto, Número, Data, Imagem, Seleção única, Múltipla escolha, Arquivo, Link, Tabela] |                        |                   |
-| ***Exemplo:***  |                                                                                                               |                        |                   |
-| login           | Caixa de Texto                                                                                                | formato de e-mail      |                   |
-| senha           | Caixa de Texto                                                                                                | mínimo de 8 caracteres |                   |
+ Será a página inicial do processo, que após o usúario do sistema se interessar por este, tem a oção de realizar seu cadastro para otimizar seu lazer. Dentro do cadastro o usuário tera a opção de selecionar se será um cliente (jogador) ou um gestor (dono/administrador de quadra), é requerido também as informações básicas do usuário, como nome e dados de contato, validação usuário real ou repitido a partir do CPF, criação de senha e opções de colocar foto de perfil e escrever um pequeno texto sobre o motívo do cadastro e a inspiração deste.
+
+| **Campo**                    | **Tipo**       | **Restrições**                                                                 | **Valor default** |
+| ---------------------------- | -------------- | ------------------------------------------------------------------------------ | ----------------- |
+| Escolha de Cliente ou Gestor | Seleção Única  | Uma opção deve ser preenchida                                                  |                   |
+| Nome Completo                | Caixa de texto | Preenchimento obrigatório; Bloqueio caracteres especiais                       |                   |
+| Endereço                     | Caixa de Texto | Preenchimento Obrigatório                                                      |                   |
+| CPF                          | Número         | Preenchimento Obrigatório, mínimo de 11 caractesres                            |                   |
+| Telefone                     | Número         | Preenchimento Opcional, formatação de Telefone                                 |                   |
+| Sexo                         | Seleção Única  | Uma opção deve ser preenchida                                                  |                   |
+| E-mail                       | Caixa de texto | Formato e-mail                                                                 |                   |
+| Data nascimento              | Caixa de Texto | Caso encolha Gestor: Mínimo 21 anos; Caso escolha Cliente: Mínimo 16           |                   |
+| Senha                        | Caixa de Texto | Mínimo 8 caracteres; Senha forte: Conter caracteres especiais e conter números |                   |
+| Confirmar senha              | Caixa de Texto | Valor do campo ser igual ao da senha                                           |                   |
+| Foto perfil                  | Imagens        | Preenchimento Opcional                                                         |                   |
+| Motivo do cadastro           | Area texto     | Preenchimento Opcional                                                         |                   |
 
 
 #### Processo 2 – Cadastro de Quadras
