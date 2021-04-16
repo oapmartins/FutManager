@@ -224,7 +224,7 @@ Apresente o modelo de dados. Defina o dicionário de dados com os respectivos fo
 
 ### 5.1. Diagrama de Entidade-Relacionamento
 
-Apresente aqui o Diagrama de Entidade-Relacionamento (DER) que contemple todos conceitos e atributos apresentados item anterior. Deve contemplar também o controle de acesso de usuários de acordo com os papeis definidos nos modelos do processo de negócio.
+Diagrama de Entidade-Relacionamento (DER) criado a partir do detalhamento de atividades
 
 ![Diagrama de Entidade Relacionamento de Exemplo](imagens/DiagramaFutManager.png "Diagrama de Entidade Relacionamento de Exemplo")
 
