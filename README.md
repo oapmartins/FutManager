@@ -9,7 +9,7 @@ A finalidade do sistema será auxiliar na administração, para a organização 
 * Octavio Augusto Pereira Martins
 * Thiago Costa de Souza Pereira
 * Mateus Gomes Pereira Silva
-* Pedro Henrique Faria Andrade
+* Pedro Henrique Damasceno Dias
 * Samuel Ribeiro de Freitas
 
 ## Professores
