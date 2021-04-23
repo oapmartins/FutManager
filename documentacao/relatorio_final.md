@@ -218,6 +218,8 @@ Será fornecido um formulário para o usuário preencher os dados do cartão que
 
 Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas. Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
+Nosso software se caracteriza sendo um sistema-web, em que as linguagens ultilizadas para para criação do front (parte visível pelos usuários) será HTML para linguagem de marcação, CSS editor de visualização no front e também consta a utilização do Bootstrap para auxiliar na responsividade do site. Para o back-end, assunto em discussão está em aberto, em que a linguagem que mais chama a atenção de todos integrantes do grupo é JavaScript. Dentre isso, para finalizar foi discutido a utilização MySQL 
+
 ## 5. Modelagem de dados
 
 Apresente o modelo de dados. Defina o dicionário de dados com os respectivos formatos e significados.
