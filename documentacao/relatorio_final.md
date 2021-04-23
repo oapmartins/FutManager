@@ -62,11 +62,8 @@ Facilitar a gestão de quadras transformando um modelo de negócio informal em u
 ## 2. Participantes do processo
 
     2.1 PERSONA 1
-
- Fábio tem 41 anos, é casado e atualmente trabalha como dono/gestor de quadras de futebol na região onde vive. Sua personalidade é de uma pessoa brincalhona e bem humorada, é também um ótimo empreendedor. Seu sonho atualmente é conhecer o mundo e poder melhorar e ampliar seus negócios.
- 
-
-Um problema que Fábio enfrenta atualmente é a falta de organização em sua quadra. Fábio se utiliza de uma agenda para se organizar mas, mesmo assim, não foram raras as vezes que ele acabou reservando um mesmo horário para mais de uma pessoa. O sistema de gestão de quadras sanará este e outros problemas. Com o sistema, Fábio poderá ter controle total em sua agenda, sabendo quais horários estão disponíveis, pré-reservados ou reservados. Ele também não precisará mais se preocupar com confirmação de presença ou com a divulgação de sua quadra.
+    
+ Fábio tem 41 anos, é casado e atualmente trabalha como dono/gestor de quadras de futebol na região onde vive. Sua personalidade é de uma pessoa brincalhona e bem humorada, é também um ótimo empreendedor. Seu sonho atualmente é conhecer o mundo e poder melhorar e ampliar seus negócios. Porém, um problema que Fábio enfrenta atualmente é a falta de organização em sua quadra. Fábio se utiliza de uma agenda para se organizar mas, mesmo assim, não foram raras as vezes que ele acabou reservando um mesmo horário para mais de uma pessoa. O sistema de gestão de quadras sanará este e outros problemas. Com o sistema, Fábio poderá ter controle total em sua agenda, sabendo quais horários estão disponíveis, pré-reservados ou reservados. Ele também não precisará mais se preocupar com confirmação de presença ou com a divulgação de sua quadra.
 
     2.2 PERSONA 2
 
@@ -95,15 +92,18 @@ Pode-se citar para resolução desses problemas a criação do Fut Manager que v
 
 ## 3.2. Descrição Geral da proposta
 
-Nossa proposta é facilitar e automatizar o gerenciamento de quadradas de futebol através de um sistema de controle de reservas de quadradas, proporcionando maior controle e retorno financeiro para a organização que gerencia as quadras. Além disso o usuário que utilizar o serviço para agendar horários terá maior conveniência ao marca ou desmarcar um horário de aluguel de uma quadra através do sistema.
+A proposta da FutManager é criar uma plataforma capaz de facilitar o processo de uma reserva de quadra de futebol. Para isso, a plataforma contemplará poucas funcionalidades, mas que todas elas sejam essenciais para torna a experiçência de usuário mais simples, conveniente e intuitiva. 
 
-Oportunidades de melhorias:
+Sendo assim, da pespectiva de quem deseja alugar uma quadra, a plataforma permitirá que o processo de reserva seja totalmente online. Nele, o usuário será capaz de encontrar quais quadras e horários estão disponiveis em um determinado dia e região, realizar o pagamento e confirmar a presença de quais de seus amigos irão comparecer.
 
-* Possibilidade de divulgação das quadras em canais digitais
+A plataforma também permitírá que o gestor de uma quadra possa ter a sua agenda de reserva de horário e controle financeiro automatizados, além de dar visibilidade de sua quadra a toda a base de usuários da FutManager.
 
-* Agilidade no processo agendamento
+Ao colocar em pespectiva um futuro breve, dentre as oportunidades de melhorias, a plataforma poderá: 
 
-* Melhor visibilidade de métricas do negócio
+* Integraçoes com os pricipais sistemas ERPs que, por ventura, o gestor de quadras já utilize. 
+* adicionae sistema de valiação da estrutura da quadra para auxiliar o usuário a escolher a melhor opção. 
+* Pagamento por visibilidade, onde o gestor de uma quadra poderá pagar para ganhar mais destaque dentro do sistema de busca. 
+* Sistema de cupons e fidelização.
   
   ## 3.3. Processos
 
@@ -121,7 +121,7 @@ No processo de cadastro de Quadras, o cliente inicialmente envia os dados da qua
 
 ### 3.3.3 Processo 3 – Reserva de Horários
 
-O Processo permitirá ao usuário encontrar quais horários então disponíveis em uma quadra. Nele, o usuário, caso tenha interesse por algum dos horários disponíveis, deverá realizar a pré-reserva. A pré-reserva consisti no pagamento de uma taxa que deverá ser paga em até um dia. Somente após a confirmação do pagamento será efetivada a reserva de horário. Uma vez paga taxa, o valor não poderá ser reavido pelo usuário.
+O processo permitirá ao usuário encontrar quais horários então disponíveis em uma quadra. Nele, o usuário, caso tenha interesse por algum dos horários disponíveis, deverá realizar a pré-reserva. A pré-reserva consiste em uma taxa que deverá ser paga em até um dia e, somente após a confirmação do pagamento, será efetivada a reserva de horário. Uma vez paga a taxa, o valor não poderá ser reavido pelo usuário.
 
 ![Processo de reserva](imagens/reserva-de-horario.jpg "Modelo BPMN do Processo de Reserva de Horários.")
 
