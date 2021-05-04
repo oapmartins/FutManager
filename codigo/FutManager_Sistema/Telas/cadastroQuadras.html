@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cadastro Quadras | Fut Manager</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .bg-gradient-primary {
+            background-color: #275476;
+            background-image: none;
+        }
+        
+        .btn-primary {
+            color: #fff;
+            background-color: #436884;
+            border-color: #436884;
+        }
+        
+        .btn-primary:hover {
+            color: #fff;
+            background-color: #618bab;
+            border-color: #618bab;
+        }
+        
+        #estado {
+            border-radius: 10rem;
+            height: 50px;
+            font-size: 13px;
+        }
+        
+        .fa-plus-circle {
+            color: #61c98b;
+        }
+        
+        #addImagens:hover {
+            background-color: #b5b5b54a;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Cadastro de Quadras <i class="fas fa-clipboard-list"></i></h1>
+                            </div>
+
+                            <form class="user">
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="razaoSocial" placeholder="Razão Social">
+                                    </div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="nomeFantasia" placeholder="Nome Fantasia">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="razaoSocial" placeholder="CNPJ">
+                                    </div>
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="nomeFantasia" placeholder="Telefone para Contato">
+                                    </div>
+
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="nomeFantasia" placeholder="Observações">
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="cep" name="cep" placeholder="CEP">
+                                    </div>
+
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="logradouro" name="logradouro" placeholder="Logradouro" disabled="disabled">
+                                    </div>
+
+                                    <div class="col-sm-2 mb-2 mb-sm-0">
+                                        <input type="number" class="form-control form-control-user" id="numeroLocal" name="numeroLocal" placeholder="Número">
+                                    </div>
+
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="complemento" name="complemento" placeholder="Complemento">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="bairro" name="bairro" placeholder="Bairro" disabled="disabled">
+                                    </div>
+
+                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="cidade" name="cidade" placeholder="Cidade" disabled="disabled">
+                                    </div>
+
+                                    <div class="col-sm-2 mb-3 mb-sm-0">
+                                        <select id="estado" name="estado" class="form-control" disabled="disabled">
+                                            <option selected>Estado</option>
+                                            <option>AC</option>
+                                            <option>AL</option>
+                                            <option>AP</option>
+                                            <option>AM</option>
+                                            <option>BA</option>
+                                            <option>CE</option>
+                                            <option>ES</option>
+                                            <option>GO</option>
+                                            <option>MA</option>
+                                            <option>MT</option>
+                                            <option>MS</option>
+                                            <option>MG</option>
+                                            <option>PA</option>
+                                            <option>PB</option>
+                                            <option>PR</option>
+                                            <option>PE</option>
+                                            <option>PI</option>
+                                            <option>RJ</option>
+                                            <option>RN</option>
+                                            <option>RS</option>
+                                            <option>RO</option>
+                                            <option>RR</option>
+                                            <option>SC</option>
+                                            <option>SP</option>
+                                            <option>SE</option>
+                                            <option>TO</option>
+                                            <option>DF</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="nomeFantasia" placeholder="Ponto de Referência">
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-3 col-md-6 mb-4">
+                                        <div class="card border-left-success shadow h-100 py-2" id="addImagens">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+
+                                                    <div class="col mr-2">
+                                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                            Adicionar Imagens</div>
+
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <i class="fas fa-plus-circle fa-2x text-300"></i>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                    Registrar
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
