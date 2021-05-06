@@ -111,7 +111,7 @@
                                         <a class="small" href="forgot-password.html">Esqueceu a Senha?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Não é cadastrado? Realize seu
+                                        <a id="btnCadastro" class="small" href="cadastro.html">Não é cadastrado? Realize seu
                                             cadastro!</a>
                                     </div>
                                 </div>
@@ -139,6 +139,9 @@
     <script>
         const btnLogin = $("#btnLogin");
         const tipoUsuario = $("#tipoUsuario");
+        const btnCadastro = $("#btnCadastro");
+
+
 
         btnLogin.click(() => {
             eventoLogin();
