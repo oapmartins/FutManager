@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservas",
+  "info": {
+    "name": "Reserva"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dia": {
+      "type": "date",
+      "required": true
+    },
+    "confirmado": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "horario_quadra": {
+      "model": "horario-quadra",
+      "via": "reserva"
+    }
+  }
+}

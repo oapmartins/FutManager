@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "horario_quadras",
+  "info": {
+    "name": "Horário Quadra"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "inicio": {
+      "type": "time",
+      "required": true,
+      "default": "00:00:00"
+    },
+    "final": {
+      "type": "time",
+      "default": "00:00:00",
+      "required": true
+    },
+    "diaSemana": {
+      "type": "string",
+      "default": "S",
+      "required": true,
+      "maxLength": 1,
+      "minLength": 1
+    },
+    "reserva": {
+      "via": "horario_quadra",
+      "model": "reserva"
+    }
+  }
+}

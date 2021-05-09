@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quadras",
+  "info": {
+    "name": "Quadra",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nome": {
+      "type": "string",
+      "required": true
+    },
+    "Descricao": {
+      "type": "text"
+    },
+    "centro_esportivo": {
+      "model": "centro-esportivo",
+      "via": "quadras"
+    }
+  }
+}
