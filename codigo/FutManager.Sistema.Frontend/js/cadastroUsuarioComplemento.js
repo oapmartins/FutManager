@@ -8,6 +8,15 @@ function validar() {
         return false;
     }
 
+    //verificar e-mail são iguais
+    if (confirmEmail.value == email.value) {
+        return true;
+    } else {
+        alert("E-mails são diferentes")
+        confirmEmail.focus();
+        return false;
+    }
+
     //verificar se confirmar email está vazio
     var confirmEmail = document.getElementById("confirmEmail");
     if (confirmEmail.value == "") {
@@ -15,6 +24,7 @@ function validar() {
         confirmEmail.focus();
         return false;
     }
+
 
     //verificar se senha está vazio
     var senha = document.getElementById("senha");
@@ -30,15 +40,6 @@ function validar() {
     } else {
         alert("Senhas são diferentes")
         senha.focus();
-        return false;
-    }
-
-    //verificar e-mail são iguais
-    if (confirmEmail.value == email.value) {
-        return true;
-    } else {
-        alert("E-mails são diferentes")
-        confirmEmail.focus();
         return false;
     }
 
