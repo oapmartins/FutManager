@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "name": "Usuário"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "codigo": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "maxLength": 16,
+      "minLength": 4
+    },
+    "senha": {
+      "type": "string",
+      "required": true,
+      "minLength": 8
+    },
+    "gestor": {
+      "via": "usuario",
+      "model": "gestor"
+    },
+    "peladeiro": {
+      "via": "usuario",
+      "model": "peladeiro"
+    }
+  }
+}
