@@ -7,6 +7,7 @@ const preencherFormulario = (endereco) => {
     document.getElementById('estado').value = endereco.uf;
 }
 
+// uso da API para completar endereço do usuario
 const pesquisarCep = async () => {
     const cep = document.getElementById('cep').value;
     const url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -15,8 +16,8 @@ const pesquisarCep = async () => {
     preencherFormulario(endereco);
     console.log(endereco);
 }
-
 document.getElementById('cep').addEventListener('focusout', pesquisarCep)
+
 
 //validação de campos vazios
 function validar() {
@@ -101,15 +102,36 @@ function validar() {
         return false;
     }
 
-    //verificar se o ponto referencia está vazio
-    var nomeFantasia = document.getElementById("nomeFantasia");
-    if (nomeFantasia.value == "") {
-        alert("Ponto de referencia não informado");
-        nomefantasia.focus();
-        return false;
-    }
-
 
 }
 
 //validação se o CPF é verdadeiro
+function ValidarCPF(){
+    var cpf = document.getElementById("cpf");
+    exp = /\.|\-/g
+    cpf = cpf.toString().replace( exp, "" ); 
+    var digitoDigitado = eval(cpf.charAt(9)+cpf.charAt(10));
+    var soma1=0, soma2=0;
+    var vlr =11;
+
+    for(i=0;i<9;i++){
+            soma1+=eval(cpf.charAt(i)*(vlr-1));
+            soma2+=eval(cpf.charAt(i)*vlr);
+            vlr--;
+    }       
+    soma1 = (((soma1*10)%11)==10 ? 0:((soma1*10)%11));
+    soma2=(((soma2+(2*soma1))*10)%11);
+
+    var digitoGerado=(soma1*10)+soma2;
+    if(digitoGerado!=digitoDigitado)        
+            alert('CPF Invalido!');         
+}
+
+//valida numero inteiro com mascara
+function mascaraInteiro(){
+    if (event.keyCode < 48 || event.keyCode > 57){
+            event.returnValue = false;
+            return false;
+    }
+    return true;
+}
