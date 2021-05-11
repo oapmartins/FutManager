@@ -20,8 +20,8 @@
       "type": "text"
     },
     "centro_esportivo": {
-      "model": "centro-esportivo",
-      "via": "quadras"
+      "via": "quadras",
+      "model": "centro-esportivo"
     }
   }
 }
