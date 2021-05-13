@@ -13,7 +13,9 @@
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
@@ -45,20 +47,24 @@
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="nome" placeholder="Nome">
+                                        <input type="text" class="form-control form-control-user" id="nome"
+                                            placeholder="Nome">
                                     </div>
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="sobrenome" placeholder="Sobrenome">
+                                        <input type="text" class="form-control form-control-user" id="sobrenome"
+                                            placeholder="Sobrenome">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <div class="col-sm-3 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="cpf" placeholder="CPF">
+                                        <input type="text" class="form-control form-control-user" id="cpf"
+                                            placeholder="CPF" maxlength="11">
                                     </div>
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
-                                        <input type="date" class="form-control form-control-user" id="dtNascimento" placeholder="Data de Nascimento">
+                                        <input type="date" class="form-control form-control-user" id="dtNascimento"
+                                            placeholder="Data de Nascimento">
                                     </div>
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
@@ -71,7 +77,8 @@
                                     </div>
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="celular" placeholder="Celular para Contato">
+                                        <input type="text" class="form-control form-control-user" id="celular"
+                                            placeholder="Celular para Contato">
                                     </div>
 
                                 </div>
@@ -79,29 +86,35 @@
                                 <div class="form-group row">
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="cep" name="cep" placeholder="CEP">
+                                        <input type="text" class="form-control form-control-user" id="cep" name="cep"
+                                            placeholder="CEP">
                                     </div>
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="endereco" name="logradouro" placeholder="Logradouro" disabled="disabled">
+                                        <input type="text" class="form-control form-control-user" id="endereco"
+                                            name="logradouro" placeholder="Logradouro" disabled="disabled">
                                     </div>
 
                                     <div class="col-sm-2 mb-2 mb-sm-0">
-                                        <input type="number" class="form-control form-control-user" id="numeroLocal" name="numeroLocal" placeholder="Número">
+                                        <input type="number" class="form-control form-control-user" id="numeroLocal"
+                                            name="numeroLocal" placeholder="Número">
                                     </div>
 
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="complemento" name="complemento" placeholder="Complemento">
+                                        <input type="text" class="form-control form-control-user" id="complemento"
+                                            name="complemento" placeholder="Complemento">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <div class="col-sm-3 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="bairro" name="bairro" placeholder="Bairro" disabled="disabled">
+                                        <input type="text" class="form-control form-control-user" id="bairro"
+                                            name="bairro" placeholder="Bairro" disabled="disabled">
                                     </div>
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="cidade" name="cidade" placeholder="Cidade" disabled="disabled">
+                                        <input type="text" class="form-control form-control-user" id="cidade"
+                                            name="cidade" placeholder="Cidade" disabled="disabled">
                                     </div>
 
                                     <div class="col-sm-2 mb-3 mb-sm-0">
@@ -138,12 +151,13 @@
                                     </div>
 
                                     <div class="col-sm-4 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="nomeFantasia" placeholder="Ponto de Referência">
+                                        <input type="text" class="form-control form-control-user" id="nomeFantasia"
+                                            placeholder="Ponto de Referência">
                                     </div>
 
                                 </div>
 
-                                <a class="btn btn-primary btn-user btn-block" onclick="validar(); TestaCPF()">
+                                <a class="btn btn-primary btn-user btn-block" id="btnCadastro">
                                     Continuar Cadastro
                                 </a>
                             </form>
@@ -172,6 +186,12 @@
 
     <!-- JavaScript Cadastro Usuario-->
     <script type="text/javascript" src="../js/cadastroUsuario.js"></script>
+
+    <!-- Mascaras -->
+    <script src="../js/mascaras/jquery.mask.min.js"></script>
+
+    <!-- Notificações -->
+    <script type="text/javascript" src="../js/notificacoes/notiflix-aio-2.7.0.min.js"></script>
 
 </body>
 
