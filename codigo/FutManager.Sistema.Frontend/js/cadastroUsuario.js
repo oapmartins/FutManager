@@ -233,7 +233,6 @@ function consultaCep(valorCep) {
             crossDomain: true,
             contentType: "application/json",
             success: function(retornoEndereco) {
-                console.log(retornoEndereco);
                 if (retornoEndereco.erro != true) {
                     $('#endereco').attr('disabled', 'disabled').val(retornoEndereco.logradouro);
                     $('#bairro').attr('disabled', 'disabled').val(retornoEndereco.bairro);
