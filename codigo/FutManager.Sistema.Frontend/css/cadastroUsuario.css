@@ -16,7 +16,8 @@
 }
 
 #estado,
-#sexo {
+#sexo,
+#tipoUsuario {
     border-radius: 10rem;
     height: 50px;
     font-size: 13px;
@@ -36,7 +37,7 @@
 }
 
 #logoFutLogin {
-    margin-left: 20px;
-    margin-top: 100px;
-    width: 90%;
+    margin-left: 5px;
+    margin-top: 120%;
+    width: 100%;
 }

@@ -45,6 +45,8 @@
 
                             <form class="user">
 
+                                <hr>
+                                <h6>Dados pessoais</h6>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="nome"
@@ -59,7 +61,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-3 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="cpf"
-                                            placeholder="CPF" maxlength="11">
+                                            placeholder="CPF">
                                     </div>
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
@@ -92,12 +94,12 @@
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="endereco"
-                                            name="logradouro" placeholder="Logradouro" disabled="disabled">
+                                            name="logradouro" placeholder="Logradouro">
                                     </div>
 
                                     <div class="col-sm-2 mb-2 mb-sm-0">
                                         <input type="number" class="form-control form-control-user" id="numeroLocal"
-                                            name="numeroLocal" placeholder="Número">
+                                            name="numeroLocal" placeholder="Número" maxlength="4">
                                     </div>
 
                                     <div class="col-sm-4 mb-3 mb-sm-0">
@@ -109,16 +111,16 @@
                                 <div class="form-group row">
                                     <div class="col-sm-3 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="bairro"
-                                            name="bairro" placeholder="Bairro" disabled="disabled">
+                                            name="bairro" placeholder="Bairro">
                                     </div>
 
                                     <div class="col-sm-3 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="cidade"
-                                            name="cidade" placeholder="Cidade" disabled="disabled">
+                                            name="cidade" placeholder="Cidade">
                                     </div>
 
                                     <div class="col-sm-2 mb-3 mb-sm-0">
-                                        <select id="estado" name="estado" class="form-control" disabled="disabled">
+                                        <select id="estado" name="estado" class="form-control">
                                             <option selected>Estado</option>
                                             <option>AC</option>
                                             <option>AL</option>
@@ -157,8 +159,45 @@
 
                                 </div>
 
+                                <hr>
+
+                                <h6>Dados de Usuário</h6>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="email" class="form-control form-control-user" id="confirmEmail"
+                                            placeholder="Confirmar Email">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" class="form-control form-control-user" id="senha"
+                                            placeholder="Senha">
+                                    </div>
+
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" class="form-control form-control-user" id="confirmSenha"
+                                            placeholder="Confirmar Senha">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <div class="form-group">
+                                            <label for="">Tipo Usuário</label>
+                                            <select type="" class="form-control" id="tipoUsuario">
+                                                <option value="U">Usuario</option>
+                                                <option value="G">Gestor</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <a class="btn btn-primary btn-user btn-block" id="btnCadastro">
-                                    Continuar Cadastro
+                                    Cadastrar
                                 </a>
                             </form>
 

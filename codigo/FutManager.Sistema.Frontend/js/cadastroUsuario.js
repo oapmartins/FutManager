@@ -1,3 +1,10 @@
+/**
+ * @author Octavio Martins
+ * @author Pedro Damasceno
+ * @since 13/05/2021
+ */
+
+
 $(document).ready(function() {
 
     // Variáveis de controle.
@@ -10,34 +17,28 @@ $(document).ready(function() {
     campoCpf.mask('999.999.999-99');
     campoCep.mask('00000-000');
     campoCelular.mask('(00) 00000-0000');
+    
+    // Chamada da Função de consulta do Cep ao alterar o campo.
+    campoCep.change(() => {
+        consultaCep(campoCep.val());
+    });
 
-    // Evendo de click no botão cadastrar
-    btnCadastro.click(() => {
-        validaDadosFormulario();
+    // Chamada da Função de validação ao clicar no botão de cadastro.
+    btnCadastro.click(()=>{
+        if(validaDadosFormulario()){
+            Notiflix.Report.Success('Cadastro Usuário', 'Tudo Pronto. Seu cadastro foi realizado com Sucesso!', null, retornarLogin);
+        }
     });
 });
 
-// Implementação API para CEP
-const preencherFormulario = (endereco) => {
-    document.getElementById('endereco').value = endereco.logradouro;
-    document.getElementById('bairro').value = endereco.bairro;
-    document.getElementById('cidade').value = endereco.localidade;
-    document.getElementById('estado').value = endereco.uf;
+function retornarLogin(){
+    window.location.href = 'login.html'
 }
-
-// uso da API para completar endereço do usuario
-const pesquisarCep = async(cep) => {
-    const url = `https://viacep.com.br/ws/${cep}/json/`;
-    const dados = await fetch(url);
-    const endereco = await dados.json();
-    console.log(endereco);
-    preencherFormulario(endereco);
-}
-document.getElementById('cep').addEventListener('focusout', pesquisarCep)
 
 // Função para validação dos dados do formulário.
 function validaDadosFormulario() {
 
+    // Variáveis de controle.
     const campoNome = $("#nome");
     const campoSobrenome = $("#sobrenome");
     const campoCpf = $("#cpf");
@@ -45,7 +46,11 @@ function validaDadosFormulario() {
     const campoSexo = $("#sexo");
     const campoCelular = $("#celular");
     const campoCep = $("#cep");
-    const numeroLocal = $("#numeroLocal");
+    const campoNumeroLocal = $("#numeroLocal");
+    const campoEmail = $("#email");
+    const campoConfirmEmail = $("#confirmEmail");
+    const campoSenha = $("#senha");
+    const campoConfirmSenha = $("#confirmSenha");
 
     if (campoNome.val() == "" || campoNome.val() == undefined) {
         Notiflix.Notify.Warning('Favor preencher o campo nome!');
@@ -75,6 +80,8 @@ function validaDadosFormulario() {
         Notiflix.Notify.Warning('Favor preencher o campo Data de Nascimento!');
         campoDtNascimento.focus();
         return false;
+    } else {
+        !validaData(campoDtNascimento) ? Notiflix.Notify.Warning('O campo Data de Nascimento esta preenchido com informações inválidas. Favor Verificar!') : true;
     }
 
     if (campoSexo.val() == "" || campoSexo.val() == undefined) {
@@ -100,13 +107,49 @@ function validaDadosFormulario() {
         campoCep.focus();
         return false;
     }
-    numeroLocal
 
-    if (numeroLocal.val() == "" || numeroLocal.val() == undefined) {
+    if (campoNumeroLocal.val() == "" || campoNumeroLocal.val() == undefined) {
         Notiflix.Notify.Warning('Favor preencher o campo Número!');
-        numeroLocal.focus();
+        campoNumeroLocal.focus();
         return false;
     }
+
+    if (campoEmail.val() == "" || campoEmail.val() == undefined) {
+        Notiflix.Notify.Warning('Favor preencher o campo Email!');
+        campoEmail.focus();
+        return false;
+    }
+
+    if (campoConfirmEmail.val() == '') {
+        Notiflix.Notify.Warning('Favor confirmar o Email!');
+        campoConfirmEmail.focus();
+        return false;
+    }else{
+        if(campoConfirmEmail.val() != campoEmail.val()){
+            Notiflix.Notify.Warning('Os E-mails informados não coincidem!');
+            campoConfirmEmail.focus();
+            return false;
+        }
+    }
+
+    if (campoSenha.val() == "") {
+        Notiflix.Notify.Warning('Favor preecher o campo Senha!');
+        campoSenha.focus();
+        return false;
+    }
+
+    if (campoConfirmSenha.val() == "") {
+        Notiflix.Notify.Warning('Favor confirmar a Senha!');
+        campoConfirmSenha.focus();
+        return false;
+    }else{
+        if(campoConfirmSenha.val() != campoSenha.val()){
+            Notiflix.Notify.Warning('As senhas informadas não coincidem. Favor Verificar!');
+            campoConfirmSenha.focus();
+            return false;
+        }
+    }
+    return true;
 }
 
 // Função para validação de CPF.
@@ -148,4 +191,67 @@ function validarCPF(cpf) {
     if (rev != parseInt(cpf.charAt(10)))
         return false;
     return true;
+}
+
+// Função para validar datas.
+function validaData(campo) {
+
+    const valorData = campo.val();
+    dtFormatada = valorData.split("-");
+    dtFormatada = dtFormatada[2] + '/' + dtFormatada[1] + '/' + dtFormatada[0];
+
+    var date = dtFormatada;
+    var ardt = new Array;
+    var ExpReg = new RegExp("(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/[12][0-9]{3}");
+    ardt = date.split("-");
+    erro = false;
+    if (date.search(ExpReg) == -1) {
+        erro = true;
+    } else if (((ardt[1] == 4) || (ardt[1] == 6) || (ardt[1] == 9) || (ardt[1] == 11)) && (ardt[0] > 30))
+        erro = true;
+    else if (ardt[1] == 2) {
+        if ((ardt[0] > 28) && ((ardt[2] % 4) != 0))
+            erro = true;
+        if ((ardt[0] > 29) && ((ardt[2] % 4) == 0))
+            erro = true;
+    }
+    if (erro) {
+        return false;
+    }
+    return true;
+}
+
+// Função para consultar o Cep do usuário.
+function consultaCep(valorCep) {
+    console.log(valorCep);
+    var cep = valorCep.replace(/[^0-9]/, '');
+    if (cep) {
+        var url = `https://viacep.com.br/ws/${cep}/json/`;
+        $.ajax({
+            url: url,
+            dataType: 'jsonp',
+            crossDomain: true,
+            contentType: "application/json",
+            success: function(retornoEndereco) {
+                console.log(retornoEndereco);
+                if (retornoEndereco.erro != true) {
+                    $('#endereco').attr('disabled', 'disabled').val(retornoEndereco.logradouro);
+                    $('#bairro').attr('disabled', 'disabled').val(retornoEndereco.bairro);
+                    $('#cidade').attr('disabled', 'disabled').val(retornoEndereco.localidade);
+                    $('#estado').attr('disabled', 'disabled').val(retornoEndereco.uf);
+                } else {
+                    $('#endereco').removeAttr('disabled').val('');
+                    $('#bairro').removeAttr('disabled').val('');
+                    $('#cidade').removeAttr('disabled').val('');
+                    $('#estado').removeAttr('disabled').val('');
+                }
+            }
+        });
+    }
+}
+
+// Função para validar Email.
+function validaEmail(email) {
+    var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return filter.test(email);
 }
