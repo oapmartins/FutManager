@@ -106,14 +106,36 @@ function validar() {
 }
 
 //validação se o CPF é verdadeiro
+function validarCPF() {
+    var cpf = document.getElementById("cpf")
+    var ok;
+    cpf = cpf.replace(/[^\d]+/g, '');
+    // Elimina CPFs invalidos conhecidos	
+    if (cpf.length != 11 ||
+        cpf == "000.000.000-00" ||
+        cpf == "11111111111" ||
+        cpf == "22222222222" ||
+        cpf == "33333333333" ||
+        cpf == "44444444444" ||
+        cpf == "55555555555" ||
+        cpf == "66666666666" ||
+        cpf == "77777777777" ||
+        cpf == "88888888888" ||
+        cpf == "99999999999") {
+        alert("CPF inválido");
+        cpf.focus();
+        ok = false;
+        return false;
+    }
+}
 
 //valida mascara CPF
-function mascaraCPF(){
+function mascaraCPF() {
     var cpf = document.getElementById("cpf")
 
-    if(cpf.value.length == 3 || cpf.value.length == 7) {
+    if (cpf.value.length == 3 || cpf.value.length == 7) {
         cpf.value += "."
-    } else if (cpf.value.length == 11){
+    } else if (cpf.value.length == 11) {
         cpf.value += "-"
     }
 }
