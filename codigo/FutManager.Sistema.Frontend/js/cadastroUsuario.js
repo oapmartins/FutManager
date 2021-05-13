@@ -1,5 +1,5 @@
 'use strict'
-
+// Implementação API para CEP
 const preencherFormulario = (endereco) => {
     document.getElementById('endereco').value = endereco.logradouro;
     document.getElementById('bairro').value = endereco.bairro;
@@ -106,32 +106,14 @@ function validar() {
 }
 
 //validação se o CPF é verdadeiro
-function ValidarCPF(){
-    var cpf = document.getElementById("cpf");
-    exp = /\.|\-/g
-    cpf = cpf.toString().replace( exp, "" ); 
-    var digitoDigitado = eval(cpf.charAt(9)+cpf.charAt(10));
-    var soma1=0, soma2=0;
-    var vlr =11;
 
-    for(i=0;i<9;i++){
-            soma1+=eval(cpf.charAt(i)*(vlr-1));
-            soma2+=eval(cpf.charAt(i)*vlr);
-            vlr--;
-    }       
-    soma1 = (((soma1*10)%11)==10 ? 0:((soma1*10)%11));
-    soma2=(((soma2+(2*soma1))*10)%11);
+//valida mascara CPF
+function mascaraCPF(){
+    var cpf = document.getElementById("cpf")
 
-    var digitoGerado=(soma1*10)+soma2;
-    if(digitoGerado!=digitoDigitado)        
-            alert('CPF Invalido!');         
-}
-
-//valida numero inteiro com mascara
-function mascaraInteiro(){
-    if (event.keyCode < 48 || event.keyCode > 57){
-            event.returnValue = false;
-            return false;
+    if(cpf.value.length == 3 || cpf.value.length == 7) {
+        cpf.value += "."
+    } else if (cpf.value.length == 11){
+        cpf.value += "-"
     }
-    return true;
 }
