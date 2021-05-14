@@ -36,8 +36,9 @@
       "required": true
     },
     "senha": {
-      "type": "password",
-      "required": true
+      "type": "string",
+      "required": true,
+      "private": false
     },
     "data_nascimento": {
       "type": "date",

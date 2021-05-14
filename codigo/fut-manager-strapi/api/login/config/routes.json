@@ -1,0 +1,12 @@
+{
+    "routes": [
+      {
+        "method": "POST",
+        "path": "/login",
+        "handler": "Login.authenticate",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }
