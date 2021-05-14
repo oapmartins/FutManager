@@ -8,9 +8,7 @@ $(document).ready(function () {
     const btnLogin = $("#btnLogin");
     // Chamada da Função de validação ao clicar no botão de cadastro.
     btnLogin.click(() => {
-        if (validaDadosFormulario()) {
-            eventoLogin();
-        }
+        validaDadosFormulario() ? eventoLogin() : true;
     });
 
 });
@@ -37,7 +35,7 @@ function validaDadosFormulario() {
         return false;
     }
 
-    if (campoSenha.val() == "") {
+    if (campoSenha.val() == "" || campoSenha.val() == undefined) {
         Notiflix.Notify.Warning('Favor preecher o campo Senha!');
         campoSenha.focus();
         return false;

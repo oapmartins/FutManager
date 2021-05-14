@@ -4,7 +4,6 @@
  * @since 13/05/2021
  */
 
-
 $(document).ready(function() {
 
     // Variáveis de controle.
@@ -17,21 +16,21 @@ $(document).ready(function() {
     campoCpf.mask('999.999.999-99');
     campoCep.mask('00000-000');
     campoCelular.mask('(00) 00000-0000');
-    
+
     // Chamada da Função de consulta do Cep ao alterar o campo.
     campoCep.change(() => {
         consultaCep(campoCep.val());
     });
 
     // Chamada da Função de validação ao clicar no botão de cadastro.
-    btnCadastro.click(()=>{
-        if(validaDadosFormulario()){
-            Notiflix.Report.Success('Cadastro Usuário', 'Tudo Pronto. Seu cadastro foi realizado com Sucesso!', null, retornarLogin);
+    btnCadastro.click(() => {
+        if (validaDadosFormulario()) {
+            cadastrarUsuario();
         }
     });
 });
 
-function retornarLogin(){
+function retornarLogin() {
     window.location.href = 'login.html'
 }
 
@@ -124,8 +123,8 @@ function validaDadosFormulario() {
         Notiflix.Notify.Warning('Favor confirmar o Email!');
         campoConfirmEmail.focus();
         return false;
-    }else{
-        if(campoConfirmEmail.val() != campoEmail.val()){
+    } else {
+        if (campoConfirmEmail.val() != campoEmail.val()) {
             Notiflix.Notify.Warning('Os E-mails informados não coincidem!');
             campoConfirmEmail.focus();
             return false;
@@ -142,8 +141,8 @@ function validaDadosFormulario() {
         Notiflix.Notify.Warning('Favor confirmar a Senha!');
         campoConfirmSenha.focus();
         return false;
-    }else{
-        if(campoConfirmSenha.val() != campoSenha.val()){
+    } else {
+        if (campoConfirmSenha.val() != campoSenha.val()) {
             Notiflix.Notify.Warning('As senhas informadas não coincidem. Favor Verificar!');
             campoConfirmSenha.focus();
             return false;
@@ -223,7 +222,6 @@ function validaData(campo) {
 
 // Função para consultar o Cep do usuário.
 function consultaCep(valorCep) {
-    console.log(valorCep);
     var cep = valorCep.replace(/[^0-9]/, '');
     if (cep) {
         var url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -238,11 +236,13 @@ function consultaCep(valorCep) {
                     $('#bairro').attr('disabled', 'disabled').val(retornoEndereco.bairro);
                     $('#cidade').attr('disabled', 'disabled').val(retornoEndereco.localidade);
                     $('#estado').attr('disabled', 'disabled').val(retornoEndereco.uf);
+                    $('#logradouro').attr('disabled', 'disabled').val(retornoEndereco.logradouro);
                 } else {
                     $('#endereco').removeAttr('disabled').val('');
                     $('#bairro').removeAttr('disabled').val('');
                     $('#cidade').removeAttr('disabled').val('');
                     $('#estado').removeAttr('disabled').val('');
+                    $('#logradouro').removeAttr('disabled').val('');
                 }
             }
         });
@@ -253,4 +253,71 @@ function consultaCep(valorCep) {
 function validaEmail(email) {
     var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     return filter.test(email);
+}
+
+// Metodo para cadastro de Usuario.
+async function cadastrarUsuario() {
+
+    // Só vai entrar aqui se o tipo do cadastro for de USUÁRIO.
+    // Criar outro metodo para cadastrar GESTOR.
+
+    const campoEmail = $("#email");
+    const campoSenha = $("#senha");
+    const campoCpf = $("#cpf");
+    const campoNome = $("#nome");
+    const campoCelular = $("#celular");
+
+    const campoDtNascimento = $("#dtNascimento");
+    const campoLogradouro = $("#logradouro");
+    const campoBairro = $("#bairro");
+    const campoCidade = $("#cidade");
+    const campoEstado = $("#estado");
+
+    // Retirando carácteres especiais para gravar no banco.
+    let campoCpfLimpo = campoCpf.val().replace(/[\D]+/g, '');
+    let campoCelularLimpo = campoCelular.val().replace(/[\D]+/g, '');
+
+    // Falta realizar o calculo da idade do usuário.
+    const campoIdade = 0;
+
+    // Estão faltando para serem adicionadas no banco.
+    const campoSobrenome = $("#sobrenome");
+    const campoSexo = $("#sexo");
+    const campoCep = $("#cep");
+    const campoNumeroLocal = $("#numeroLocal");
+    const pontoReferencia = $("#pontoReferencia");
+
+    const objCadastro = {
+        email: campoEmail.val(),
+        senha: campoSenha.val(),
+        cpf: campoCpfLimpo,
+        nome: campoNome.val(),
+        telefone: campoCelularLimpo,
+        idade: 23,
+        data_nascimento: campoDtNascimento.val(),
+        endereco: {
+            logradouro: campoLogradouro.val(),
+            bairro: campoBairro.val(),
+            cidade: campoCidade.val(),
+            estado: campoEstado.val()
+        },
+        reservas: []
+    };
+
+    console.log(objCadastro);
+
+    let response = await fetch(`http://localhost:3000/clientes`, {
+        method: 'POST',
+        body: JSON.stringify(objCadastro),
+        headers: {
+            'Origin': 'http://localhost:3000/clientes',
+            "Content-Type": "application/json"
+        },
+        mode: 'cors',
+        cache: 'default',
+    });
+    response = await response.json();
+    if (!response.error) {
+        Notiflix.Report.Success('Cadastro Usuário', 'Tudo Pronto. Seu cadastro foi realizado com Sucesso!', null, retornarLogin);
+    }
 }
