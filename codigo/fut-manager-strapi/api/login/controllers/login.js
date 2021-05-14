@@ -16,7 +16,7 @@ module.exports = {
             var entity = sanitizeEntity(await strapi.services.cliente.find({ email }), { model: strapi.models.cliente });
         }
         if(tipo == 'gestor'){
-            var entity = sanitizeEntity(await strapi.services.cliente.find({ email }), { model: strapi.models.cliente });
+            var entity = sanitizeEntity(await strapi.services.gestor.find({ email }), { model: strapi.models.gestor });
         }
 
         console.log(entity)
