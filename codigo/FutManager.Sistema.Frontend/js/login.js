@@ -3,26 +3,31 @@
  * @since 13/05/2021
  */
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     const btnLogin = $("#btnLogin");
+
     // Chamada da Função de validação ao clicar no botão de cadastro.
     btnLogin.click(() => {
-        validaDadosFormulario() ? eventoLogin() : true;
+        if (validaDadosFormulario()) {
+            login().then(
+                response =>
+                {
+                    if (response.tipo == 'cliente' && response.isAuthenticated) {
+                        window.location.href = "pageUsuario.html";
+                    } else {
+                        window.location.href = "pageGestor.html";
+                    }
+                }
+            ).catch(
+                error => {
+                    Notiflix.Notify.Warning('O campo de email ou senha estão preenchidos com informações inválidas. Favor Verificar!');
+                }
+            );
+        }
     });
 
 });
-
-function eventoLogin() {
-
-    const tipoUsuario = $("#tipoUsuario");
-
-    if (tipoUsuario.val() == 'U') {
-        window.location.href = "pageUsuario.html";
-    } else {
-        window.location.href = "pageGestor.html";
-    }
-}
 
 function validaDadosFormulario() {
 
@@ -41,4 +46,28 @@ function validaDadosFormulario() {
         return false;
     }
     return true;
+}
+
+function login() {
+    const campoEmail = $("#email");
+    const campoSenha = $("#senha")
+    const campoTipoUsuario = $("#tipoUsuario");
+
+    objLogin = {
+        email: campoEmail.val(),
+        senha: campoSenha.val(),
+        tipo: campoTipoUsuario.val()
+    }
+
+    let response = fetch(`http://localhost:3000/login`, {
+        method: 'POST',
+        body: JSON.stringify(objLogin),
+        headers: {
+            'Origin': 'http://localhost:3000/login',
+            "Content-Type": "application/json"
+        },
+        mode: 'cors',
+        cache: 'default',
+    }).then(response => response.json().then(response => response));
+    return response;
 }

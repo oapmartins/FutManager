@@ -11,6 +11,7 @@ $(document).ready(function() {
     const campoCep = $('#cep');
     const campoCelular = $('#celular');
     const btnCadastro = $("#btnCadastro");
+    const campoTipoUsuario = $("#tipoUsuario");
 
     // Iniciando o Documento com as máscaras.
     campoCpf.mask('999.999.999-99');
@@ -25,7 +26,11 @@ $(document).ready(function() {
     // Chamada da Função de validação ao clicar no botão de cadastro.
     btnCadastro.click(() => {
         if (validaDadosFormulario()) {
-            cadastrarUsuario();
+            if(campoTipoUsuario.val() == 'U'){
+                cadastrarUsuario();
+            }else{
+                cadastrarGestor();
+            }
         }
     });
 });
@@ -255,11 +260,34 @@ function validaEmail(email) {
     return filter.test(email);
 }
 
+// Função para calcular a idade.
+function calculaIdade(dtNascimento) {
+
+    dtNascimento = dtNascimento.split('-');
+    
+    var ano_aniversario = dtNascimento[0];
+    var mes_aniversario = dtNascimento[1];
+    var dia_aniversario = dtNascimento[2];
+    var d = new Date,
+        ano_atual = d.getFullYear(),
+        mes_atual = d.getMonth() + 1,
+        dia_atual = d.getDate(),
+
+        ano_aniversario = +ano_aniversario,
+        mes_aniversario = +mes_aniversario,
+        dia_aniversario = +dia_aniversario,
+
+        quantos_anos = ano_atual - ano_aniversario;
+
+    if (mes_atual < mes_aniversario || mes_atual == mes_aniversario && dia_atual < dia_aniversario) {
+        quantos_anos--;
+    }
+
+    return quantos_anos < 0 ? 0 : quantos_anos;
+}
+
 // Metodo para cadastro de Usuario.
 async function cadastrarUsuario() {
-
-    // Só vai entrar aqui se o tipo do cadastro for de USUÁRIO.
-    // Criar outro metodo para cadastrar GESTOR.
 
     const campoEmail = $("#email");
     const campoSenha = $("#senha");
@@ -273,38 +301,40 @@ async function cadastrarUsuario() {
     const campoCidade = $("#cidade");
     const campoEstado = $("#estado");
 
+    const campoSobrenome = $("#sobrenome");
+    const campoSexo = $("#sexo");
+    const campoNumeroLocal = $("#numeroLocal");
+    const pontoReferencia = $("#pontoReferencia");
+
     // Retirando carácteres especiais para gravar no banco.
     let campoCpfLimpo = campoCpf.val().replace(/[\D]+/g, '');
     let campoCelularLimpo = campoCelular.val().replace(/[\D]+/g, '');
 
     // Falta realizar o calculo da idade do usuário.
-    const campoIdade = 0;
-
-    // Estão faltando para serem adicionadas no banco.
-    const campoSobrenome = $("#sobrenome");
-    const campoSexo = $("#sexo");
+    const campoIdade = calculaIdade(campoDtNascimento.val());
     const campoCep = $("#cep");
-    const campoNumeroLocal = $("#numeroLocal");
-    const pontoReferencia = $("#pontoReferencia");
 
     const objCadastro = {
         email: campoEmail.val(),
         senha: campoSenha.val(),
         cpf: campoCpfLimpo,
         nome: campoNome.val(),
+        sobrenome: campoSobrenome.val(),
+        sexo: campoSexo.val(),
         telefone: campoCelularLimpo,
-        idade: 23,
+        idade: campoIdade,
         data_nascimento: campoDtNascimento.val(),
         endereco: {
             logradouro: campoLogradouro.val(),
             bairro: campoBairro.val(),
             cidade: campoCidade.val(),
-            estado: campoEstado.val()
+            estado: campoEstado.val(),
+            numero: campoNumeroLocal.val(),
+            ponto_referencia: pontoReferencia.val(),
+            cep: campoCep.val()
         },
         reservas: []
     };
-
-    console.log(objCadastro);
 
     let response = await fetch(`http://localhost:3000/clientes`, {
         method: 'POST',
@@ -319,5 +349,71 @@ async function cadastrarUsuario() {
     response = await response.json();
     if (!response.error) {
         Notiflix.Report.Success('Cadastro Usuário', 'Tudo Pronto. Seu cadastro foi realizado com Sucesso!', null, retornarLogin);
+    }
+}
+
+// Metodo para cadastro de Gestor.
+async function cadastrarGestor() {
+
+    const campoEmail = $("#email");
+    const campoSenha = $("#senha");
+    const campoCpf = $("#cpf");
+    const campoNome = $("#nome");
+    const campoCelular = $("#celular");
+
+    const campoDtNascimento = $("#dtNascimento");
+    const campoLogradouro = $("#logradouro");
+    const campoBairro = $("#bairro");
+    const campoCidade = $("#cidade");
+    const campoEstado = $("#estado");
+
+    const campoSobrenome = $("#sobrenome");
+    const campoSexo = $("#sexo");
+    const campoNumeroLocal = $("#numeroLocal");
+    const pontoReferencia = $("#pontoReferencia");
+
+    // Retirando carácteres especiais para gravar no banco.
+    let campoCpfLimpo = campoCpf.val().replace(/[\D]+/g, '');
+    let campoCelularLimpo = campoCelular.val().replace(/[\D]+/g, '');
+
+    // Falta realizar o calculo da idade do usuário.
+    const campoIdade = calculaIdade(campoDtNascimento.val());
+    const campoCep = $("#cep");
+
+    const objCadastro = {
+        email: campoEmail.val(),
+        senha: campoSenha.val(),
+        cpf: campoCpfLimpo,
+        nome: campoNome.val(),
+        sobrenome: campoSobrenome.val(),
+        sexo: campoSexo.val(),
+        telefone: campoCelularLimpo,
+        idade: campoIdade,
+        data_nascimento: campoDtNascimento.val(),
+        endereco: {
+            logradouro: campoLogradouro.val(),
+            bairro: campoBairro.val(),
+            cidade: campoCidade.val(),
+            estado: campoEstado.val(),
+            numero: campoNumeroLocal.val(),
+            ponto_referencia: pontoReferencia.val(),
+            cep: campoCep.val()
+        },
+        reservas: []
+    };
+
+    let response = await fetch(`http://localhost:3000/Gestors`, {
+        method: 'POST',
+        body: JSON.stringify(objCadastro),
+        headers: {
+            'Origin': 'http://localhost:3000/Gestors',
+            "Content-Type": "application/json"
+        },
+        mode: 'cors',
+        cache: 'default',
+    });
+    response = await response.json();
+    if (!response.error) {
+        Notiflix.Report.Success('Cadastro Gestor', 'Tudo Pronto. Seu cadastro foi realizado com Sucesso!', null, retornarLogin);
     }
 }
