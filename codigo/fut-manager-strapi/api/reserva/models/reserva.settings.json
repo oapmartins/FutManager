@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservas",
+  "info": {
+    "name": "Reserva"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dia": {
+      "type": "date",
+      "required": true
+    },
+    "hora": {
+      "type": "time"
+    },
+    "confirmada": {
+      "type": "boolean",
+      "required": true
+    },
+    "pagamento": {
+      "model": "pagamento"
+    }
+  }
+}

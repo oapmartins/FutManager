@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "name": "cliente",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "cpf": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 11
+    },
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "telefone": {
+      "type": "string",
+      "required": false,
+      "maxLength": 11
+    },
+    "idade": {
+      "type": "integer",
+      "required": true
+    },
+    "senha": {
+      "type": "password",
+      "required": true
+    },
+    "data_nascimento": {
+      "type": "date",
+      "required": true
+    },
+    "endereco": {
+      "model": "endereco"
+    },
+    "reservas": {
+      "collection": "reserva"
+    }
+  }
+}

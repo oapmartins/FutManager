@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boletos",
+  "info": {
+    "name": "Boleto"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "valor": {
+      "type": "float"
+    },
+    "data_vencimento": {
+      "type": "date"
+    }
+  }
+}

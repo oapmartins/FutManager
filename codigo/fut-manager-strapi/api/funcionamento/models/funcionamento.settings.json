@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "funcionamentos",
+  "info": {
+    "name": "funcionamento",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dia_abertura": {
+      "type": "enumeration",
+      "enum": [
+        "segunda",
+        "terca",
+        "quarta",
+        "quinta",
+        "sexta",
+        "sabado",
+        "domingo"
+      ],
+      "required": true
+    },
+    "dia_fechamento": {
+      "type": "enumeration",
+      "enum": [
+        "segunda",
+        "terca",
+        "quarta",
+        "quinta",
+        "sexta",
+        "sabado",
+        "domingo"
+      ],
+      "required": true
+    },
+    "horario_abertura": {
+      "type": "time",
+      "required": true
+    },
+    "horario_fechamento": {
+      "type": "time",
+      "required": true
+    }
+  }
+}

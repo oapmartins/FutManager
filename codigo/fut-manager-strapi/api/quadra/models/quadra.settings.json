@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quadras",
+  "info": {
+    "name": "Quadra",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "razao_social": {
+      "type": "string",
+      "required": true
+    },
+    "cnpj": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "telefone": {
+      "type": "string"
+    },
+    "endereco": {
+      "model": "endereco"
+    },
+    "funcionamento": {
+      "model": "funcionamento"
+    }
+  }
+}

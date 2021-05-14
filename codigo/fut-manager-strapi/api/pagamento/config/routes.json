@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pagamentos",
+      "handler": "pagamento.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pagamentos/count",
+      "handler": "pagamento.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pagamentos/:id",
+      "handler": "pagamento.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pagamentos",
+      "handler": "pagamento.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pagamentos/:id",
+      "handler": "pagamento.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pagamentos/:id",
+      "handler": "pagamento.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

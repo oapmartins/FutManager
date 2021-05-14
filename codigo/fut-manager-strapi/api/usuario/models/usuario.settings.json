@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "name": "Usuario",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "data_nascimento": {
+      "type": "date"
+    },
+    "senha": {
+      "type": "password"
+    },
+    "idade": {
+      "type": "integer"
+    },
+    "endereco": {
+      "model": "endereco"
+    }
+  }
+}

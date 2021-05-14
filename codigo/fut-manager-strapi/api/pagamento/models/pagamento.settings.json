@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pagamentos",
+  "info": {
+    "name": "Pagamento"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "valor": {
+      "type": "float",
+      "required": true
+    },
+    "data_pagamento": {
+      "type": "date"
+    },
+    "pago": {
+      "type": "boolean",
+      "required": true,
+      "unique": false
+    },
+    "tipo": {
+      "type": "enumeration",
+      "enum": [
+        "cartao",
+        "boleto",
+        "dinheiro"
+      ],
+      "required": true
+    },
+    "boleto": {
+      "model": "boleto"
+    }
+  }
+}

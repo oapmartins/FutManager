@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gestors",
+  "info": {
+    "name": "Gestor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "cpf": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "senha": {
+      "type": "password",
+      "required": true
+    },
+    "idade": {
+      "type": "integer"
+    },
+    "data_nascimento": {
+      "type": "date",
+      "required": true
+    },
+    "telefone": {
+      "type": "string",
+      "required": true
+    },
+    "endereco": {
+      "model": "endereco"
+    },
+    "quadras": {
+      "collection": "quadra"
+    }
+  }
+}

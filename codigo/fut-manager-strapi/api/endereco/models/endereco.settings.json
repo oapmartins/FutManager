@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enderecos",
+  "info": {
+    "name": "Endereco",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logradouro": {
+      "type": "string",
+      "required": true
+    },
+    "bairro": {
+      "type": "string",
+      "unique": true
+    },
+    "cidade": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
