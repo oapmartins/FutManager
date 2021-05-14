@@ -35,6 +35,10 @@
     "numero": {
       "type": "integer",
       "required": true
+    },
+    "cep": {
+      "type": "string",
+      "required": true
     }
   }
 }
