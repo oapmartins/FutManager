@@ -18,7 +18,8 @@
     },
     "bairro": {
       "type": "string",
-      "unique": true
+      "unique": false,
+      "required": true
     },
     "cidade": {
       "type": "string",
