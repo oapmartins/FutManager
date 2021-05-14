@@ -85,10 +85,10 @@
                                     </div>
                                     <form class="user">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Usuário ou Endereço de Email">
+                                            <input type="email" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Endereço de Email">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Senha">
+                                            <input type="password" class="form-control form-control-user" id="senha" placeholder="Senha">
                                         </div>
 
                                         <hr>
@@ -141,26 +141,15 @@
     <!-- Core plugin JavaScript-->
     <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
+    <!-- JavaScript Login-->
+    <script type="text/javascript" src="../js/login.js"></script>
+
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
 
-    <script>
-        const btnLogin = $("#btnLogin");
-        const tipoUsuario = $("#tipoUsuario");
-        const btnCadastro = $("#btnCadastro");
+    <!-- Notificações -->
+    <script type="text/javascript" src="../js/notificacoes/notiflix-aio-2.7.0.min.js"></script>
 
-        btnLogin.click(() => {
-            eventoLogin();
-        });
-
-        function eventoLogin() {
-            if (tipoUsuario.val() == 'U') {
-                window.location.href = "pageUsuario.html";
-            } else {
-                window.location.href = "pageGestor.html";
-            }
-        }
-    </script>
 </body>
 
 </html>
