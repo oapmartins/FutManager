@@ -28,7 +28,8 @@ module.exports = {
             return {
                 id: entity.id,
                 nome: entity.nome,
-                isAuthenticated: entity.email == email && entity.senha == senha
+                isAuthenticated: entity.email == email && entity.senha == senha,
+                tipo: tipo
             };
         }
 
