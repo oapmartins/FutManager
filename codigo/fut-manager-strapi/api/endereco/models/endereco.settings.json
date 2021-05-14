@@ -27,6 +27,14 @@
     "estado": {
       "type": "string",
       "required": true
+    },
+    "ponto_referencia": {
+      "type": "string",
+      "required": false
+    },
+    "numero": {
+      "type": "integer",
+      "required": true
     }
   }
 }

@@ -49,6 +49,19 @@
     },
     "reservas": {
       "collection": "reserva"
+    },
+    "sobrenome": {
+      "type": "string",
+      "required": true
+    },
+    "sexo": {
+      "type": "enumeration",
+      "enum": [
+        "masculino",
+        "feminino",
+        "indefinido"
+      ],
+      "required": true
     }
   }
 }

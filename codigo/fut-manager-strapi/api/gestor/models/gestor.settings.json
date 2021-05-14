@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "gestors",
   "info": {
-    "name": "Gestor"
+    "name": "Gestor",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -44,6 +45,19 @@
     },
     "quadras": {
       "collection": "quadra"
+    },
+    "sobrenome": {
+      "type": "string",
+      "required": true
+    },
+    "sexo": {
+      "type": "enumeration",
+      "enum": [
+        "masculino",
+        "feminino",
+        "indefinido"
+      ],
+      "required": true
     }
   }
 }
