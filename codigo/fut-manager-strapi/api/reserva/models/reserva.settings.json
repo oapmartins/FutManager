@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "reservas",
   "info": {
-    "name": "Reserva"
+    "name": "Reserva",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -15,15 +16,16 @@
       "type": "date",
       "required": true
     },
-    "hora": {
-      "type": "time"
-    },
     "confirmada": {
       "type": "boolean",
       "required": true
     },
     "pagamento": {
       "model": "pagamento"
+    },
+    "horario": {
+      "via": "reserva",
+      "model": "horario"
     }
   }
 }

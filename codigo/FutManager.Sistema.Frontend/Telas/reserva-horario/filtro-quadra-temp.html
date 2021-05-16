@@ -23,56 +23,46 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <label for="cidade" class="form-label">Cidade</label>
-                    <select class="form-control" id="cidade">
-                        <option>Contagem</option>
+                    <label for="input-cidade" class="form-label">Cidade</label>
+                    <select class="form-control" id="input-cidade">
                         <option>Belo Horizonte</option>
-                        <option>Vitória</option>
-                        <option>São Paulo</option>
+                        <option>Betim</option>
+                        <option>Contagem</option>
                     </select>
                 </div>
                 <div class="col">
-                    <label for="estado" class="form-label">Estado</label>
-                    <select class="form-control" id="estado">
+                    <label for="input-estado" class="form-label">Estado</label>
+                    <select class="form-control" id="input-estado">
                         <option>Minas Gerais</option>
-                        <option>São Paulo</option>
-                        <option>Espirito Santo</option>
                     </select>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <label for="horario-inicio" class="form-label">Horário de inicio</label>
-                            <select class="form-control" id="horario-inicio">
-                                <option>Contagem</option>
-                                <option>Belo Horizonte</option>
-                                <option>Vitória</option>
-                                <option>São Paulo</option>
-                            </select>
+                            <label for="timerpicker-horario-inicio" class="form-label">Horário início</label>
+                            <input type="time" id="timerpicker-horario-inicio" class="form-control timepicker">
                         </div>
                         <div class="col">
-                            <label for="horario-final" class="form-label">Horário final</label>
-                            <select class="form-control" id="horario-final">
-                                <option>Minas Gerais</option>
-                                <option>São Paulo</option>
-                                <option>Espirito Santo</option>
-                            </select>
+                            <label for="timepicker-horario-final" class="form-label">Horário final</label>
+                            <input type="time" id="timepicker-horario-final" class="form-control timepicker">
                         </div>
                         <div class="col">
-                            <label for="data-inicio" class="form-label">Data inicial</label>
-                            <input type="text" placeholder="" id="data-inicio">
+                            <label for="datepicker-data-inicio" class="form-label">Data inicial</label>
+                            <input type="date" placeholder="" id="datepicker-data-inicio"
+                                class="form-control datepicker">
                         </div>
                         <div class="col">
-                            <label for="data-final" class="form-label">Data final</label>
-                            <input type="text" placeholder="" id="data-final">
-                        </div>
-                        <div>
+                            <label for="datepicker-data-final" class="form-label">Data final</label>
+                            <input type="date" placeholder="" id="datepicker-data-final"
+                                class="form-control datepicker">
                         </div>
                     </div>
                     <div class="container">
-                        <div class="col">
-                            <button class="btn btn-primary" type="button" id="btn-limpar">Limpar</button>
-                            <button class="btn btn-primary" type="button" id="btn-buscar">Buscar</button>
+                        <div class="row>">
+                            <div class="col">
+                                <button class="btn btn-primary" type="button" id="btn-limpar">Limpar</button>
+                                <button class="btn btn-primary" type="button" id="btn-buscar">Buscar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,20 +72,13 @@
     <div class="container" id="container-resultado">
         <div class="row">
             <h1>Lista de Quadras Encontradas</h1>
-            <table>
+            <table id="table-horarios-disponiveis">
                 <tr>
                     <th>Reservar?</th>
-                    <th>Centro Esportivo</th>
                     <th>Quadra</th>
+                    <th>Dia</th>
                     <th>Início do Horário</th>
                     <th>Fim do Horário</th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" value=""></td>
-                    <td>Minas Arena</td>
-                    <td>Mineirão</td>
-                    <td>08:00</td>
-                    <td>09:00</td>
                 </tr>
             </table>
         </div>

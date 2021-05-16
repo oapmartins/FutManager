@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "GET",
+      "path": "/reservas/horariosDisponiveis",
+      "handler": "reserva.horariosDisponiveis",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/reservas",
       "handler": "reserva.find",
       "config": {

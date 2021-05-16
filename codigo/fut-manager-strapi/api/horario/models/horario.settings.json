@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "horarios",
+  "info": {
+    "name": "Horario",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "horario_inicio": {
+      "type": "time",
+      "required": true
+    },
+    "horario_final": {
+      "type": "time",
+      "required": true
+    },
+    "reserva": {
+      "via": "horario",
+      "model": "reserva"
+    },
+    "dia_abertura": {
+      "type": "integer",
+      "required": true,
+      "max": 6,
+      "min": 0,
+      "default": 0
+    },
+    "quadra": {
+      "model": "quadra"
+    }
+  }
+}
