@@ -28,6 +28,7 @@ $(document).ready(function () {
     });
 
     $("#btn-confirmar-reserva").click(function () {
+        //
         $("table tr input:checkbox[name=reservar]:checked")
             .each((index, checkbox) => {
                 let params = $(checkbox).val().split('|');
