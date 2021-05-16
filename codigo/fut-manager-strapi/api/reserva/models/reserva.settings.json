@@ -24,7 +24,6 @@
       "model": "pagamento"
     },
     "horario": {
-      "via": "reserva",
       "model": "horario"
     }
   }

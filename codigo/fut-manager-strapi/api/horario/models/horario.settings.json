@@ -20,10 +20,6 @@
       "type": "time",
       "required": true
     },
-    "reserva": {
-      "via": "horario",
-      "model": "reserva"
-    },
     "dia_abertura": {
       "type": "integer",
       "required": true,
