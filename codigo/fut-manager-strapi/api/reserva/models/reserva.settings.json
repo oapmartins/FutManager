@@ -27,6 +27,9 @@
       "default": 0,
       "required": false,
       "min": 0
+    },
+    "cliente": {
+      "model": "cliente"
     }
   }
 }

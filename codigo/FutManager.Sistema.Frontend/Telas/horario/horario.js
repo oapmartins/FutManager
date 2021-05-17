@@ -33,8 +33,7 @@ $(document).ready(function () {
                 let params = $(checkbox).val().split('|');
                 let data = {
                     dia: params[1],
-                    horario: params[0],
-                    confirmada: 0
+                    horario: params[0]
                 };
 
                 $.ajax({
