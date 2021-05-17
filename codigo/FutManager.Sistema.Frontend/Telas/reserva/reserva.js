@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     buscar_reservas();
 });
 
@@ -9,7 +9,7 @@ function buscar_reservas() {
 function callback_busca(reservas, status) {
     if (status === "error") {
         alert("Algo inesperado ocorreu durante a busca de suas reservas!");
-    } else{
+    } else {
         if (reservas.length == 0) {
             $("#conteudo-placeholder").html("<p>Você ainda não realizou nenhuma reserva :(<\p>");
         }
@@ -25,7 +25,7 @@ function callback_busca(reservas, status) {
                                     ${reserva.endereco_quadra}
                             </div>
                             <span class="badge bg-primary rounded-pill">${reserva.status}</span>
-                        </li>`;         
+                        </li>`;
             });
 
             let grid = `<ol class="list-group list-group">${rows}<\ol>`;

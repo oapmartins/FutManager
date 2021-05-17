@@ -1,13 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhe minha reserva | Fut Manager</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="reserva.js"></script>
+
+    <style>
+        ul.timeline {
+            list-style-type: none;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        ul.timeline:before {
+            content: ' ';
+            background: rgb(235, 69, 69);
+            display: inline-block;
+            position: absolute;
+            left: 16px;
+            width: 4px;
+            height: 100%;
+            z-index: 400;
+            border-radius: 1rem;
+        }
+
+        li.timeline-item {
+            margin: 20px 0;
+        }
+
+        .timeline-arrow {
+            border-top: 0.5rem solid transparent;
+            border-right: 0.5rem solid #fff;
+            border-bottom: 0.5rem solid transparent;
+            display: block;
+            position: absolute;
+            left: 2rem;
+        }
+
+        li.timeline-item::before {
+            content: ' ';
+            background: #ddd;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            left: 11px;
+            width: 14px;
+            height: 14px;
+            z-index: 400;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* body {
+            background: blue;
+            min-height: 100vh;
+        } */
+
+        .text-gray {
+            color: #999;
+        }
+    </style>
+
 </head>
+
 <body>
-    
+    <div class="container py-5">
+
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4">Detalhe de reserva</h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+
+                <ul class="timeline">
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Pré-reserva realizada?</h2><span class="small text-gray"><i
+                                class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
+                        <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet</p>
+                    </li>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Boleto pré-reserva gerado?</h2><span class="small text-gray"><i
+                                class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
+                        <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet</p>
+                    </li>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Pré-reserva paga?</h2><span class="small text-gray"><i
+                                class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
+                        <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet</p>
+                    </li>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Pré reserva confirmada pelo centro esportivo?</h2><span
+                            class="small text-gray"><i class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
+                        <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet</p>
+                    </li>
+                    <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                        <div class="timeline-arrow"></div>
+                        <h2 class="h5 mb-0">Reserva confirmada?</h2><span class="small text-gray"><i
+                                class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
+                        <p class="text-small mt-2 font-weight-light">Lorem ipsum dolor sit amet</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
