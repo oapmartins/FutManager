@@ -2,84 +2,34 @@
 
 module.exports = {
 
-    async create(ctx) {
-        console.log('ok');
-        return true;
-    },
-
     async find(ctx) {
-        return [{
-            id: 1212,
-            dia: '17/05/2021',
-            horario: { inicio: '12:00', final: '13:00' },
-            id_quadra: 1212,
-            nome_quadra: 'Mineirão',
-            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
-            status: 'reservado'
-        },
-        {
-            id: 1212,
-            dia: '17/05/2021',
-            horario: { inicio: '12:00', final: '13:00' },
-            id_quadra: 1212,
-            nome_quadra: 'Mineirão',
-            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
-            status: 'reservado'
-        },
-        {
-            id: 1212,
-            dia: '17/05/2021',
-            horario: { inicio: '12:00', final: '13:00' },
-            id_quadra: 1212,
-            nome_quadra: 'Mineirão',
-            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
-            status: 'reservado'
-        },
-        {
-            id: 1212,
-            dia: '17/05/2021',
-            horario: { inicio: '12:00', final: '13:00' },
-            id_quadra: 1212,
-            nome_quadra: 'Mineirão',
-            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
-            status: 'reservado'
-        },
-        {
-            id: 1212,
-            dia: '17/05/2021',
-            horario: { inicio: '12:00', final: '13:00' },
-            id_quadra: 1212,
-            nome_quadra: 'Mineirão',
-            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
-            status: 'reservado'
-        },
-        {
-            id: 1212,
-            dia: '17/05/2021',
-            horario: { inicio: '12:00', final: '13:00' },
-            id_quadra: 1212,
-            nome_quadra: 'Mineirão',
-            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
-            status: 'reservado'
-        },
-        {
-            id: 1212,
-            dia: '17/05/2021',
-            horario: { inicio: '12:00', final: '13:00' },
-            id_quadra: 1212,
-            nome_quadra: 'Mineirão',
-            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
-            status: 'reservado'
-        },
-        {
-            id: 1212,
-            dia: '17/05/2021',
-            horario: { inicio: '12:00', final: '13:00' },
-            id_quadra: 1212,
-            nome_quadra: 'Mineirão',
-            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
-            status: 'reservado'
-        },];
+        const knex = strapi.connections.default;
+        return await knex.raw(`
+            SELECT 
+                r.id, 
+                r.status,
+                CASE
+                    WHEN status = 0 THEN 'Pré-reserva realizada'
+                    WHEN status = 1 THEN 'Gerando boleto'
+                    WHEN status = 2 THEN 'Pendente pagamento'
+                    WHEN status = 3 THEN 'Pendente confirmação de centro esportivo'
+                    WHEN status = 4 THEN 'Reserva confirmada'
+                    ELSE 'Não definido'
+                END AS descricao_status,
+                h.id as id_horario, 
+                r.dia as dia, 
+                h.horario_inicio, 
+                h.horario_final, 
+                q.id as id_quadra, 
+                q.razao_social as nome_quadra, 
+                e.logradouro || ', ' || e.numero || ', ' || e.bairro || ', ' || e.cidade || '/' || e.estado AS endereco_quadra 
+            FROM reservas r 
+            JOIN horarios h ON 
+                h.id = r.horario 
+            JOIN quadras q ON
+                q.id = h.quadra 
+            JOIN enderecos e ON
+                e.Id = q.endereco`);
     },
 
     async horariosDisponiveis(ctx) {
@@ -101,9 +51,6 @@ module.exports = {
 
         let data_inicio = new Date(filtro.data_inicio);
         let data_final = new Date(filtro.data_final);
-
-        console.log(filtro);
-
         let agendas = [];
         // Pecorre todas as dias compreendidas entre a data de início e fim
         // gerando, em memória, as agendas. Certamente não é a melhor solução.
@@ -130,8 +77,6 @@ module.exports = {
             // Incrementa em um dia a data de início
             data_inicio.setDate(data_inicio.getDate() + 1);
         }
-        console.log(data_inicio);
-        console.log(data_final);
 
         return ctx.send(agendas);
     },

@@ -43,10 +43,11 @@ $(document).ready(function () {
                     contentType: "application/json",
                     data: JSON.stringify(data),
                     success: function (result) {
-                        alert("Pré-reserva realizada com sucesso!")
+                        window.location.replace("../reserva/lista-reserva.html");
                     },
                     error: function (err) {
                         console.log(err);
+                        alert("Algo inesperado ocorreu! É possível que uma ou mais de suas pré-reserva não foram realizada com sucesso :(");
                     }
                 });
             });

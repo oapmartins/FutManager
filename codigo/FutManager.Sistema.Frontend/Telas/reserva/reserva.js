@@ -20,11 +20,11 @@ function callback_busca(reservas, status) {
                 rows += `<li class="list-group-item d-flex justify-content-between align-items-start">
                             <div class="ms-2 me-auto">
                                 <div class="fw-bold">
-                                    <a href="./detalhe-reserva.html">${reserva.id} - ${reserva.nome_quadra} | ${reserva.dia}, de ${reserva.horario.inicio} às ${reserva.horario.final}</a>
+                                    <a href="./detalhe-reserva.html">${reserva.id} - ${reserva.nome_quadra} | ${reserva.dia}, de ${reserva.horario_inicio} às ${reserva.horario_final}</a>
                                 </div>
                                     ${reserva.endereco_quadra}
                             </div>
-                            <span class="badge bg-primary rounded-pill">${reserva.status}</span>
+                            <span class="badge bg-primary rounded-pill">${reserva.descricao_status}</span>
                         </li>`;
             });
 
