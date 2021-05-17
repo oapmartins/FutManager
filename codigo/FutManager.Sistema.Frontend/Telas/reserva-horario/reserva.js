@@ -57,10 +57,10 @@ $(document).ready(function () {
 function callback_busca(horarios, status) {
     if (status === "error") {
         alert("Algo inesperado ocorreu durante a busca por horários!");
-        return;
     }
-
-    montar_tabela(horarios);
+    else {
+        montar_tabela(horarios);
+    }
 };
 
 function montar_tabela(horarios) {
@@ -68,7 +68,7 @@ function montar_tabela(horarios) {
 
     horarios.forEach(horario => {
         rows +=
-            `<tr>
+        `<tr>
             <td><input type="checkbox" name="reservar" value="${horario.id_horario}|${horario.dia_disponivel}"></td>
             <td>${horario.nome_quadra}</td>
             <td>${horario.dia_disponivel}</td>

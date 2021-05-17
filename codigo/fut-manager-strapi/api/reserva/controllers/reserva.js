@@ -2,6 +2,86 @@
 
 module.exports = {
 
+    async create(ctx) {
+        console.log('ok');
+        return true;
+    },
+
+    async find(ctx) {
+        return [{
+            id: 1212,
+            dia: '17/05/2021',
+            horario: { inicio: '12:00', final: '13:00' },
+            id_quadra: 1212,
+            nome_quadra: 'Mineirão',
+            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
+            status: 'reservado'
+        },
+        {
+            id: 1212,
+            dia: '17/05/2021',
+            horario: { inicio: '12:00', final: '13:00' },
+            id_quadra: 1212,
+            nome_quadra: 'Mineirão',
+            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
+            status: 'reservado'
+        },
+        {
+            id: 1212,
+            dia: '17/05/2021',
+            horario: { inicio: '12:00', final: '13:00' },
+            id_quadra: 1212,
+            nome_quadra: 'Mineirão',
+            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
+            status: 'reservado'
+        },
+        {
+            id: 1212,
+            dia: '17/05/2021',
+            horario: { inicio: '12:00', final: '13:00' },
+            id_quadra: 1212,
+            nome_quadra: 'Mineirão',
+            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
+            status: 'reservado'
+        },
+        {
+            id: 1212,
+            dia: '17/05/2021',
+            horario: { inicio: '12:00', final: '13:00' },
+            id_quadra: 1212,
+            nome_quadra: 'Mineirão',
+            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
+            status: 'reservado'
+        },
+        {
+            id: 1212,
+            dia: '17/05/2021',
+            horario: { inicio: '12:00', final: '13:00' },
+            id_quadra: 1212,
+            nome_quadra: 'Mineirão',
+            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
+            status: 'reservado'
+        },
+        {
+            id: 1212,
+            dia: '17/05/2021',
+            horario: { inicio: '12:00', final: '13:00' },
+            id_quadra: 1212,
+            nome_quadra: 'Mineirão',
+            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
+            status: 'reservado'
+        },
+        {
+            id: 1212,
+            dia: '17/05/2021',
+            horario: { inicio: '12:00', final: '13:00' },
+            id_quadra: 1212,
+            nome_quadra: 'Mineirão',
+            endereco_quadra: 'Avenida Antônio Carlos, Pampulha, Belo Horizonte/MG',
+            status: 'reservado'
+        },];
+    },
+
     async horariosDisponiveis(ctx) {
         let filtro = ctx.query;
 
