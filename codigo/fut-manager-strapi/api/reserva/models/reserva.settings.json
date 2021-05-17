@@ -16,15 +16,17 @@
       "type": "date",
       "required": true
     },
-    "confirmada": {
-      "type": "boolean",
-      "required": true
-    },
     "pagamento": {
       "model": "pagamento"
     },
     "horario": {
       "model": "horario"
+    },
+    "status": {
+      "type": "integer",
+      "default": 0,
+      "required": false,
+      "min": 0
     }
   }
 }
