@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gestores",
+  "info": {
+    "name": "gestor",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "usuario": {
+      "model": "usuario",
+      "via": "gestor"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "centro_esportivos",
+  "info": {
+    "name": "Centro Esportivo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "quadras": {
+      "via": "centro_esportivo",
+      "collection": "quadra"
+    },
+    "cpnj": {
+      "type": "string",
+      "required": true,
+      "maxLength": 14,
+      "minLength": 14
+    }
+  }
+}
