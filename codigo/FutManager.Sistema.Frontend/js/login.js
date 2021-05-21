@@ -13,15 +13,22 @@ $(document).ready(function() {
             login().then(
                 response =>
                 {
-                    if (response.tipo == 'cliente' && response.isAuthenticated) {
-                        window.location.href = "pageUsuario.html";
-                    } else {
-                        window.location.href = "pageGestor.html";
+                    if(response.isAuthenticated){
+                        if (response.tipo == 'cliente') {
+                            window.location.href = "pageUsuario.html";
+                        } 
+                        if(response.tipo == 'gestor'){
+                            window.location.href = "pageGestor.html";
+                        }
                     }
+                    else{
+                        Notiflix.Notify.Warning('O campo de email ou senha estão preenchidos com informações inválidas. Favor Verificar!');
+                    }
+                    
                 }
             ).catch(
-                error => {
-                    Notiflix.Notify.Warning('O campo de email ou senha estão preenchidos com informações inválidas. Favor Verificar!');
+                () => {
+                    Notiflix.Notify.Warning('Erro ao validar os dados.');
                 }
             );
         }
