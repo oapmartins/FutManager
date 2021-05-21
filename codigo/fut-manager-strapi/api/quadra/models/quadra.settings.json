@@ -27,8 +27,8 @@
     "endereco": {
       "model": "endereco"
     },
-    "funcionamento": {
-      "model": "funcionamento"
+    "horarios": {
+      "collection": "horario"
     }
   }
 }

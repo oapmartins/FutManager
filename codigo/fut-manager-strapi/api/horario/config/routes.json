@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/funcionamentos",
-      "handler": "funcionamento.find",
+      "path": "/horarios",
+      "handler": "horario.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/funcionamentos/count",
-      "handler": "funcionamento.count",
+      "path": "/horarios/count",
+      "handler": "horario.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/funcionamentos/:id",
-      "handler": "funcionamento.findOne",
+      "path": "/horarios/:id",
+      "handler": "horario.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/funcionamentos",
-      "handler": "funcionamento.create",
+      "path": "/horarios",
+      "handler": "horario.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/funcionamentos/:id",
-      "handler": "funcionamento.update",
+      "path": "/horarios/:id",
+      "handler": "horario.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/funcionamentos/:id",
-      "handler": "funcionamento.delete",
+      "path": "/horarios/:id",
+      "handler": "horario.delete",
       "config": {
         "policies": []
       }
