@@ -12,8 +12,9 @@ module.exports = {
                     WHEN status = 0 THEN 'Pré-reserva realizada'
                     WHEN status = 1 THEN 'Gerando boleto'
                     WHEN status = 2 THEN 'Pendente pagamento'
-                    WHEN status = 3 THEN 'Pendente confirmação de centro esportivo'
-                    WHEN status = 4 THEN 'Reserva confirmada'
+                    WHEN status = 3 THEN 'Pagamento confirmado'
+                    WHEN status = 4 THEN 'Pendente confirmação do centro esportivo'
+                    WHEN status = 5 THEN 'Reserva confirmada'
                     ELSE 'Não definido'
                 END AS descricao_status,
                 h.id as id_horario, 
@@ -30,6 +31,19 @@ module.exports = {
                 q.id = h.quadra 
             JOIN enderecos e ON
                 e.Id = q.endereco`);
+    },
+
+    async confirmar(ctx) {
+        const { id } = ctx.params;
+        const { perfil } = ctx.params;
+
+        const knex = strapi.connections.default;
+        await knex.raw(`UPDATE reservas SET status = ${perfil == "cliente" ? 4 : 5} WHERE id = ${id}`);
+        // enviar email para gestor
+        
+        ctx.send({
+            ok: true,
+        });
     },
 
     async horariosDisponiveis(ctx) {
@@ -63,7 +77,7 @@ module.exports = {
                         && filtro.horario_final >= horarios[index].horario_final) {
                         agendas.push(
                             {
-                                dia_disponivel: data_inicio,
+                                dia_disponivel: new Date(data_inicio),
                                 id_quadra: horarios[index].id_quadra,
                                 nome_quadra: horarios[index].razao_social,
                                 id_horario: horarios[index].id_horario,
