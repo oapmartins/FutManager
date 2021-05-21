@@ -29,6 +29,12 @@
     },
     "horarios": {
       "collection": "horario"
+    },
+    "nome_fantasia": {
+      "type": "string"
+    },
+    "observacao": {
+      "type": "string"
     }
   }
 }
