@@ -145,19 +145,24 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo**                    | **Tipo**       | **Restrições**                                                                 | **Valor default** |
 | ---------------------------- | -------------- | ------------------------------------------------------------------------------ | ----------------- |
-| Escolha de Cliente ou Gestor | Seleção Única  | Uma opção deve ser preenchida                                                  |                   |
-| Nome Completo                | Caixa de texto | Preenchimento obrigatório; Bloqueio caracteres especiais                       |                   |
-| Endereço                     | Caixa de Texto | Preenchimento Obrigatório                                                      |                   |
+| Nome                         | Caixa de texto | Preenchimento obrigatório; Bloqueio caracteres especiais                       |                   |
+| Sobreenome                   | Caixa de texto | Preenchimento obrigatório; Bloqueio caracteres especiais                       |                   |
 | CPF                          | Número         | Preenchimento Obrigatório, mínimo de 11 caractesres                            |                   |
-| Telefone                     | Número         | Preenchimento Opcional, formatação de Telefone                                 |                   |
+| Data nascimento              | Caixa de Texto | Preenchimento obrigatório, formato data                                        |                   |
 | Sexo                         | Seleção Única  | Uma opção deve ser preenchida                                                  |                   |
+| Celular para Contato         | Número         | Preenchimento obrigatório, formatação de Telefone                              |                   |
+| CEP                          | Número         | Preenchimento Obrigatório                                                      |                   |
+| Logradouro                   | Caixa de Texto | Preenchimento à partir da entrada do CEP                                       |                   |
+| Número                       | Caixa de Texto | Preenchimento obrigatório                                                      |                   |
+| Complemento                  | Caixa de Texto | Preenchimento opcional                                                         |                   |
+| Bairro                       | Caixa de Texto | Preenchimento à partir da entrada do CEP                                       |                   |
+| Cidade                       | Caixa de Texto | Preenchimento à partir da entrada do CEP                                       |                   |
+| Estado                       | Seleção Única  | Preenchimento à partir da entrada do CEP                                       |                   |
+| Ponto de referência          | Caixa de Texto | Preenchimento opcional                                                         |                   |
 | E-mail                       | Caixa de texto | Formato e-mail                                                                 |                   |
-| Data nascimento              | Caixa de Texto | Caso encolha Gestor: Mínimo 21 anos; Caso escolha Cliente: Mínimo 16           |                   |
 | Senha                        | Caixa de Texto | Mínimo 8 caracteres; Senha forte: Conter caracteres especiais e conter números |                   |
 | Confirmar senha              | Caixa de Texto | Valor do campo ser igual ao da senha                                           |                   |
-| Foto perfil                  | Imagens        | Preenchimento Opcional                                                         |                   |
-| Motivo do cadastro           | Area texto     | Preenchimento Opcional                                                         |                   |
-
+| Escolha de Cliente ou Gestor | Seleção Única  | Uma opção deve ser preenchida                                                  |                   |
 
 #### Processo 2 – Cadastro de Quadras
 
@@ -167,14 +172,22 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 | **Campo**                 | **Tipo**       | **Restrições**                                  | **Valor default** |
 | ------------------------- | -------------- | ----------------------------------------------- | ----------------- |
-| Nome                      | Caixa de Texto | Preenchimento Obrigatório                       |                   |
-| Endereço                  | Caixa de Texto | Preenchimento Obrigatório                       |                   |
+| Rasão Social              | Caixa de Texto | Preenchimento Obrigatório                       |                   |
+| Nome Fantasia             | Caixa de Texto | Preenchimento Obrigatório                       |                   |
 | CNPJ                      | Número         | Preenchimento Obrigatório, mínimo 14 carácteres |                   |
 | Telefone                  | Número         | Preenchimento Opcional, formatação de Telefone  |                   |
+| Observações               | Caixa de Texto | Preenchimento Opcional                          |                   |
+| CEP                       | Número         | Preenchimento Obrigatório                       |                   |
+| Logradouro                | Caixa de Texto | Preenchimento feito à partir da entrada do CEP  |                   |
+| Número                    | Número         | Preenchimento feito à partir da entrada do CEP  |                   |
+| Complemento               | Caixa de Texto | Preenchimento Opcional                          |                   |
+| Bairro                    | Caixa de Texto | Preenchimento feito à partir da entrada do CEP  |                   |
+| Cidade                    | Caixa de Texto | Preenchimento feito à partir da entrada do CEP  |                   |
+| Estado                    | Seleção Única  | Preenchimento feito à partir da entrada do CEP  |                   |
 | Horário Comercial Inicial | Caixa de Texto | Obrigatório, padrão do horário 00:00            |                   |
 | Horário Comercial Final   | Caixa de Texto | Obrigatório, padrão do horário 00:00            |                   |
-| Descrição                 | Área de texto  | Preenchimento Opcional                          |                   |
-| Fotos                     | Imagens        | Preenchimento Opcional                          |                   |
+| Ponto de referencia       | Caixa de texto | Preenchimento Opcional                          |                   |
+| Adcionar imagens          | Imagens        | Preenchimento Opcional                          |                   |
 
 #### Processo 3 – Reserva de Horários
 
@@ -204,14 +217,14 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 
 Será fornecido um formulário para o usuário preencher os dados do cartão que será utilizado caso opte pelo tipo de pagamento pós. Os dados informados pelo usuário serão utilizados para pagamentos futuros. O formulário conterá os campos necessários para serem enviados ao gateway de pagamento.
 
-| **Campo**        | **Tipo**         | **Restrições**                             | **Valor default**   |
-| ------------     | ---------------- | ------------------------------------------ | ------------------- |
-| Numero do Cartão | Caixa de texto   | Somente números                            | Vazio               |
-| Validade         | Caixa de texto   | Somente números                            | Vazio               |
-| CVV              | Caixa de texto   | Somente números                            | Vazio               |
-| Nome do Titlar   | Caixa de texto   | Caracteres de texto somente                | Vazio               |
-| Apelido do cartão| Caixa de texto   | Opcional                                   | Vazio               |
-| CPF/CNPJ titular | Caixa de texto   | Somente números                            | Vazio               |
+| **Campo**         | **Tipo**       | **Restrições**              | **Valor default** |
+| ----------------- | -------------- | --------------------------- | ----------------- |
+| Numero do Cartão  | Caixa de texto | Somente números             | Vazio             |
+| Validade          | Caixa de texto | Somente números             | Vazio             |
+| CVV               | Caixa de texto | Somente números             | Vazio             |
+| Nome do Titlar    | Caixa de texto | Caracteres de texto somente | Vazio             |
+| Apelido do cartão | Caixa de texto | Opcional                    | Vazio             |
+| CPF/CNPJ titular  | Caixa de texto | Somente números             | Vazio             |
 
 
 ### 4.2. Tecnologias
