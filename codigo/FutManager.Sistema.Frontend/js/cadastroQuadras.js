@@ -31,12 +31,12 @@ $(document).ready(function() {
         cadastrarQuadra();
     });
 
-    document.querySelector('#addImagens').addEventListener("click", clicaTeste);
+    document.querySelector('#addImagens').addEventListener("click", clickImagem);
     document.getElementById("img-input").addEventListener("change", mostrarPreviewImagem, false);
     // Adicionando preview da imagem
 });
 
-function clicaTeste(){
+function clickImagem(){
     $("#img-input").click();
 }
 
