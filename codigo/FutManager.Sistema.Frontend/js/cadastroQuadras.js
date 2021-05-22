@@ -31,9 +31,14 @@ $(document).ready(function() {
         cadastrarQuadra();
     });
 
-    // Adicionando preview da imagem
+    document.querySelector('#addImagens').addEventListener("click", clicaTeste);
     document.getElementById("img-input").addEventListener("change", mostrarPreviewImagem, false);
+    // Adicionando preview da imagem
 });
+
+function clicaTeste(){
+    $("#img-input").click();
+}
 
 function retornarInicioGestor() {
     window.location.href = 'pageGestor.html'
@@ -261,6 +266,9 @@ async function cadastrarQuadra() {
 
 // Mostrar preview da imagem cadastrada pelo usuário.
 function mostrarPreviewImagem() {
+
+    // $("#img-container").append('<img id="previewImagem" src="">');
+
     if (this.files && this.files[0]) {
         var file = new FileReader();
         file.onload = function(e) {

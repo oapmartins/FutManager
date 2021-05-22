@@ -30,3 +30,11 @@
     cursor: pointer;
 }
 
+#previewImagem {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.cardImagens{
+    width: 100%;
+}
