@@ -131,6 +131,12 @@ O Processo permitirá ao usuário escolher o tipo de pagamento, entre pré e pó
 
 ![Processo de Pagamento](imagens/paymentProcessv2.png "Modelo BPMN do Processo de Pagamento.")
 
+### 3.3.5 Processo 5 – Avaliação do serviço
+
+Após a realização de uma reserva, o usuário será questionado se deseja avaliar o serviço utilizado. Através do feedback dos usuários será possível otimizar e refinar o processo de negócio. Os feedbacks serão armazenados em banco e utilizados em dashboards.
+
+![Processo de Pagamento](imagens/rating-process.png "Modelo BPMN do Processo de Avaliação do serviço.")
+
 ## 4. Projeto da Solução
 
 ### 4.1. Detalhamento das atividades
@@ -225,6 +231,17 @@ Será fornecido um formulário para o usuário preencher os dados do cartão que
 | Nome do Titlar    | Caixa de texto | Caracteres de texto somente | Vazio             |
 | Apelido do cartão | Caixa de texto | Opcional                    | Vazio             |
 | CPF/CNPJ titular  | Caixa de texto | Somente números             | Vazio             |
+
+#### Processo 5 – Fluxo de Avaliação
+**Perguntas de avaliação**
+
+Após a efetuação da reserva o usuário receberá um alerta com a opção de avaliar o serviço obtido. O fluxo consiste em perguntas sobre recomendaqção, um NPS sobre o serviço e uma caixa de observação
+
+| **Campo**               | **Tipo**       | **Restrições**              | **Valor default** |
+| ----------------------- | -------------- | --------------------------- | ----------------- |
+| Seleção de recomendação | Select         | Sim ou Não                  | Sim               |
+| NPS do serviço          | Select         | Range de zero a dez         | 10                |
+| Campo de Observação     | Caixa de texto | Máximo de 200 caracteres    | Sim               |
 
 
 ### 4.2. Tecnologias
