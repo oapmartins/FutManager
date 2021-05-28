@@ -237,14 +237,16 @@ async function cadastrarQuadra() {
         nome_fantasia: campoNomeFantasia.val(),
         cnpj: campoCnpj.val(),
         telefone: campoTelefoneLimpo,
-        observacao: campoObservacao.val()
-        // logradouro: campoLogradouro.val(),
-        // bairro: campoBairro.val(),
-        // cidade: campoCidade.val(),
-        // estado: campoEstado.val(),
-        // numero: campoNumeroLocal.val(),
-        // ponto_referencia: campoPontoReferencia.val(),
-        // cep: campoCep.val()
+        observacao: campoObservacao.val(),
+        endereco: {
+            logradouro: campoLogradouro.val(),
+            bairro: campoBairro.val(),
+            cidade: campoCidade.val(),
+            estado: campoEstado.val(),
+            numero: campoNumeroLocal.val(),
+            ponto_referencia: campoPontoReferencia.val(),
+            cep: campoCep.val()
+        }
     };
 
     // Validar CNPJ 
