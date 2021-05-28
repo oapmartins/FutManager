@@ -113,7 +113,7 @@ Processo de cadastro de cliente levará em conta o cliente ao entrar no site, te
 
 ![Processo de cadastro do usuário no sistema](imagens/processoCadastro.jpg "Modelo BPMN do Processo de Cadastro do usuário no sistema.")
 
-### 3.3.2 Processo 3 – Login
+### 3.3.2 Processo 2 – Login
 
 Após o processo de cadastro de usuário, temos o login do usuário no sistema. O processo irá validar se o usuário foi criado corretamente a partir deste cadastrado no banco e realizará o final do processo, assim, entra-se no sistema.
 
@@ -176,7 +176,22 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Confirmar senha              | Caixa de Texto | Valor do campo ser igual ao da senha                                           |                   |
 | Escolha de Cliente ou Gestor | Seleção Única  | Uma opção deve ser preenchida                                                  |                   |
 
-#### Processo 2 – Cadastro de Quadras
+#### Processo 2 – Login
+
+**Informação sobre o Cadastro das Quadras**
+
+Após o processo de cadastro de usuário, temos o login do usuário no sistema. O processo irá validar se o usuário foi criado corretamente a partir deste cadastrado no banco e realizará o final do processo, assim, entra-se no sistema.
+
+| **Campo**                    | **Tipo**       | **Restrições**      | **Valor default** |
+| ---------------------------- | -------------- | ------------------- | ----------------- |
+| Endereço e-mail              | Caixa de Texto | Cadastrado no banco | ----------------- |
+| Senha                        | Caixa de Texto | Cadastrado no banco | ----------------- |
+| Escolha de Cliente ou Gestor | Seleção Únicao | Cadastrado no banco | ----------------- |
+
+
+
+
+#### Processo 3 – Cadastro de Quadras
 
 **Informação sobre o Cadastro das Quadras**
 
@@ -201,7 +216,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Ponto de referencia       | Caixa de texto | Preenchimento Opcional                          |                   |
 | Adcionar imagens          | Imagens        | Preenchimento Opcional                          |                   |
 
-#### Processo 3 – Reserva de Horários
+#### Processo 4 – Reserva de Horários
 
 **Solicita horários disponíveis**
 
@@ -224,7 +239,7 @@ Descrever aqui cada uma das propriedades das atividades de cada um dos processos
 | Horário   | Múltipla escolha | Obrigatório seleção de um ou mais | Checkbox desmarcado |
 |           |                  |                                   |                     |
 
-#### Processo 4 – Fluxo de Pagamento
+#### Processo 5 – Fluxo de Pagamento
 **Preencher informações de contato**
 
 Será fornecido um formulário para o usuário preencher os dados do cartão que será utilizado caso opte pelo tipo de pagamento pós. Os dados informados pelo usuário serão utilizados para pagamentos futuros. O formulário conterá os campos necessários para serem enviados ao gateway de pagamento.
@@ -238,16 +253,16 @@ Será fornecido um formulário para o usuário preencher os dados do cartão que
 | Apelido do cartão | Caixa de texto | Opcional                    | Vazio             |
 | CPF/CNPJ titular  | Caixa de texto | Somente números             | Vazio             |
 
-#### Processo 5 – Fluxo de Avaliação
+#### Processo 6 – Fluxo de Avaliação
 **Perguntas de avaliação**
 
 Após a efetuação da reserva o usuário receberá um alerta com a opção de avaliar o serviço obtido. O fluxo consiste em perguntas sobre recomendação, um NPS sobre o serviço e uma caixa de texto de observação.
 
-| **Campo**               | **Tipo**       | **Restrições**              | **Valor default** |
-| ----------------------- | -------------- | --------------------------- | ----------------- |
-| Seleção de recomendação | Select         | Sim ou Não                  | Sim               |
-| NPS do serviço          | Select         | Range de zero a dez         | 10                |
-| Campo de Observação     | Caixa de texto | Máximo de 200 caracteres    | Sim               |
+| **Campo**               | **Tipo**       | **Restrições**           | **Valor default** |
+| ----------------------- | -------------- | ------------------------ | ----------------- |
+| Seleção de recomendação | Select         | Sim ou Não               | Sim               |
+| NPS do serviço          | Select         | Range de zero a dez      | 10                |
+| Campo de Observação     | Caixa de texto | Máximo de 200 caracteres | Sim               |
 
 
 ### 4.2. Tecnologias
