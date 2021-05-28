@@ -235,7 +235,7 @@ Será fornecido um formulário para o usuário preencher os dados do cartão que
 #### Processo 5 – Fluxo de Avaliação
 **Perguntas de avaliação**
 
-Após a efetuação da reserva o usuário receberá um alerta com a opção de avaliar o serviço obtido. O fluxo consiste em perguntas sobre recomendaqção, um NPS sobre o serviço e uma caixa de observação
+Após a efetuação da reserva o usuário receberá um alerta com a opção de avaliar o serviço obtido. O fluxo consiste em perguntas sobre recomendação, um NPS sobre o serviço e uma caixa de texto de observação.
 
 | **Campo**               | **Tipo**       | **Restrições**              | **Valor default** |
 | ----------------------- | -------------- | --------------------------- | ----------------- |
