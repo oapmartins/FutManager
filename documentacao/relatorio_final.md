@@ -239,7 +239,7 @@ Apresente o modelo de dados. Defina o dicionário de dados com os respectivos fo
 
 Diagrama de Entidade-Relacionamento (DER) criado a partir do detalhamento de atividades
 
-![Diagrama de Entidade Relacionamento de Exemplo](imagens/fut-manager-der-3.0.png "Diagrama de Entidade Relacionamento de Exemplo")
+![Diagrama de Entidade Relacionamento de Exemplo](imagens/DiagramaFutManagerV2.jpg "Diagrama de Entidade Relacionamento de Exemplo")
 
 ## 6. Indicadores de desempenho
 
