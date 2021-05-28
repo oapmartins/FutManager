@@ -79,15 +79,14 @@ function callback_busca(horarios, status) {
 
 function montar_tabela(horarios) {
     let rows = '';
-
-    horarios.forEach(horario => {
+    horarios.forEach(horario => { 
         rows +=
             `<tr>
             <td><input type="checkbox" name="reservar" value="${horario.id_horario}|${horario.dia_disponivel}"></td>
             <td>${horario.nome_quadra}</td>
-            <td>${horario.dia_disponivel}</td>
-            <td>${horario.horario_inicio}</td>
-            <td>${horario.horario_final}</td>
+            <td>${formataData(horario.dia_disponivel)}</td>
+            <td>${formataHora(horario.horario_inicio)}</td>
+            <td>${formataHora(horario.horario_final)}</td>
         </tr>`;
     });
 
@@ -141,3 +140,13 @@ function validar_filtro(filtro) {
     }
     return true;
 };
+
+function formataData(data){
+    dataFormatada = data.substr(0,10);
+    dataFormatada = dataFormatada.split('-');
+    return dataFormatada = dataFormatada[2] + '/' + dataFormatada[1] + '/'  + dataFormatada[0];  
+}
+
+function formataHora(hora){
+    return horaFormatada = hora.substr(0,5);
+}
