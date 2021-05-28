@@ -113,25 +113,31 @@ Processo de cadastro de cliente levará em conta o cliente ao entrar no site, te
 
 ![Processo de cadastro do usuário no sistema](imagens/processoCadastro.jpg "Modelo BPMN do Processo de Cadastro do usuário no sistema.")
 
-### 3.3.2 Processo 2 – Cadastro de Quadras
+### 3.3.2 Processo 3 – Login
+
+Após o processo de cadastro de usuário, temos o login do usuário no sistema. O processo irá validar se o usuário foi criado corretamente a partir deste cadastrado no banco e realizará o final do processo, assim, entra-se no sistema.
+
+![Processo de login no sistema](imagens/ModeloLogin.png "Modelo BPMN do Processo de Cadastro de Quadras no sistema.")
+
+### 3.3.3 Processo 3 – Cadastro de Quadras
 
 No processo de cadastro de Quadras, o cliente inicialmente envia os dados da quadra, para ser realizado o cadastro. Depois de passar pela validação, os dados são enviados ao banco. Após completar o cadastro, é exibida uma janela de escolhas, onde é perguntado, se ele deseja continuar e cadastrar mais quadras, ou finalizar.
 
 ![Processo de cadastro de Quadras no sistema](imagens/modeloCadastroQuadras.jpg "Modelo BPMN do Processo de Cadastro de Quadras no sistema.")
 
-### 3.3.3 Processo 3 – Reserva de Horários
+### 3.3.4 Processo 4 – Reserva de Horários
 
 O processo permitirá ao usuário encontrar quais horários então disponíveis em uma quadra. Nele, o usuário, caso tenha interesse por algum dos horários disponíveis, deverá realizar a pré-reserva. A pré-reserva consiste em uma taxa que deverá ser paga em até um dia e, somente após a confirmação do pagamento, será efetivada a reserva de horário. Uma vez paga a taxa, o valor não poderá ser reavido pelo usuário.
 
 ![Processo de reserva](imagens/reserva-de-horario.jpg "Modelo BPMN do Processo de Reserva de Horários.")
 
-### 3.3.4 Processo 4 – Pagamento
+### 3.3.5 Processo 5 – Pagamento
 
 O Processo permitirá ao usuário escolher o tipo de pagamento, entre pré e pós. Para ambos os tipos de pagamento haverão duas formas, sendo elas através de cartão ou boleto. Após a confirmação do pagamento no método pré, será necessário levar o comprovante no dia da realização do evento. No pagamento pós, o usuário pagará no local após a realização do evento.
 
 ![Processo de Pagamento](imagens/paymentProcessv2.png "Modelo BPMN do Processo de Pagamento.")
 
-### 3.3.5 Processo 5 – Avaliação do serviço
+### 3.3.6 Processo 6 – Avaliação do serviço
 
 Após a realização de uma reserva, o usuário será questionado se deseja avaliar o serviço utilizado. Através do feedback dos usuários será possível otimizar e refinar o processo de negócio. Os feedbacks serão armazenados em banco e utilizados em dashboards.
 
