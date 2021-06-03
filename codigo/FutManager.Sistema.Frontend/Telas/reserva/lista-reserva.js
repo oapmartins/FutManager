@@ -1,5 +1,11 @@
 $(document).ready(function () {
+    const btnVoltar = document.querySelector("#btnVoltar");
+
     buscar_reservas();
+
+    btnVoltar.addEventListener('click',()=>{
+        window.location.href = '../pageUsuario.html';
+    });
 });
 
 function buscar_reservas() {
@@ -17,10 +23,10 @@ function callback_busca(reservas, status) {
             let rows = '';
 
             reservas.forEach(reserva => {
-                rows += `<li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
+                rows += `<li class="list-group-item d-flex justify-content-between align-items-start" onclick="window.location='detalhe-reserva.html?id=${reserva.id}';">
+                            <div class="ms-2 me-auto" style="color:#8a8a8a">
                                 <div class="fw-bold">
-                                    <a href="./detalhe-reserva.html?id=${reserva.id}">${reserva.id} - ${reserva.nome_quadra} | ${reserva.dia}, de ${reserva.horario_inicio} às ${reserva.horario_final}</a>
+                                    <a href="./detalhe-reserva.html?id=${reserva.id}">${reserva.id} - ${reserva.nome_quadra} | ${formataData(reserva.dia)}, de ${formataHora(reserva.horario_inicio)} às ${formataHora(reserva.horario_final)}</a>
                                 </div>
                                     ${reserva.endereco_quadra}
                             </div>
@@ -33,3 +39,13 @@ function callback_busca(reservas, status) {
         }
     }
 };
+
+function formataData(data){
+    dataFormatada = data.substr(0,10);
+    dataFormatada = dataFormatada.split('-');
+    return dataFormatada = dataFormatada[2] + '/' + dataFormatada[1] + '/'  + dataFormatada[0];  
+}
+
+function formataHora(hora){
+    return horaFormatada = hora.substr(0,5);
+}

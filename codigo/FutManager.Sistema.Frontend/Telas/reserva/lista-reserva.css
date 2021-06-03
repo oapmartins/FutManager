@@ -1,0 +1,27 @@
+.bg-gradient-primary {
+    color: white;
+    background-color: #275476;
+    background-image: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #ffffff47;
+    border-color: #436884;
+}
+
+.btn-primary:hover {
+    background-color: #618bab;
+    border-color: #618bab;
+}
+
+.list-group-item:hover {
+    background: #d6d6d6;
+    cursor: pointer
+}
+
+a, a:hover {
+    color: #011b69;
+    text-decoration: none;
+    background-color: transparent;
+}
