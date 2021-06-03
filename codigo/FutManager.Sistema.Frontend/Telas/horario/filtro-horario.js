@@ -1,6 +1,11 @@
 $(document).ready(function() {
 
     const btnPreReserva = $("#btnPreReserva");
+    const btnVoltar = $("#btn-voltar");
+
+    btnVoltar.click(() =>{
+        window.location.href = '../pageUsuario.html';
+    });
 
     btnPreReserva.click(() => {
         Notiflix.Confirm.Show(
