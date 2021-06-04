@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avaliacoes",
+  "info": {
+    "name": "Avaliacao"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reserva": {
+      "model": "reserva",
+      "via": "avaliacao"
+    },
+    "nota": {
+      "type": "integer",
+      "default": 5,
+      "required": true,
+      "min": 0,
+      "max": 5
+    }
+  }
+}

@@ -2,6 +2,14 @@
   "routes": [
     {
       "method": "POST",
+      "path": "/reservas/:reserva_id/avaliacoes",
+      "handler": "reserva.avaliar",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
       "path": "/reservas/:id/confirmacao/:perfil",
       "handler": "reserva.confirmar",
       "config": {
@@ -10,8 +18,8 @@
     },
     {
       "method": "GET",
-      "path": "/reservas/horariosDisponiveis",
-      "handler": "reserva.horariosDisponiveis",
+      "path": "/reservas/horarios_disponiveis",
+      "handler": "reserva.horarios_disponiveis",
       "config": {
         "policies": []
       }

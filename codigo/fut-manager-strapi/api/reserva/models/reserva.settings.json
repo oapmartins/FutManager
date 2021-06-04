@@ -30,6 +30,10 @@
     },
     "cliente": {
       "model": "cliente"
+    },
+    "avaliacao": {
+      "via": "reserva",
+      "model": "avaliacao"
     }
   }
 }

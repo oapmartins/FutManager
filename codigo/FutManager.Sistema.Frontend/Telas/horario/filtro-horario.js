@@ -27,7 +27,7 @@ $(document).ready(function() {
             data_final: $("#datepicker-data-final").val()
         };
 
-        validar_filtro(filtro) ? $.get("http://localhost:3000/reservas/horariosDisponiveis", filtro, callback_busca) : false;
+        validar_filtro(filtro) ? $.get("http://localhost:3000/reservas/horarios_disponiveis", filtro, callback_busca) : false;
     });
 
     $("#btn-limpar").click(function() {
@@ -92,6 +92,7 @@ function montar_tabela(horarios) {
             <td>${formataData(horario.dia_disponivel)}</td>
             <td>${formataHora(horario.horario_inicio)}</td>
             <td>${formataHora(horario.horario_final)}</td>
+            <td>Nota: ${horario.nota}</td>
         </tr>`;
     });
 
