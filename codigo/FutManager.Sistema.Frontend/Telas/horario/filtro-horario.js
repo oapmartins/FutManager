@@ -64,7 +64,17 @@ function confirmarPreReserv() {
             contentType: "application/json",
             data: JSON.stringify(data),
             success: function(result) {
-                window.location.replace("../reserva/lista-reserva.html");
+                Notiflix.Confirm.Show(
+                    'Avaliação FutManager',
+                    'Escreve a mensagem que você quer aqui',
+                    'Confirmar',
+                    'Cancelar',
+                    function(){
+                        alert('teste');
+                    }, // Confirmar
+                    function() {
+                        window.location.replace("../reserva/lista-reserva.html");
+                    });
             },
             error: function(err) {
                 console.log(err);
@@ -92,7 +102,7 @@ function montar_tabela(horarios) {
             <td>${formataData(horario.dia_disponivel)}</td>
             <td>${formataHora(horario.horario_inicio)}</td>
             <td>${formataHora(horario.horario_final)}</td>
-            <td>Nota: ${horario.nota}</td>
+            <td>${horario.nota.toFixed(2)}</td>
         </tr>`;
     });
 
