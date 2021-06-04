@@ -8,14 +8,14 @@ module.exports = {
 
         // Encontra a avaliação corresponde a reserva
         let avaliacao = await strapi.services.avaliacao.findOne({ reserva: reserva_id })
-
         // Reserva ainda não foi avaliada?
         if (avaliacao == null) {
-            avaliacao = await strapi.services.avaliacao.create(
-                {
-                    reserva: reserva_id,
-                    nota: nota
-                });
+            let data = {
+                reserva: reserva_id,
+                nota: nota
+            };
+
+            avaliacao = await strapi.services.avaliacao.create(data);
         }
         else {
             avaliacao = await strapi.services.avaliacao.update({ id: avaliacao.id },
