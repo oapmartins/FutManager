@@ -3,7 +3,7 @@ $(document).ready(function() {
     const btnPreReserva = $("#btnPreReserva");
     const btnVoltar = $("#btn-voltar");
 
-    btnVoltar.click(() =>{
+    btnVoltar.click(() => {
         window.location.href = '../pageUsuario.html';
     });
 
@@ -43,9 +43,10 @@ $(document).ready(function() {
 });
 
 function confirmarPreReserv() {
-    const checkReserva =  $("table tr input:checkbox[name=reservar]:checked");
 
-    if(checkReserva.val() == '' || checkReserva.val() == undefined){
+    const checkReserva = $("table tr input:checkbox[name=reservar]:checked");
+
+    if (checkReserva.val() == '' || checkReserva.val() == undefined) {
         Notiflix.Notify.Warning('Favor selecionar algum Horário a ser reservado!');
         return false;
     }
@@ -64,7 +65,9 @@ function confirmarPreReserv() {
             contentType: "application/json",
             data: JSON.stringify(data),
             success: function(result) {
-                window.location.replace("../reserva/lista-reserva.html");
+                if (result) {
+                    window.location.replace("../reserva/lista-reserva.html");
+                }
             },
             error: function(err) {
                 console.log(err);
@@ -84,7 +87,7 @@ function callback_busca(horarios, status) {
 
 function montar_tabela(horarios) {
     let rows = '';
-    horarios.forEach(horario => { 
+    horarios.forEach(horario => {
         rows +=
             `<tr>
             <td><input type="checkbox" name="reservar" value="${horario.id_horario}|${horario.dia_disponivel}"></td>
@@ -92,7 +95,7 @@ function montar_tabela(horarios) {
             <td>${formataData(horario.dia_disponivel)}</td>
             <td>${formataHora(horario.horario_inicio)}</td>
             <td>${formataHora(horario.horario_final)}</td>
-            <td>Nota: ${horario.nota}</td>
+            <td>${horario.nota.toFixed(2)} <i class="fas fa-star"></i></td>
         </tr>`;
     });
 
@@ -147,12 +150,12 @@ function validar_filtro(filtro) {
     return true;
 };
 
-function formataData(data){
-    dataFormatada = data.substr(0,10);
+function formataData(data) {
+    dataFormatada = data.substr(0, 10);
     dataFormatada = dataFormatada.split('-');
-    return dataFormatada = dataFormatada[2] + '/' + dataFormatada[1] + '/'  + dataFormatada[0];  
+    return dataFormatada = dataFormatada[2] + '/' + dataFormatada[1] + '/' + dataFormatada[0];
 }
 
-function formataHora(hora){
-    return horaFormatada = hora.substr(0,5);
+function formataHora(hora) {
+    return horaFormatada = hora.substr(0, 5);
 }
