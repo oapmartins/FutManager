@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    notificacaoAvaliacao();
+    
     buscar_reservas();
 
     $("#btnVoltar").click(() => {
@@ -117,4 +119,18 @@ function formatarData(data) {
 
 function formatarHora(hora) {
     return horaFormatada = hora.substr(0, 5);
+}
+
+function notificacaoAvaliacao() {
+    Notiflix.Confirm.Show(
+        'Avaliação FutManager',
+        'Escreve a mensagem que você quer aqui',
+        'Confirmar',
+        'Cancelar',
+        function() {
+            alert('teste');
+        }, // Confirmar
+        function() {
+            
+        });
 }

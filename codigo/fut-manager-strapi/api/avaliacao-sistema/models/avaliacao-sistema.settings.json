@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avaliacao_sistemas",
+  "info": {
+    "name": "AvaliacaoSistema"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nota": {
+      "type": "integer"
+    },
+    "observacao": {
+      "type": "text"
+    },
+    "cliente": {
+      "model": "cliente"
+    }
+  }
+}
