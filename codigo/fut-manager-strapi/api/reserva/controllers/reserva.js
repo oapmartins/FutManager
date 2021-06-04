@@ -4,7 +4,8 @@ module.exports = {
 
     async find(ctx) {
         const knex = strapi.connections.default;
-        return await knex.raw(`
+        
+        let reservas = await knex.raw(`
             SELECT 
                 r.id, 
                 r.status,
@@ -15,6 +16,7 @@ module.exports = {
                     WHEN status = 3 THEN 'Pagamento confirmado'
                     WHEN status = 4 THEN 'Pendente confirmação do centro esportivo'
                     WHEN status = 5 THEN 'Reserva confirmada'
+                    WHEN status = 6 THEN 'Pendente avaliação'
                     ELSE 'Não definido'
                 END AS descricao_status,
                 h.id as id_horario, 
@@ -31,6 +33,17 @@ module.exports = {
                 q.id = h.quadra 
             JOIN enderecos e ON
                 e.Id = q.endereco`);
+
+        reservas.forEach(reserva => {
+            let data_fim_reserva = new Date(reserva.dia + ' ' + reserva.horario_final);
+            // A data da reserva já ocorreu?
+            if (data_fim_reserva <= Date.now()) {
+                reserva.status = 6;
+                reserva.descricao_status = 'Pendente avaliação';
+            }
+        });
+        
+        return reservas;
     },
 
     async confirmar(ctx) {
