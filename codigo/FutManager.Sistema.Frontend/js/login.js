@@ -13,6 +13,7 @@ $(document).ready(function() {
             login().then(
                 response =>
                 {
+                    localStorage.setItem('usuario',response);
                     if(response.isAuthenticated){
                         if (response.tipo == 'cliente') {
                             window.location.href = "pageUsuario.html";

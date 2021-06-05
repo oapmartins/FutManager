@@ -52,7 +52,7 @@ function apresentar_grid(grid) {
     $("#conteudo-placeholder").html(grid);
 }
 
-function montar_modal_avaliacao(reserva) {
+function montar_modal_avaliacao(reserva = null) {
     return `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
             Avaliar
             </button>
@@ -124,11 +124,11 @@ function formatarHora(hora) {
 function notificacaoAvaliacao() {
     Notiflix.Confirm.Show(
         'Avaliação FutManager',
-        'Escreve a mensagem que você quer aqui',
-        'Confirmar',
-        'Cancelar',
+        'Você poderia avaliar os nossos serviços?',
+        'Sim',
+        'Não',
         function() {
-            alert('teste');
+            window.location.href = '../avaliacoes.html'
         }, // Confirmar
         function() {
             
