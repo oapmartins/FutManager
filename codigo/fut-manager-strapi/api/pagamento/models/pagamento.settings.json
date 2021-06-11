@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "pagamentos",
   "info": {
-    "name": "Pagamento"
+    "name": "Pagamento",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -34,6 +35,9 @@
     },
     "boleto": {
       "model": "boleto"
+    },
+    "reserva": {
+      "model": "reserva"
     }
   }
 }

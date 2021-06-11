@@ -5,8 +5,6 @@
  * to customize this controller
  */
 
- const { sanitizeEntity } = require('strapi-utils');
-
 module.exports = {
     async createWithUser(ctx){
         const { request } = ctx;
