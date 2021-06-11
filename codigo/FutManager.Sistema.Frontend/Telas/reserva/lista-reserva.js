@@ -40,7 +40,7 @@ function montar_row(reserva) {
                         ${reserva.endereco_quadra}
                 </div>
                 ${reserva.status == 1 ? montar_botao_pagamento(reserva) : ''}
-                ${reserva.status == 6 ? montar_modal_avaliacao(reserva) : ''}
+                ${reserva.status == 3 ? montar_modal_avaliacao(reserva) : ''}
                 <span class="badge bg-primary rounded-pill">${reserva.descricao_status}</span>
             </li>`;
 }
@@ -54,7 +54,6 @@ function apresentar_grid(grid) {
 }
 
 function montar_botao_pagamento(reserva = null) {
-    // return `<button type="button" class="btn btn-primary bg-primary" onclick="redirecionar_pagamento(${reserva});">
     return `<button type="button" class="btn btn-primary bg-primary" onclick="redirecionar_pagamento(${reserva.id});">
                 Pagar
             </button>`;
@@ -65,7 +64,7 @@ function redirecionar_pagamento(id) {
 }
 
 function montar_modal_avaliacao(reserva = null) {
-    return `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    return `<button type="button" class="btn btn-primary bg-primary" data-toggle="modal" data-target="#exampleModalLong">
             Avaliar
             </button>
             
@@ -94,7 +93,7 @@ function montar_modal_avaliacao(reserva = null) {
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">fechar</button>
-                    <button type="button" class="btn btn-primary" onclick="postar_avaliacao(${reserva.id});">Avaliar</button>
+                    <button type="button" class="btn btn-primary bg-primary" onclick="postar_avaliacao(${reserva.id});">Avaliar</button>
                 </div>
                 </div>
             </div>
@@ -102,7 +101,8 @@ function montar_modal_avaliacao(reserva = null) {
 }
 
 function postar_avaliacao(reserva_id) {
-    let nota = $('#option-avaliacao option:selected').val();
+    let nota = $('#option-avaliacao option:selected').filter(':selected').val();
+    console.log(nota);
 
     $.ajax({
         url: `http://localhost:3000/reservas/${reserva_id}/avaliacoes`,

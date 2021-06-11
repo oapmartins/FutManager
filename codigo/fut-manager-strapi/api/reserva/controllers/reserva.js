@@ -28,7 +28,7 @@ module.exports = {
         // altera status para concluído(usar enum para tornar mais descritivo os status)
         await strapi.services.reserva.update({ id: reserva_id },
             {
-                status: 4
+                status: 5
             })
 
         ctx.send({
@@ -47,7 +47,7 @@ module.exports = {
                     WHEN status = 1 THEN 'Pré-reserva realizada'
                     WHEN status = 2 THEN 'Pré-reserva paga'
                     WHEN status = 3 THEN 'Avaliação disponível'
-                    WHEN status = 4 THEN 'Reserva finalizada'                    
+                    WHEN status = 5 THEN 'Reserva finalizada'                    
                     ELSE 'Não definido'
                 END AS descricao_status,
                 h.id as id_horario, 
@@ -76,6 +76,7 @@ module.exports = {
                     reserva.descricao_status = 'Pendente avaliação';
                 }
                 else {
+                    reserva.status = 4;
                     reserva.descricao_status = 'Aguardando chegar a data da reserva';
 
                 }
