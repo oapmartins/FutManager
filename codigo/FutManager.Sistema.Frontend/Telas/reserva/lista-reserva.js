@@ -83,8 +83,8 @@ function montar_modal_avaliacao(reserva = null) {
                     <label class="input-group-text" for="option-avaliacao">Nota</label>
                     </div>
                     <select class="custom-select" id="option-avaliacao">
-                        <option values='1'>Uma estrela</option>
-                        <option value="2">duas estrelas</option>
+                        <option value="1">Uma estrela</option>
+                        <option value="2">Duas estrelas</option>
                         <option value="3">Três estrelas</option>
                         <option value="4">Quatro estrelas</option>
                         <option selected value="5">Cinco estrelas</option>
