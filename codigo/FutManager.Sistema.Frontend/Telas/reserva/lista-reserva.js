@@ -39,6 +39,7 @@ function montar_row(reserva) {
                     </div>
                         ${reserva.endereco_quadra}
                 </div>
+                ${reserva.status == 1 ? montar_botao_pagamento(reserva) : ''}
                 ${reserva.status == 6 ? montar_modal_avaliacao(reserva) : ''}
                 <span class="badge bg-primary rounded-pill">${reserva.descricao_status}</span>
             </li>`;
@@ -50,6 +51,17 @@ function montar_grid(rows) {
 
 function apresentar_grid(grid) {
     $("#conteudo-placeholder").html(grid);
+}
+
+function montar_botao_pagamento(reserva = null) {
+    // return `<button type="button" class="btn btn-primary bg-primary" onclick="redirecionar_pagamento(${reserva});">
+    return `<button type="button" class="btn btn-primary bg-primary" onclick="redirecionar_pagamento(${reserva.id});">
+                Pagar
+            </button>`;
+}
+
+function redirecionar_pagamento(id) {
+    window.location.href = `../pagamento/confirmacao-pagamento-pre-reserva.html?id=${id}`;
 }
 
 function montar_modal_avaliacao(reserva = null) {

@@ -24,6 +24,10 @@ function callback_busca(reserva, status) {
                             <div class="timeline-arrow"></div>
                             <h2 class="h5 mb-0">Pré-reserva paga?</h2><span class="small text-gray"><i
                         </li>
+                        <li class="timeline-item ${reserva.status >= 2 ? 'bg-success': 'bg-light'} rounded ml-3 p-4 shadow">
+                            <div class="timeline-arrow"></div>
+                            <h2 class="h5 mb-0">Aguardando data da reserva</h2><span class="small text-gray"><i
+                        </li>
                         <li class="timeline-item ${reserva.status >= 3 ? 'bg-success': 'bg-light'} rounded ml-3 p-4 shadow">
                             <div class="timeline-arrow"></div>
                             <h2 class="h5 mb-0">Avaliar reserva?</h2><span class="small text-gray"><i

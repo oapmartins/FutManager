@@ -68,10 +68,17 @@ module.exports = {
 
         reservas.forEach(reserva => {
             let data_fim_reserva = new Date(reserva.dia + ' ' + reserva.horario_final);
-            // A data da reserva já ocorreu?
-            if (reserva.status != 4 && data_fim_reserva <= Date.now()) {
-                reserva.status = 3;
-                reserva.descricao_status = 'Pendente avaliação';
+            
+            if (reserva.status == 2) {
+                // A data da reserva já ocorreu?
+                if (data_fim_reserva <= Date.now()) {
+                    reserva.status = 3;
+                    reserva.descricao_status = 'Pendente avaliação';
+                }
+                else {
+                    reserva.descricao_status = 'Aguardando chegar a data da reserva';
+
+                }
             }
         });
 
@@ -122,7 +129,14 @@ module.exports = {
                                         q.id = ${quadras_regiao[index].id_quadra}`;
 
             let nota = await knex.raw(query_avaliacao);
-            quadras_regiao[index].nota = nota[0].nota;
+
+            if (nota[0].nota == null) {
+                quadras_regiao[index].nota = 5;
+            }
+            else {
+                quadras_regiao[index].nota = nota[0].nota;
+            }
+            
 
             let query_horario = `SELECT 
                                     h.id AS id_horario, 
