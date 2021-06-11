@@ -28,7 +28,7 @@ module.exports = {
         // altera status para concluído(usar enum para tornar mais descritivo os status)
         await strapi.services.reserva.update({ id: reserva_id },
             {
-                status: 7
+                status: 4
             })
 
         ctx.send({
@@ -44,14 +44,10 @@ module.exports = {
                 r.id, 
                 r.status,
                 CASE
-                    WHEN status = 0 THEN 'Pré-reserva realizada'
-                    WHEN status = 1 THEN 'Gerando boleto'
-                    WHEN status = 2 THEN 'Pendente pagamento'
-                    WHEN status = 3 THEN 'Pagamento confirmado'
-                    WHEN status = 4 THEN 'Pendente confirmação do centro esportivo'
-                    WHEN status = 5 THEN 'Reserva confirmada'
-                    WHEN status = 6 THEN 'Pendente avaliação'
-                    WHEN status = 7 THEN 'Reserva concluída'
+                    WHEN status = 1 THEN 'Pré-reserva realizada'
+                    WHEN status = 2 THEN 'Pré-reserva paga'
+                    WHEN status = 3 THEN 'Avaliação disponível'
+                    WHEN status = 4 THEN 'Reserva finalizada'                    
                     ELSE 'Não definido'
                 END AS descricao_status,
                 h.id as id_horario, 
@@ -73,8 +69,8 @@ module.exports = {
         reservas.forEach(reserva => {
             let data_fim_reserva = new Date(reserva.dia + ' ' + reserva.horario_final);
             // A data da reserva já ocorreu?
-            if (reserva.status != 7 && data_fim_reserva <= Date.now()) {
-                reserva.status = 6;
+            if (reserva.status != 4 && data_fim_reserva <= Date.now()) {
+                reserva.status = 3;
                 reserva.descricao_status = 'Pendente avaliação';
             }
         });
@@ -84,11 +80,9 @@ module.exports = {
 
     async confirmar(ctx) {
         const { id } = ctx.params;
-        const { perfil } = ctx.params;
 
         const knex = strapi.connections.default;
-        await knex.raw(`UPDATE reservas SET status = ${perfil == "cliente" ? 4 : 5} WHERE id = ${id}`);
-        // enviar email para gestor
+        await knex.raw(`UPDATE reservas SET status = 2 WHERE id = ${id}`);
 
         ctx.send({
             ok: true,
@@ -145,48 +139,11 @@ module.exports = {
             horarios_quadras = horarios_quadras.concat(horario_quadra);   
         }
 
-        // const horarios = await knex('quadras')
-        //     .join('enderecos', 'quadras.endereco', 'enderecos.id')
-        //     .join('horarios', 'horarios.quadra', 'quadras.id')
-        //     .where('enderecos.estado', filtro.estado)
-        //     .where('enderecos.cidade', filtro.cidade)
-        //     .select('enderecos.logradouro')
-        //     .select('horarios.id AS id_horario')
-        //     .select('horarios.dia_abertura')
-        //     .select('horarios.horario_inicio')
-        //     .select('horarios.horario_final')
-        //     .select('quadras.id AS id_quadra')
-        //     .select('quadras.razao_social');
-
         let data_inicio = new Date(filtro.data_inicio);
         let data_final = new Date(filtro.data_final);
         let agendas = [];
         // Pecorre todas as dias compreendidas entre a data de início e fim
         // gerando, em memória, as agendas. Certamente não é a melhor solução.
-        // while (data_inicio <= data_final) {
-        //     for (let index = 0; index < horarios.length; index++) {
-        //         // Horário disponível é para o mesmo dia da semana do filtro?
-        //         if (data_inicio.getDay() == horarios[index].dia_abertura) {
-        //             // Horário disponível compreende o horário do filtro?
-        //             if (filtro.horario_inicio <= horarios[index].horario_inicio
-        //                 && filtro.horario_final >= horarios[index].horario_final) {
-        //                 agendas.push(
-        //                     {
-        //                         dia_disponivel: new Date(data_inicio),
-        //                         id_quadra: horarios[index].id_quadra,
-        //                         nome_quadra: horarios[index].razao_social,
-        //                         id_horario: horarios[index].id_horario,
-        //                         horario_inicio: horarios[index].horario_inicio,
-        //                         horario_final: horarios[index].horario_final
-        //                     }
-        //                 );
-        //             }
-        //         }
-        //     }
-        //     // Incrementa em um dia a data de início
-        //     data_inicio.setDate(data_inicio.getDate() + 1);
-        // }
-
         while (data_inicio <= data_final) {
             for (let index = 0; index < horarios_quadras.length; index++) {
                 // Horário disponível é para o mesmo dia da semana do filtro?
