@@ -10,7 +10,7 @@
     },
     {
       "method": "POST",
-      "path": "/reservas/:id/confirmacao/:perfil",
+      "path": "/reservas/:id/confirmacao",
       "handler": "reserva.confirmar",
       "config": {
         "policies": []

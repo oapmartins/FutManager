@@ -6,7 +6,7 @@ function confirmar_prereserva() {
     const id_reserva = new URLSearchParams(window.location.search).get("id");
 
     $.ajax({
-        url: `http://localhost:3000/reservas/${id_reserva}/confirmacao/cliente`,
+        url: `http://localhost:3000/reservas/${id_reserva}/confirmacao`,
         type: "POST",
         dataType: "json",
         contentType: "application/json",

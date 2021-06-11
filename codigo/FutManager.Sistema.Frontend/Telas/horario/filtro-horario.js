@@ -55,7 +55,8 @@ function confirmarPreReserv() {
         let params = $(checkbox).val().split('|');
         let data = {
             dia: params[1],
-            horario: params[0]
+            horario: params[0],
+            status: 1
         };
 
         $.ajax({

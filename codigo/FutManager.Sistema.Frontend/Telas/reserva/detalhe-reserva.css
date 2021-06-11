@@ -1,0 +1,81 @@
+.bg-gradient-primary {
+    color: white;
+    background-color: #275476;
+    background-image: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #ffffff47;
+    border-color: #436884;
+    width: 200px;
+}
+
+.btn-primary:hover {
+    background-color: #618bab;
+    border-color: #618bab;
+}
+
+.list-group-item:hover {
+    background: #d6d6d6;
+    cursor: pointer
+}
+
+a, a:hover {
+    color: #011b69;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+ul {
+    color: #011b69;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: grey;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+}
+
+li.timeline-item {
+    margin: 20px 0;
+}
+
+.timeline-arrow {
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid transparent;
+    display: block;
+    position: absolute;
+    left: 2rem;
+}
+
+li.timeline-item::before {
+    content: ' ';
+    background: black;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: 11px;
+    width: 14px;
+    height: 14px;
+    z-index: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-gray {
+    color: #8a8a8a;
+}
