@@ -20,9 +20,10 @@ module.exports = {
 
     },
 
-    async getRatings(ctx){
+    async getRatingsByMonth(ctx){
         const { request } = ctx;
+        const { query } = request;
 
-        return strapi.query('avaliacao-sistema').find({observacao_contains: 'teste'});
+        return strapi.query('avaliacao-sistema').find({created_at_gte: `2021-${query.mes}-01T00:00:00Z`, created_at_lte: `2021-${query.mes}-28T00:00:00Z`});
     }
 };
