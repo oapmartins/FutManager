@@ -71,6 +71,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/reservas/relatorio/avaliacao-por-mes",
+      "handler": "reserva.reservas_por_mes",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

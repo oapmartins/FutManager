@@ -189,4 +189,18 @@ module.exports = {
 
         return ctx.send(agendas);
     },
+
+    async reservas_por_mes(ctx) {
+        const knex = strapi.connections.default;
+        
+        return await knex.raw(`
+            SELECT 	DISTINCT 
+            strftime('%Y', date(r.dia)) Ano,
+            strftime('%m', r.dia) Mes,
+            COUNT(*) OVER(PARTITION BY strftime('%Y', r.dia), strftime('%m', r.dia)) Volume
+            FROM reservas r 
+            JOIN avaliacoes a ON
+                a.reserva = r.id `);
+    },
+
 };

@@ -62,7 +62,7 @@ Facilitar a gestão de quadras transformando um modelo de negócio informal em u
 ## 2. Participantes do processo
 
     2.1 PERSONA 1
-    
+
  Fábio tem 41 anos, é casado e atualmente trabalha como dono/gestor de quadras de futebol na região onde vive. Sua personalidade é de uma pessoa brincalhona e bem humorada, é também um ótimo empreendedor. Seu sonho atualmente é conhecer o mundo e poder melhorar e ampliar seus negócios. Porém, um problema que Fábio enfrenta atualmente é a falta de organização em sua quadra. Fábio se utiliza de uma agenda para se organizar mas, mesmo assim, não foram raras as vezes que ele acabou reservando um mesmo horário para mais de uma pessoa. O sistema de gestão de quadras sanará este e outros problemas. Com o sistema, Fábio poderá ter controle total em sua agenda, sabendo quais horários estão disponíveis, pré-reservados ou reservados. Ele também não precisará mais se preocupar com confirmação de presença ou com a divulgação de sua quadra.
 
     2.2 PERSONA 2
@@ -101,8 +101,11 @@ A plataforma também permitírá que o gestor de uma quadra possa ter a sua agen
 Ao colocar em pespectiva um futuro breve, dentre as oportunidades de melhorias, a plataforma poderá: 
 
 * Integraçoes com os pricipais sistemas ERPs que, por ventura, o gestor de quadras já utilize. 
+
 * adicionae sistema de valiação da estrutura da quadra para auxiliar o usuário a escolher a melhor opção. 
+
 * Pagamento por visibilidade, onde o gestor de uma quadra poderá pagar para ganhar mais destaque dentro do sistema de busca. 
+
 * Sistema de cupons e fidelização.
   
   ## 3.3. Processos
@@ -188,9 +191,6 @@ Após o processo de cadastro de usuário, temos o login do usuário no sistema. 
 | Senha                        | Caixa de Texto | Cadastrado no banco | ----------------- |
 | Escolha de Cliente ou Gestor | Seleção Únicao | Cadastrado no banco | ----------------- |
 
-
-
-
 #### Processo 3 – Cadastro de Quadras
 
 **Informação sobre o Cadastro das Quadras**
@@ -240,6 +240,7 @@ Após o processo de cadastro de usuário, temos o login do usuário no sistema. 
 |           |                  |                                   |                     |
 
 #### Processo 5 – Fluxo de Pagamento
+
 **Preencher informações de contato**
 
 Será fornecido um formulário para o usuário preencher os dados do cartão que será utilizado caso opte pelo tipo de pagamento pós. Os dados informados pelo usuário serão utilizados para pagamentos futuros. O formulário conterá os campos necessários para serem enviados ao gateway de pagamento.
@@ -254,6 +255,7 @@ Será fornecido um formulário para o usuário preencher os dados do cartão que
 | CPF/CNPJ titular  | Caixa de texto | Somente números             | Vazio             |
 
 #### Processo 6 – Fluxo de Avaliação
+
 **Perguntas de avaliação**
 
 Após a efetuação da reserva o usuário receberá um alerta com a opção de avaliar o serviço obtido. O fluxo consiste em perguntas sobre recomendação, um NPS sobre o serviço e uma caixa de texto de observação.
@@ -263,7 +265,6 @@ Após a efetuação da reserva o usuário receberá um alerta com a opção de a
 | Seleção de recomendação | Select         | Sim ou Não               | Sim               |
 | NPS do serviço          | Select         | Range de zero a dez      | 10                |
 | Campo de Observação     | Caixa de texto | Máximo de 200 caracteres | Sim               |
-
 
 ### 4.2. Tecnologias
 
@@ -281,15 +282,16 @@ Diagrama de Entidade-Relacionamento (DER) criado a partir do detalhamento de ati
 
 ## 6. Indicadores de desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores.
-
 Usar o seguinte modelo:
 
-| **Indicador**               | **Objetivos**                                                         | **Descrição**                                             | **Cálculo** | **Fonte dados**     | **Perspectiva**           |
-| --------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------- | ----------- | ------------------- | ------------------------- |
-| Percentual reclamações      | Avaliar quantitativamente as reclamações                              | Percentual de reclamações em relação ao total atendimento |             | Tabela reclamações  | Aprendizado e Crescimento |
-| Taxa de Requisições abertas | Melhorar a prestação de serviços medindo a porcentagem de requisições | Mede % de requisições atendidas na semana                 | \*100       | Tabela solicitações | Processos internos        |
-| Taxa de entrega de material | Manter controle sobre os materiais que estão sendo entregues          | Mede % de material entregue dentro do mês                 |             | Tabela Pedidos      | Clientes                  |
+| **Indicador**                       | **Objetivos**                                                                                                               | **Descrição**                                                                                                                      | **Cálculo**                                               | **Fonte dados**         | **Perspectiva**                             |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ----------------------- | ------------------------------------------- |
+| Indicador de avaliação de quadra    | Avaliar a média de satisfação de uma determinada quadra, para visualiação se espectativas de clientes estão sendo atendidas | Mede a quantidade de "estrelas" que um usuário avaliou nas reservas que estão associadas a uma quadra de acordo com seus critérios | Quant estrelas (avaliação select) / (quant avaliação * 5) | Tabela Reserva          | Melhora em processos e crescimento          |
+| Indicador de avaliação do sistema   | Avaliar a média de satisfação do sistema, para visualiação se espectativas de clientes estão sendo atendidas                | Mede a quantidade de "estrelas" que um usuário avaliou de acordo com seus critérios                                                | Quant estrelas (avaliação select) / (quant avaliação * 5) | Tabela AvaliaçãoSistema | Processos internos                          |
+| Indicador de acesso ao sistema      | Vizualizar a quantidade de acessos ao sistema por cada mês, para perceber o crescimento do público ao sistema               | Gerar um relatório de quantos acessos ao sistema ocorreu, mede um número de acordo com o mês                                       |                                                           | Tabela Log              | Processos internos                          |
+| Indicador de quantidade de reservas | Vizualizar a quantidade de reservas por cada mês, para perceber o crescimento do público daquela determinada quadra         | Gerar um relatório de quantos marcações de reserva ocorreu em cada mês por cada gestor                                             |                                                           | Tabela Reservas         | Processos que auxiliam os usuários (gestor) |
+| Indicador de receita                | Mede a receita que recebe a cada mês através de marcações                                                                   | Quando a quadra está tendo de receita para auxilio do gestor em seus gastos e mudanças na quadrca                                  |                                                           | Tabela Receita          | Processos que auxiliam os usuários (gestor) |
+
 
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe **a ser proposto**
 
