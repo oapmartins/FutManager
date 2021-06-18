@@ -35,6 +35,10 @@
     },
     "observacao": {
       "type": "string"
+    },
+    "reservas": {
+      "via": "quadra",
+      "collection": "reserva"
     }
   }
 }

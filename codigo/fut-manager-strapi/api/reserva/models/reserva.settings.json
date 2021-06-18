@@ -34,6 +34,10 @@
     "avaliacao": {
       "via": "reserva",
       "model": "avaliacao"
+    },
+    "quadra": {
+      "model": "quadra",
+      "via": "reservas"
     }
   }
 }
