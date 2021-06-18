@@ -123,33 +123,24 @@
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Dados pagamento tranferência <i
+                                <h1 class="h4 text-gray-900 mb-4">Pagamento por boleto<i
                                         class="fas fa-clipboard-list"></i></h1>
                             </div>
+                            <br>
                             <div>
                                 <div class="text-center">
-                                    <h7 class="">Dados conta Banco do Brasil</h7>
+                                    <a id="btnBoleto" class="btn btn-primary btn-user btn-block">
+                                        Clique aqui para gerar boleto
+                                    </a>
                                 </div>
-                                <div>
-                                    <label>
-                                        Conta -> <br>
-                                        Agência -> <br>
-                                        Nome Quadra
-                                    </label>
-                                </div>
-                                <div class="text-center">
-                                    <h7 class="">PIX</h7>
-                                </div>
-                                <div>
-                                    <label>
-                                        Chave PIX
-                                    </label>
-                                </div>
+
+                                <br>
+                                <br>
                             </div>
                             <p></p>
                             <h1 class="h5 text-gray-900 mb-4">* Anexar comprovante de pagamento</h1>
                             <input type="file" name="imagem" id="imagem" onchange="previewImagem()">
-                            
+
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <img style="width: 150px; height: 150px;">
@@ -160,11 +151,26 @@
                                     <br>
                                     <br>
                                     <br>
-                                    <a id="btnCadastro" class="btn btn-primary btn-user btn-block">
-                                        Confirmar
-                                    </a>
+                                    <br>
+                                    <br>
                                 </div>
 
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+
+                                    <div >
+
+                                    </div>
+
+                                    <div>
+                                        <a id="btnBoleto" class="btn btn-primary btn-user btn-block">
+                                            Confirmar
+                                        </a>
+                                    </div>
+
+                                    <div>
+
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -182,11 +188,11 @@
 
             var reader = new FileReader();
 
-            reader.onloadend = function() {
+            reader.onloadend = function () {
                 preview.src = reader.result;
             }
 
-            if(imagem) {
+            if (imagem) {
                 reader.readAsDataURL(imagem);
             } else {
                 preview.src = "";

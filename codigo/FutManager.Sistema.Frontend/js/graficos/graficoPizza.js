@@ -7,7 +7,7 @@ var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ["Masculino", "Feminino", "Outros"],
+        labels: ["Masculino", "Feminino", "Outros", 2],
         datasets: [{
             data: [55, 35, 5],
             backgroundColor: ['#4e73df', '#1cc88a', '#533375'],

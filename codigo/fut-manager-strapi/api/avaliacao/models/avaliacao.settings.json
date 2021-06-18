@@ -12,8 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "reserva": {
-      "model": "reserva",
-      "via": "avaliacao"
+      "via": "avaliacao",
+      "model": "reserva"
     },
     "nota": {
       "type": "integer",

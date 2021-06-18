@@ -13,7 +13,9 @@ $(document).ready(function() {
             login().then(
                 response =>
                 {
-                    localStorage.setItem('usuario',response);
+                    localStorage.clear();
+                    localStorage.setItem('id', response.id);
+                    localStorage.setItem('nome', response.nome);
                     if(response.isAuthenticated){
                         if (response.tipo == 'cliente') {
                             window.location.href = "pageUsuario.html";
@@ -24,8 +26,7 @@ $(document).ready(function() {
                     }
                     else{
                         Notiflix.Notify.Warning('O campo de email ou senha estão preenchidos com informações inválidas. Favor Verificar!');
-                    }
-                    
+                    }    
                 }
             ).catch(
                 () => {

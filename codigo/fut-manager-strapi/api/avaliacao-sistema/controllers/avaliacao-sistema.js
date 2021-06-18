@@ -18,5 +18,11 @@ module.exports = {
             return result;
         }).catch(error => console.log(error))
 
+    },
+
+    async getRatings(ctx){
+        const { request } = ctx;
+
+        return strapi.query('avaliacao-sistema').find({observacao_contains: 'teste'});
     }
 };

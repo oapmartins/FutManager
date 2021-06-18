@@ -55,6 +55,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/avaliacoes-usuario/medium",
+      "handler": "avaliacao-sistema.getRatings",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
