@@ -5,4 +5,9 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+    async getEarningsByMonth(ctx){
+        const { request } = ctx;
+        const { body } = request;
+    }
+};

@@ -157,7 +157,7 @@
 
                                 <div class="col-sm-6 mb-3 mb-sm-0">
 
-                                    <div >
+                                    <div>
 
                                     </div>
 
@@ -182,6 +182,31 @@
     </div>
 
     <script>
+
+        const btnPagamento = document.querySelector("#btnCadastro");
+
+        btnPagamento.addEventListener('click', confirmarPagamento);
+
+        function confirmarPagamento() {
+
+            const id_reserva = localStorage.idReserva;
+
+            $.ajax({
+                url: `http://localhost:3000/reservas/${id_reserva}/confirmacao`,
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json",
+                data: {},
+                success: function (result) {
+                    Notiflix.Report.Success('Pagamento', 'Pagamento Realizado com sucesso!', null, retornarLogin);
+                },
+                error: function (err) {
+                    console.log(err);
+                    alert("Algo inesperado ocorreu durante a confirmação de pré-reserva! Tente mais tarde.");
+                }
+            });
+        }
+
         function previewImagem() {
             var imagem = document.querySelector('input[name=imagem]').files[0];
             var preview = document.querySelector('img');
@@ -197,6 +222,11 @@
             } else {
                 preview.src = "";
             }
+        }
+
+        function retornarLogin(){
+            window.location.replace(`pageUsuario.html`);
+
         }
 
     </script>

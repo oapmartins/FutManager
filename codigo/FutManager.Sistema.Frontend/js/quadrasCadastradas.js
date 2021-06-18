@@ -14,7 +14,6 @@ function buscarQuadras() {
 
 function callback_busca(quadras, status) {
 
-    console.log(quadras, status);
 
     if (status === "error") {
         alert("Algo inesperado ocorreu durante a busca de suas quadras!");
@@ -28,17 +27,18 @@ function callback_busca(quadras, status) {
 
                 // <label> | Endereço: ${quadra.endereco}</label>
                 // <label> | Horários: ${quadra.horarios}</label>
+                
+                let observacoes = !!!quadra.observacao ? 'Sem observações' : quadra.observacao;
+                let telefone = !!!quadra.telefone ? '' : quadra.telefone;
 
-                let observacoes = quadra.observacao == ''? 'Sem observações' : quadra.observacao;
-
-                rows += `<li class="list-group-item d-flex justify-content-between align-items-start" onclick="window.location='detalhe-quadra.html?id=${quadra.id}';">
+                rows += `<li class="list-group-item d-flex justify-content-between align-items-start">
                             <div class="ms-2 me-auto" style="color:#8a8a8a">
                                 <div class="fw-bold">
-                                    <a href="./detalhe-quadra.html?id=${quadra.id}">${quadra.id} - ${quadra.nome_fantasia}</a>
+                                    <a>${quadra.id} - ${quadra.razao_social}</a>
                                 </div>
                                     <label>CNPJ: ${quadra.cnpj}</label>
 
-                                    <label> | Telefone: ${mascaraTelefone(quadra.telefone)}</label>
+                                    <label> | Telefone: ${mascaraTelefone(telefone)}</label>
                                     <label> | Criado no dia: ${formataData(quadra.published_at)}</label>
                                     <br>
                                     <label>Observações: ${observacoes}</label>
@@ -60,6 +60,9 @@ function formataData(data) {
 }
 
 function mascaraTelefone(tel) {
+    if(!tel){
+        return tel;
+    }
     tel = tel.replace(/\D/g, "")
 
     tel = tel.replace(/(.{0})(\d)/, "$1($2")

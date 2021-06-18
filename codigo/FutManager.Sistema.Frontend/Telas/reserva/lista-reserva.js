@@ -60,7 +60,8 @@ function montar_botao_pagamento(reserva = null) {
 }
 
 function redirecionar_pagamento(id) {
-    window.location.href = `../pagamento/confirmacao-pagamento-pre-reserva.html?id=${id}`;
+    window.localStorage.idReserva = id;
+    window.location.href = `../pagamento.html`;
 }
 
 function montar_modal_avaliacao(reserva = null) {
@@ -113,14 +114,16 @@ function postar_avaliacao(reserva_id) {
             nota: nota
         }),
         success: function (result) {
-            alert('Avaliação enviada, obrigado');
-            location.reload();
+            Notiflix.Report.Success('Avaliação quadra', 'Avaliação Enviada com Sucesso, Obrigado!', null, retornaOkBtn);
         },
         error: function (err) {
             console.log(err);
-            alert("Algo inesperado ocorreu durante a confirmação de sua avaliação! Tente mais tarde.");
         }
     });
+}
+
+function retornaOkBtn(){
+    location.reload();
 }
 
 function formatarData(data) {

@@ -59,7 +59,7 @@
     {
       "method": "GET",
       "path": "/avaliacoes-usuario/medium",
-      "handler": "avaliacao-sistema.getRatings",
+      "handler": "avaliacao-sistema.getRatingsByMonth",
       "config": {
         "policies": []
       }
