@@ -310,9 +310,9 @@ TELA LOGIN
 
 TELA CLIENTE
 -> Com usuário "logado" e na tela de cliente, terão as opções:
-	Busca de quadras mais próximas a sua região ou de seu interesse para lazer a partir de um mapa na tela inicial. 
-	A parte de reservas, em que existe a opção tanto de realizar sua reservas quanto visualizar reservas já existentes.
-	Fale conosco, um campo para realizar uma dúvida sobre a usabilidade do sistema.
+    Busca de quadras mais próximas a sua região ou de seu interesse para lazer a partir de um mapa na tela inicial. 
+    A parte de reservas, em que existe a opção tanto de realizar sua reservas quanto visualizar reservas já existentes.
+    Fale conosco, um campo para realizar uma dúvida sobre a usabilidade do sistema.
 
 TELA RESERVA
 -> A partir da seleção de estado e cidade, horário de início e final da busca e variação da data clicar no botão buscar para aparecer os horários disponíveis e as devidas quadras com suas respectivas avaliações, horários e data. Selecionando um quadra para pré-reserva irá ser direcionada para lista de quadras agendas, tendo a possibilidade de pagar as quadras com pagamentos pendentes (mostram a situação necessária para prosseguimento do agendamento)
@@ -325,16 +325,17 @@ TELA DE AVALIAÇÃO
 
 TELA GESTOR
 -> Com usuário "logado" e na tela de gestor, terão as opções:
-	Visualização do seu perfil
-	Quadras: Tanto para o cadastro de quadras e visualização destas já cadastradas.
-	Financeiro, para visualizar a receita da empresa, gráfico de indicador
+    Visualização do seu perfil
+    Quadras: Tanto para o cadastro de quadras e visualização destas já cadastradas.
+    Financeiro, para visualizar a receita da empresa, gráfico de indicador
 
 TELA CADASTRO QUADRA
 -> Com o gestor já cadastrado no sistema, ele tem a possibilidade de adicionar várias quadras que ele administra, pode-se assim visualizar o faturamento de cada quadra e esta será adicionada no banco para usuários reservar a jogar nesta e demais processos. Este cadastro é feito a partir do preenchimento de campos com dados como endereço, razão social, CNPJ e entre outras, após isso adicionada no banco.
 
 ## 8. Avaliação
 
-Faça aqui sobre a avaliação do software. Indique se ele atendeu as expectativas e ele é viável. Para não ficar subjetivo, o ideal é fazer um questionário e pedir ao usuário do processo que faça a avaliação
+Considerando que a plataforma FutManager nasceu com a proposta de unicamente atender os critérios de avaliação da disciplina de Trabalho Interdisciplinar II, dos cursos de Engenharia de Software e Sistemas da Informação, podemos concluir que a mesma 
+superou as expectativas. Porém, em um contexto de mercado real, é possível identificar que a plataforma FutManager ainda precisa de polimento para se tornar um MVP. Para tal, precisaríamos, por exemplo, de rescrever para o frontend e backend utilizando algum framework consolidado e escalável, trabalhar em parceria com algum stakerholder para compreender e evoluirmos ainda mais na modelagem dos processos.
 
 ## 9. Conclusão
 
@@ -368,4 +369,4 @@ Dos artefatos;
 
 Da apresentação final;
 
-Do vídeo de apresentação.
+Do vídeo de apresentação.d
