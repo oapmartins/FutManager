@@ -300,37 +300,37 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## 7.Sistema desenvolvido
 
--> Primeiramente temos em nosso projeto, umas das telas mais importantes em questões de marketing, a famosa tela de propaganda. Nela se encontra toda proposta que nos os desenvolvedores, elaboramos para atender a demandas dos clientes e gestores de quadras, tanto para agilizar quanto para facilitar processos, que em questão são apresentadas aos donos de quadra quem veem a importância deste sistema para o seu negócio e aos clientes melhorando ao seu lazer.
+* Primeiramente temos em nosso projeto, umas das telas mais importantes em questões de marketing, a famosa tela de propaganda. Nela se encontra toda proposta que nos os desenvolvedores, elaboramos para atender a demandas dos clientes e gestores de quadras, tanto para agilizar quanto para facilitar processos, que em questão são apresentadas aos donos de quadra quem veem a importância deste sistema para o seu negócio e aos clientes melhorando ao seu lazer.
 
-TELA CADASTRO
--> Após o interesse do dono da quadra  (gestor) ou ao usuário de uma quadra (cliente/jogador) ao sistema, a primeira tela do processo é a tela de cadastro do gestor ou usuário, tendo a opção de escolha de acordo com suas necessidades do sistema. Além da definição do tipo de usuário a o cadastro de seus dados pessoais, como nome e dados de contato, validação usuário real ou repetido a partir do CPF, criação de senha seu e-mail e senha que a partir disto serão guardadas em um banco para o auxilio em outras etapas.
+**TELA CADASTRO
+* Após o interesse do dono da quadra  (gestor) ou ao usuário de uma quadra (cliente/jogador) ao sistema, a primeira tela do processo é a tela de cadastro do gestor ou usuário, tendo a opção de escolha de acordo com suas necessidades do sistema. Além da definição do tipo de usuário a o cadastro de seus dados pessoais, como nome e dados de contato, validação usuário real ou repetido a partir do CPF, criação de senha seu e-mail e senha que a partir disto serão guardadas em um banco para o auxilio em outras etapas.
 
-TELA LOGIN
--> Com o cadastro realizado, o próximo passo é o fator principal para a entrada no sistema, a tela de login do usuário no sistema. A partir de dados armazenados no banco, como o e-mail, senha e tipo do usuário será validado está informação digitada com informações do banco e com tudo correto o correrá o login, que através deste, terá o encaminhamento para sua devida tela, a de cliente(jogador) ou de gestor(administrador da quadra)
+**TELA LOGIN
+* Com o cadastro realizado, o próximo passo é o fator principal para a entrada no sistema, a tela de login do usuário no sistema. A partir de dados armazenados no banco, como o e-mail, senha e tipo do usuário será validado está informação digitada com informações do banco e com tudo correto o correrá o login, que através deste, terá o encaminhamento para sua devida tela, a de cliente(jogador) ou de gestor(administrador da quadra)
 
-TELA CLIENTE
--> Com usuário "logado" e na tela de cliente, terão as opções:
+**TELA CLIENTE
+* Com usuário "logado" e na tela de cliente, terão as opções:
 	Busca de quadras mais próximas a sua região ou de seu interesse para lazer a partir de um mapa na tela inicial. 
 	A parte de reservas, em que existe a opção tanto de realizar sua reservas quanto visualizar reservas já existentes.
 	Fale conosco, um campo para realizar uma dúvida sobre a usabilidade do sistema.
 
-TELA RESERVA
--> A partir da seleção de estado e cidade, horário de início e final da busca e variação da data clicar no botão buscar para aparecer os horários disponíveis e as devidas quadras com suas respectivas avaliações, horários e data. Selecionando um quadra para pré-reserva irá ser direcionada para lista de quadras agendas, tendo a possibilidade de pagar as quadras com pagamentos pendentes (mostram a situação necessária para prosseguimento do agendamento)
+**TELA RESERVA
+* A partir da seleção de estado e cidade, horário de início e final da busca e variação da data clicar no botão buscar para aparecer os horários disponíveis e as devidas quadras com suas respectivas avaliações, horários e data. Selecionando um quadra para pré-reserva irá ser direcionada para lista de quadras agendas, tendo a possibilidade de pagar as quadras com pagamentos pendentes (mostram a situação necessária para prosseguimento do agendamento)
 
-TELA DE PAGAMENTO
--> A tela onde será realizada o pagamento através da escolha em de cartão de crédito ou de boleto, em que já é criado a partir dados do cliente salvo no banco. Após o pagamento do boleto, a tele conta com um campo que permite o anexo do comprovante de pagamento, para assim a liberação da quadra para o lazer.
+**TELA DE PAGAMENTO
+* A tela onde será realizada o pagamento através da escolha em de cartão de crédito ou de boleto, em que já é criado a partir dados do cliente salvo no banco. Após o pagamento do boleto, a tele conta com um campo que permite o anexo do comprovante de pagamento, para assim a liberação da quadra para o lazer.
 
-TELA DE AVALIAÇÃO
--> Após a realização do lazer, da data do respectivo jogo, na lista de reservas irá ficar disponível a quadra para a avaliação, que a partir desta pode alterar a média da nota da quadra disponível no buscar quadras. Está avaliação é composta da quantidade de estrelas (contadas de 1 a 5) para a respectiva quadra e um campo para deixar um comentário do porque / o motivo daquela avaliação
+**TELA DE AVALIAÇÃO
+* Após a realização do lazer, da data do respectivo jogo, na lista de reservas irá ficar disponível a quadra para a avaliação, que a partir desta pode alterar a média da nota da quadra disponível no buscar quadras. Está avaliação é composta da quantidade de estrelas (contadas de 1 a 5) para a respectiva quadra e um campo para deixar um comentário do porque / o motivo daquela avaliação
 
-TELA GESTOR
--> Com usuário "logado" e na tela de gestor, terão as opções:
-	Visualização do seu perfil
-	Quadras: Tanto para o cadastro de quadras e visualização destas já cadastradas.
-	Financeiro, para visualizar a receita da empresa, gráfico de indicador
+**TELA GESTOR
+* Com usuário "logado" e na tela de gestor, terão as opções:
+	- Visualização do seu perfil
+	- Quadras: Tanto para o cadastro de quadras e visualização destas já cadastradas.
+	- Financeiro, para visualizar a receita da empresa, gráfico de indicador
 
-TELA CADASTRO QUADRA
--> Com o gestor já cadastrado no sistema, ele tem a possibilidade de adicionar várias quadras que ele administra, pode-se assim visualizar o faturamento de cada quadra e esta será adicionada no banco para usuários reservar a jogar nesta e demais processos. Este cadastro é feito a partir do preenchimento de campos com dados como endereço, razão social, CNPJ e entre outras, após isso adicionada no banco.
+**TELA CADASTRO QUADRA
+* Com o gestor já cadastrado no sistema, ele tem a possibilidade de adicionar várias quadras que ele administra, pode-se assim visualizar o faturamento de cada quadra e esta será adicionada no banco para usuários reservar a jogar nesta e demais processos. Este cadastro é feito a partir do preenchimento de campos com dados como endereço, razão social, CNPJ e entre outras, após isso adicionada no banco.
 
 ## 8. Avaliação
 
@@ -338,7 +338,19 @@ Faça aqui sobre a avaliação do software. Indique se ele atendeu as expectativ
 
 ## 9. Conclusão
 
-Apresente aqui a conclusão do seu trabalho. Discussão dos resultados obtidos no trabalho, onde se verifica as observações pessoais de cada aluno. Poderá também apresentar sugestões de novas linhas de estudo.
+Este trabalho foi desenvolvido com o intuito de facilitar a relação entre clientes e gestores de uma quadra de futebol Socity, em outras palavras, reuni peladeiros e donos de quadras, facilitando através da automatização de processos que visam melhorar tanto a gestão quanto ao lazer de um cliente, maximizar o tempo de espera e melhorando a segurança do estabelecimento no que diz respeito a pagamento e ao local.
+
+Percebe-se em conjunto ao grupo que apesar das dificuldades de conciliação com outras matérias em conjunto a que envolvem esta, para realização do trabalho, este atendeu e foi possível colocar em prática a maior parte do conteúdo aprendido, como o funcionamento de uma empresa de criação de sistemas (pela plataforma gerenciamento do GitHub), a criação de banco de dados para alocação de informações necessárias no sistema, as devidas modelagens de processos que são parte fundamental do funcionamento e a continuação do aprendizado da linguagem Web de back-end e front-end.
+
+Através de conversas sobre avaliação do sistema, constatamos que a maioria dos objetivos de um gerenciador de quadras foram atendidas, que atividades manuais como, controle de valor, visualização de quadras da sua região, reserva de horários e pagamento acabaram se transformando em atividades que você pode fazer no conforto do seu lar e agilizam suas tarefas, ocasionando em mais mais conforto e facilidade antes do seu lazer (jogadores/clientes) e ajudando a gestores a estar cada vez mais próximo do que passa no seu estabelecimento.
+
+Dentre os objetivos definidos, as ideias que não foram inclusas nesse momento, que buscam ser implementadas em um futuro próximo são:
+* Adaptação do sistema em dispositivos moveis, criação de aplicativo mobile, pelo fato do do site já ser responsivo para adaptação web a estes dispositivos.
+* Busca de novas implementações de quadras ao redor do Brasil, para maiores opções e crescimento no mercado
+* Chat de conversas entre gestores e clientes, melhorando cada vez mais a comunicação e relacionamento entre eles.
+* Pagamento por cartão de crédito ser desenvolvido por completo, através de API que visam ter contato com emissoras de cartão para cobrança
+* Implementação do comercio varejo da quadra, o qual o gestor faz vendas para cliente por um meio virtual para facilitar pagamento e até mesmo o controle de estoque 
+
 
 # REFERÊNCIAS
 
