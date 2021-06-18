@@ -20,13 +20,18 @@ A finalidade do sistema será auxiliar na administração, para a organização 
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Para utilizar, será necessário possuir ter um serviço do Strapi local executando o backend da aplicação na porta 3000. Para tal, será necessário:
+
+* Instalar o [Node.js](https://nodejs.org/en/)
+
+* Instalar o [Strapi](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/installation.html)
+
+* No cmd, navegar até o diretório `fut-manager-strapi`
+
+* No cmd, executar `npm run develop`
+
+Neste momento a aplicação estará executando. Basta acessar o diretório `./FutManager.Sistema.Frontend/Telas/` e abrir o arquivo `login.html` em seu navegador, criar uma conta e usar o sistema.
 
 ## Histórico de versões
 
-* 0.1.1
-  * CHANGE: Atualização das documentacoes. Código permaneceu inalterado.
-* 0.1.0
-  * Implementação da funcionalidade X pertencente ao processo P.
-* 0.0.1
-  * Trabalhando na modelagem do processo de negócios.
+* **0.0.1** Versão inicial. Documentação das instruções de utilização.
