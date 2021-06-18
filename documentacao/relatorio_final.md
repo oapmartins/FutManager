@@ -62,7 +62,7 @@ Facilitar a gestão de quadras transformando um modelo de negócio informal em u
 ## 2. Participantes do processo
 
     2.1 PERSONA 1
-    
+
  Fábio tem 41 anos, é casado e atualmente trabalha como dono/gestor de quadras de futebol na região onde vive. Sua personalidade é de uma pessoa brincalhona e bem humorada, é também um ótimo empreendedor. Seu sonho atualmente é conhecer o mundo e poder melhorar e ampliar seus negócios. Porém, um problema que Fábio enfrenta atualmente é a falta de organização em sua quadra. Fábio se utiliza de uma agenda para se organizar mas, mesmo assim, não foram raras as vezes que ele acabou reservando um mesmo horário para mais de uma pessoa. O sistema de gestão de quadras sanará este e outros problemas. Com o sistema, Fábio poderá ter controle total em sua agenda, sabendo quais horários estão disponíveis, pré-reservados ou reservados. Ele também não precisará mais se preocupar com confirmação de presença ou com a divulgação de sua quadra.
 
     2.2 PERSONA 2
@@ -101,8 +101,11 @@ A plataforma também permitírá que o gestor de uma quadra possa ter a sua agen
 Ao colocar em pespectiva um futuro breve, dentre as oportunidades de melhorias, a plataforma poderá: 
 
 * Integraçoes com os pricipais sistemas ERPs que, por ventura, o gestor de quadras já utilize. 
+
 * adicionae sistema de valiação da estrutura da quadra para auxiliar o usuário a escolher a melhor opção. 
+
 * Pagamento por visibilidade, onde o gestor de uma quadra poderá pagar para ganhar mais destaque dentro do sistema de busca. 
+
 * Sistema de cupons e fidelização.
   
   ## 3.3. Processos
@@ -188,9 +191,6 @@ Após o processo de cadastro de usuário, temos o login do usuário no sistema. 
 | Senha                        | Caixa de Texto | Cadastrado no banco | ----------------- |
 | Escolha de Cliente ou Gestor | Seleção Únicao | Cadastrado no banco | ----------------- |
 
-
-
-
 #### Processo 3 – Cadastro de Quadras
 
 **Informação sobre o Cadastro das Quadras**
@@ -240,6 +240,7 @@ Após o processo de cadastro de usuário, temos o login do usuário no sistema. 
 |           |                  |                                   |                     |
 
 #### Processo 5 – Fluxo de Pagamento
+
 **Preencher informações de contato**
 
 Será fornecido um formulário para o usuário preencher os dados do cartão que será utilizado caso opte pelo tipo de pagamento pós. Os dados informados pelo usuário serão utilizados para pagamentos futuros. O formulário conterá os campos necessários para serem enviados ao gateway de pagamento.
@@ -254,6 +255,7 @@ Será fornecido um formulário para o usuário preencher os dados do cartão que
 | CPF/CNPJ titular  | Caixa de texto | Somente números             | Vazio             |
 
 #### Processo 6 – Fluxo de Avaliação
+
 **Perguntas de avaliação**
 
 Após a efetuação da reserva o usuário receberá um alerta com a opção de avaliar o serviço obtido. O fluxo consiste em perguntas sobre recomendação, um NPS sobre o serviço e uma caixa de texto de observação.
@@ -263,7 +265,6 @@ Após a efetuação da reserva o usuário receberá um alerta com a opção de a
 | Seleção de recomendação | Select         | Sim ou Não               | Sim               |
 | NPS do serviço          | Select         | Range de zero a dez      | 10                |
 | Campo de Observação     | Caixa de texto | Máximo de 200 caracteres | Sim               |
-
 
 ### 4.2. Tecnologias
 
