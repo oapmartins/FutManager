@@ -60,7 +60,8 @@ function montar_botao_pagamento(reserva = null) {
 }
 
 function redirecionar_pagamento(id) {
-    window.location.href = `../pagamento/confirmacao-pagamento-pre-reserva.html?id=${id}`;
+    window.localStorage.idReserva = id;
+    window.location.href = `../pagamento.html`;
 }
 
 function montar_modal_avaliacao(reserva = null) {
