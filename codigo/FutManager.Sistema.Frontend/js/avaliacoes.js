@@ -18,7 +18,6 @@ async function cadastrarAvaliacao(){
     const nome = localStorage.nome;
     const nota = document.querySelector("#nota");
     const comentario = document.querySelector("#comentario");
-    console.log(id);
 
     let response = await fetch(`http://localhost:3000/avaliacoes-usuario`, {
         method: 'POST',

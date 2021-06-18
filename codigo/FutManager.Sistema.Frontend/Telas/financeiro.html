@@ -76,6 +76,7 @@
                 Menus
             </div>
 
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -93,10 +94,11 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="./financeiro.html">
+                <a class="nav-link" href="#">
                     <i class="far fa-money-bill-alt"></i>
                     <span>Financeiro</span></a>
             </li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -162,7 +164,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Analítico</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Financeiro</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Gerar Relatório</a>
                     </div>
@@ -171,52 +173,41 @@
                     <div class="row">
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-8 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Horários
-                                                Reservados
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">65%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 65%" aria-valuenow="85" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Receita (Mensal)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">R$ 1,223.59</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Média avaliação reservas</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="mediaAvaliacoes">5,03</div>
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Receita (anual)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">R$ 2,552.50</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-star fa-2x text-gray-300"></i>
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                     <!-- Content Row -->
@@ -224,65 +215,22 @@
                     <div class="row">
 
                         <!-- Area Chart -->
-                        <div class="col-xl-6">
+                        <div class="col-xl-12 col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Relação da quantidade de reservas por
-                                        mês</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Grafico de Receita</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="graficoBarra"></canvas>
-                                        </div>
+                                        <canvas id="myAreaChart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Area Chart -->
-                        <div class="col-xl-6">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Relação de quantidade de Acessos no Sistema por mês</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="graficoLinha"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-12">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Relação da quantidade Avaliações por Mês</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <div class="chart-pie pt-4 pb-2">
-                                            <canvas id="graficoAvaliacaoSist"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
@@ -356,7 +304,6 @@
     <script src="../js/graficos/graficoArea.js"></script>
     <script src="../js/graficos/graficoBarra.js"></script>
     <script src="../js/graficos/graficoLinha.js"></script>
-    <script src="../js/graficos/graficoAvaliacaoSist.js"></script>
 
 </body>
 
