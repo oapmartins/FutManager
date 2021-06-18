@@ -25,33 +25,37 @@ mostrar algum resultado relevante do trabalho (até 10 linhas)._
 
 ## 1. Introdução
 
-O projeto do sistema Gestão de Quadras será um software que irá reunir "peladeiros" e donos de quadras em uma gestão automatizada dos processos, para a facilidade do gerenciamento de quadras e centros esportivos. Pode-se citar entre esses processos: cadastro e atendimento ao cliente; cadastro de quadra; agenda de horários disponíveis e reservas destes; cobrança e pagamentos.
+O FutManager será uma plataforma online que irá reunir jogadores de futebol amador e os centros esportivos. Nele, será possível realizar uma gestão automatizada de processos que hoje são realizados de forma manual na grande maioria dos centros esportivos de pequeno e médio porte. Entre os processos chaves do sistema, podemos destacar o cadastro quadras e horários de funcionamento, busca e reserva de horários, pagamento por boleto ou cartão, assim como a avaliação de quadras. 
 
-A finalidade do sistema será auxiliar na administração, para a organização de produtos, serviços e clientes. A fim de automatizar processos para uma forma mais prática, ágil e simples.
+ Desta forma, a finalidade do sistema será auxiliar o gestor de quadra na administração de sua agenda de reservas e horários, bem como na administração financeira e divulgação de seu estabelecimento. Para os usuários da plataforma será possível realizar uma reserva em qualquer quadra em sua região, realizar o pagamento online através de boleto ou cartão de crédito, além de poder contar com o sistema de avaliações. Tudo isso de forma prática, ágil e simples.
 
     1.1 Contextualização
 
-O projeto tem como finalidade o gerenciamento de quadras, se qualificando no ramo de negócios que se trata a esportes e lazer de clientes como um todo. Atualmente o Brasil consta com mais de 30 mil atletas registrados , 12 milhões de adeptos ao futebol Society e com mais de 4 mil campos disponíveis em todo território nacional segundo a Confederação Brasileira de Futebol 7 Society. Visto tal fato, coloca-se como necessário a entrada de tecnologias que visam auxiliar esse grande mercado de esportes, para assim, gerar automatização de processos gerais, desde ao contato ao clientes até o termino do seu "jogo". Com isso, o software FutManager veio para facilitar pequenas empresas de quadras que visam a entrada no mercado e até mesmo melhora das já existentes.
+Atualmente, com mais de 4 mil campos disponíveis em todo território nacional, o Brasil, segundo a Confederação Brasileira de Futebol 7 Society, possui mais de 30 mil atletas registrados e 12 milhões de adeptos ao futebol Society. Dado o potencial deste universo, coloca-se a necessidade de tecnologias que visam auxiliar todo o contexto envolvido em uma partida de futebol, seja ela profissional ou amadora. Neste contexto, o FutManager coloca-se como uma plataforma online que visa facilitar pequenos e médios centros esportivos que necessitam de ferramentas para automatizar seus processos, bem como auxiliar os jogadores de futebol amadores que gostaria de realizar uma reserva em uma quadra de maneira simples e online.
 
-    1.2 Problema
-
-O Fut Manager é um software que visa realizar a ponte entre jogadores de futebol, amadores ou profissionais, e donos de quadras. Hoje, o fluxo normal de quem deseja encontrar uma quadra disponível em sua região passa por realizar uma pesquisa por centros esportivos em sua região na internet, entrar em contato, realizar o levantamento de preço, conferir os dias e horários diponíveis, para, caso positivo, realizar a alocação da quadra. Da perspectiva do centro esportivo, a divulgação de suas quadras e promoções, gerenciar o quadro de horários, as abstenções de ultima hora, passam a se tornar um ofensor.
+O FutManager é um software que visa realizar a ponte entre jogadores de futebol, amadores, e os centros esportivos que possuem quadras de futebol. Hoje, o fluxo normal de quem deseja encontrar uma quadra disponível em sua região passa por realizar uma pesquisa por centros esportivos em sua região na internet, entrar em contato, realizar o levantamento de preço, conferir os dias e horários disponíveis, para ai sim realizar a alocação da quadra. Da perspectiva do centro esportivo, a divulgação de suas quadras e promoções, gerenciar o quadro de horários, as abstenções de ultima hora, passam a se tornar um ofensor.
 
     1.3 Objetivo geral
 
-Facilitar a gestão de quadras transformando um modelo de negócio informal em um modelo escalável e sustentável.
+Da perspectiva de um centro esportivo, o FutManager visa facilitar a gestão financeira, gestão de reservas, bem como auxiliar na divulgação do estabelecimento. Isto tornará o modelo de negócio informal em um modelo mais rentável, escalável e sustentável.
+
+Para os jogadores de futebol, referenciados como usuários até aqui, os mesmos poderão encontrar, através de um poderoso filtro, as quadras que possuem horários disponíveis em sua região, no dia e horário desejado. Para auxiliar na decisão de qual centro esportivo escolher, os usuários poderão visualizar a média de avaliação de uma quadra. Além disso, os usuários poderão realizar o pagar dentro da própria plataforma, bem como avaliar sua experiencia com o centro esportivo.
 
         1.3.1 Objetivos específicos
 
-- Facilitar o agendamento de horários nas quadras, tanto por parte do cliente quanto do fornecedor.
+- Auxiliar na divulgação de pequenos e médios centros esportivos.
 
 - Melhorar a visualização de horários disponíveis.
 
+- Facilitar o agendamento de reservas.
+
 - Melhorar o sistema de cobrança e pagamentos.
 
-- Implementar um tratamento de fluxo de exceção no modelo de negócio. (Quando um cliente desiste de um horário).
-  
-    1.4 Justificativas
+- Implementar sistema de avaliações.
+
+```
+1.4 Justificativas
+```
 
 - A maioria das empresas de locação de quadras não tem um processo bem definido, o que abre margem para vários furos no modelo de negócio.
 
@@ -73,7 +77,7 @@ Paulo tem 25 anos é solteiro e estudante, ele adora se reunir com os amigos nos
 
 ## 3.1. Análise da situação atual
 
-No momento atual que vivemos o futebol 7 ou chamado Society está em crescimento atual por ser tratar de uma lazer entre crianças, jovens e até adultos como também da grande existencia de quadras ao decorrer de todo território. Através desse grande fluxo de atletas e quadras citadas, encontra-se o problema tanto de jogadores para marcação de seus horários quanto dos gestores de quadras que muitas das vezes trabalham sozinhos para a administração deste grande volume. O processo normalmente ocorre de forma manual. 
+No momento atual que vivemos o futebol 7 ou chamado Society está em crescimento atual por ser tratar de uma lazer entre crianças, jovens e até adultos como também da grande existência de quadras ao decorrer de todo território. Através desse grande fluxo de atletas e quadras citadas, encontra-se o problema tanto de jogadores para marcação de seus horários quanto dos gestores de quadras que muitas das vezes trabalham sozinhos para a administração deste grande volume. O processo normalmente ocorre de forma manual. 
 
 * O cliente precisa entrar em contato presencialmente (maioria das vezes) ou por telefone para realizar a marcação de horários;
 * Logo após o contato o dono da quadra precisa conferir em seu caderno de anotações a existencia de um novo horário (que sendo manuel pode ocorrer de esquecer da marcação ou a duplicidade de horários)
@@ -291,7 +295,6 @@ Usar o seguinte modelo:
 | Indicador de acesso ao sistema      | Vizualizar a quantidade de acessos ao sistema por cada mês, para perceber o crescimento do público ao sistema               | Gerar um relatório de quantos acessos ao sistema ocorreu, mede um número de acordo com o mês                                       |                                                           | Tabela Log              | Processos internos                          |
 | Indicador de quantidade de reservas | Vizualizar a quantidade de reservas por cada mês, para perceber o crescimento do público daquela determinada quadra         | Gerar um relatório de quantos marcações de reserva ocorreu em cada mês por cada gestor                                             |                                                           | Tabela Reservas         | Processos que auxiliam os usuários (gestor) |
 | Indicador de receita                | Mede a receita que recebe a cada mês através de marcações                                                                   | Quando a quadra está tendo de receita para auxilio do gestor em seus gastos e mudanças na quadrca                                  |                                                           | Tabela Receita          | Processos que auxiliam os usuários (gestor) |
-
 
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe **a ser proposto**
 
