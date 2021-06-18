@@ -311,14 +311,7 @@ Usar o seguinte modelo:
     - Busca de quadras mais próximas a sua região ou de seu interesse para lazer a partir de um mapa na tela inicial. 
     - A parte de reservas, em que existe a opção tanto de realizar sua reservas quanto visualizar reservas já existentes.
     - Fale conosco, um campo para realizar uma dúvida sobre a usabilidade do sistema.
-
-**TELA CLIENTE**
-* Com usuário "logado" e na tela de cliente, terão as opções:
-    - Busca de quadras mais próximas a sua região ou de seu interesse para lazer a partir de um mapa na tela inicial. 
-    - A parte de reservas, em que existe a opção tanto de realizar sua reservas quanto visualizar reservas já existentes.
-    - Fale conosco, um campo para realizar uma dúvida sobre a usabilidade do sistema.
   
-
 **TELA RESERVA**
 * A partir da seleção de estado e cidade, horário de início e final da busca e variação da data clicar no botão buscar para aparecer os horários disponíveis e as devidas quadras com suas respectivas avaliações, horários e data. Selecionando um quadra para pré-reserva irá ser direcionada para lista de quadras agendas, tendo a possibilidade de pagar as quadras com pagamentos pendentes (mostram a situação necessária para prosseguimento do agendamento)
 
@@ -335,7 +328,6 @@ Usar o seguinte modelo:
   - Financeiro, para visualizar a receita da empresa, gráfico de indicador
 
 **TELA CADASTRO QUADRA**
-
 * Com o gestor já cadastrado no sistema, ele tem a possibilidade de adicionar várias quadras que ele administra, pode-se assim visualizar o faturamento de cada quadra e esta será adicionada no banco para usuários reservar a jogar nesta e demais processos. Este cadastro é feito a partir do preenchimento de campos com dados como endereço, razão social, CNPJ e entre outras, após isso adicionada no banco.
 
 ## 8. Avaliação
