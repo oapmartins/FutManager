@@ -198,7 +198,7 @@
                 contentType: "application/json",
                 data: {},
                 success: function (result) {
-                    window.location.replace(`pageUsuario.html`);
+                    Notiflix.Report.Success('Pagamento', 'Pagamento Realizado com sucesso!', null, retornarLogin);
                 },
                 error: function (err) {
                     console.log(err);
@@ -222,6 +222,11 @@
             } else {
                 preview.src = "";
             }
+        }
+
+        function retornarLogin(){
+            window.location.replace(`pageUsuario.html`);
+
         }
 
     </script>
