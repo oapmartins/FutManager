@@ -7,8 +7,8 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/oapmartins/futManager">
   
-  <a href="https://github.com/tgmarinho/nlw1/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/tgmarinho/nlw1">
+  <a href="https://github.com/oapmartins/FutManager/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oapmartins/futManager">
   </a>
 </p>
 
