@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/oapmartins/futManager?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/oapmartins/futManager?color=red">
   
   <a href="https://github.com/oapmartins/FutManager/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oapmartins/futManager">
