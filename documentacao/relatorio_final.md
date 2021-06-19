@@ -374,10 +374,11 @@ http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 **Colocar link:**
 
 Do código;
-
+https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti2-0940100-samuelmateusoctaviopedrothiago/tree/master/codigo
 Dos artefatos;
-
+https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti2-0940100-samuelmateusoctaviopedrothiago/tree/master/artefatos
 Da apresentação final;
 https://docs.google.com/presentation/d/17ZnaxPpPDNcSWQzhB1HOUiMCbC-Ms6tWClFZsrN6lUQ/edit?usp=sharing
 
-Do vídeo de apresentação.d
+Do vídeo de apresentação
+https://youtu.be/yp_xKTMbQX8
