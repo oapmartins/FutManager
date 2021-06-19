@@ -1,37 +1,110 @@
-# Fut Manager
+<h1 align="center">
+    <label> Fut Manager </label>
+</h1>
 
-O projeto do sistema Gestão de Quadras será um software que irá reunir "peladeiros" e donos de quadras em uma gestão automatizada dos processos, para a facilidade do gerenciamento de quadras e centros esportivos. Pode-se citar entre esses processos: cadastro e atendimento ao cliente; cadastro de quadra; agenda de horários disponíveis e reservas destes; cobrança e pagamentos.
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/tgmarinho/nlw1?color=%2304D361">
 
-A finalidade do sistema será auxiliar na administração, para a organização de produtos, serviços e clientes. A fim de automatizar processos para uma forma mais prática, ágil e simples.
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/oapmartins/futManager">
+  
+  <a href="https://github.com/tgmarinho/nlw1/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/tgmarinho/nlw1">
+  </a>
+</p>
 
-## Integrantes
+## Sobre o projeto
 
-* Octavio Augusto Pereira Martins
-* Thiago Costa de Souza Pereira
-* Mateus Gomes Pereira Silva
-* Pedro Henrique Damasceno Dias
-* Samuel Ribeiro de Freitas
+Fut Manager - é um software que conecta peladeiros (jogadores de futebol casual) e donos de quadras. O foco do sistema é facilitar tanto o gerenciamento de quadras e centros esportivos por parte do gestor, quanto o a marcação e visualização de horários por parte dos usuários. 
 
-## Professores
+Os Gestores(donos) terão acesso as seguintes funcionalidades:
+- Cadastro de Quadras
+- Financeiro
+- Relatório Analítico 
+- Relatório Sintético
 
-* Hugo Bastos de Paula
-* Joyce Christina de Paiva Carvalho 
-* Claudiney
+Os "peladeiros" terão acesso as seguintes funcionalidades:
+- Visualiar quadras e horários disponíveis
+- Realizar reservar de horários
+- Visualizar reservas feitas
+- Favoritar quadras
+- Menu para de avaliação de quadras
 
-## Instruções de utilização
+Projeto desenvolvido durante a realização da disciplina de **TIS** (Trabalho Interdisciplinar) no curso de Sistemas de Informação. Puc Minas. O template utilizado como base para o projeto foi o [Skydash Template](https://www.bootstrapdash.com/product/skydash-free/).
+
+
+## 💻 Sistema
+
+Nesta parte, com um breve vídeo, é apresentado as principais funcionalidades do sistema. Ao clicar no link, é levado para o YouTube, onde o vídeo esta hospedado.
+
+ - [FutManager](https://www.youtube.com/watch?v=8mAY8TV0vSw)
+
+
+
+
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Node.js][nodejs]
+- [Strapi.io](https://strapi.io/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [JQuery](https://jquery.com/)
+- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+
+
+## 🚀 Como executar o projeto
+
+Podemos considerar este projeto como sendo divido em três partes:
+1. Back End (pasta server) 
+2. Front End (pasta web)
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js][nodejs], [Strapi.io](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/installation.html). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode].
 
 Para utilizar, será necessário possuir ter um serviço do Strapi local executando o backend da aplicação na porta 3000. Para tal, será necessário:
 
-* Instalar o [Node.js](https://nodejs.org/en/)
+###  Rodando o Back End (servidor)
 
-* Instalar o [Strapi](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/installation.html)
+```bash
+# Clone este repositório
+$ git clone https://github.com/oapmartins/futManager
 
-* No cmd, navegar até o diretório `fut-manager-strapi`
+# Acesse a pasta do projeto no terminal/cmd
+$ cd futManager
 
-* No cmd, executar `npm run develop`
+# Vá para a pasta server
+$ cd fut-manager-strapi
 
-Neste momento a aplicação estará executando. Basta acessar o diretório `./FutManager.Sistema.Frontend/Telas/` e abrir o arquivo `login.html` em seu navegador, criar uma conta e usar o sistema.
+# Instale as dependências
+$ npm install
 
-## Histórico de versões
+# Execute a aplicação em modo de desenvolvimento
+$ npm run develop
 
-* **0.0.1** Versão inicial. Documentação das instruções de utilização.
+#  Após altarar a porta do strapi.io para a 3000. 
+# Para acessar a base de dados, entrar em: http://localhost:3000.
+```
+
+
+
+## 📝 Licença
+
+Ainda não decidimos uma licença para o Projeto.
+
+[nodejs]: https://nodejs.org/
+[typescript]: https://www.typescriptlang.org/
+[expo]: https://expo.io/
+[reactjs]: https://reactjs.org
+[rn]: https://facebook.github.io/react-native/
+[yarn]: https://yarnpkg.com/
+[vscode]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[license]: https://opensource.org/licenses/MIT
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+[rs]: https://rocketseat.com.br
