@@ -12,6 +12,10 @@
   </a>
 </p>
 
+<p align="center">
+    <img alt="sistema" src="https://raw.githubusercontent.com/oapmartins/FutManager/master/documentacao/imagens/futManager.gif" width="800">
+<p/>
+
 ## Sobre o projeto
 
 Fut Manager - é um software que conecta peladeiros (jogadores de futebol casual) e donos de quadras. O foco do sistema é facilitar tanto o gerenciamento de quadras e centros esportivos por parte do gestor, quanto o a marcação e visualização de horários por parte dos usuários. 
